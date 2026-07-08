@@ -221,7 +221,7 @@ function App() {
             <div>
 
             <div className="content-header">
-                <h1 className="page-title">🧠 JavaScript Drills</h1>
+                <h1 className="page-title">🧠 TypeScript Drills</h1>
                 <button className="left-reset-btn" onClick={() => handleReset()}><span>↻</span> Reset </button>
             </div>
 

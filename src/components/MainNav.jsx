@@ -8,12 +8,12 @@ const MainNav = ({displayExercise, data}) => {
   return (
     <nav className="left-menu">
         <div className="menu-header">
-          <h2>📘 JavaScript Drills </h2>
+          <h2>📘 TypeScript Drills </h2>
         </div>
         <div className="course-link">
-          <a href="https://www.udemy.com/course/modern-javascript-es6-for-react-nextjs-vue-nodejs/?referralCode=6963EBB03103EBCEF1F8" target="_blank" rel="noopener" style={{marginRight: '7px'}}>
+          <a href="https://www.udemy.com/course/modern-TypeScript-es6-for-react-nextjs-vue-nodejs/?referralCode=6963EBB03103EBCEF1F8" target="_blank" rel="noopener" style={{marginRight: '7px'}}>
           <span><img style={{height: '15px'}} src={UdemyLogo}/></span> 
-          Go to JS Course</a>
+          Go to TS Course</a>
           <a 
             href="https://www.youtube.com/channel/UCxsJ-g3ALVzsn_VCkKfDXxA" 
             target="_blank" 

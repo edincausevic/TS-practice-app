@@ -9,7 +9,7 @@ const Welcome = () => {
         <section className="hero-section">
           <div className="badge">OFFICIAL COURSE WORKBENCH</div>
           <h1 className="course-title">
-            Mastering <span className="js-yellow">JavaScript</span>
+            Mastering <span className="js-yellow">TypeScript</span>
           </h1>
           <p className="author-name">by <strong>Edin Causevic</strong></p>
           
