@@ -6,6 +6,7 @@ import { initDB, saveDB, getDB } from "./db/init"
 import CodeQuestion from "./components/CodeQuestion"
 import Welcome from "./components/Welcome"
 
+
 function App() {
   initDB()
 

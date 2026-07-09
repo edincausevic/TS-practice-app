@@ -1,6 +1,6 @@
 export const seedData = {
   id: 114,
-  version: '0.3',
+  version: '0.6',
   allExercises: [
     {
       "id": "primitives-section-101",
@@ -288,6 +288,30 @@ export const seedData = {
             { "id": "opt-16", "option": "d", "text": "let id: number & string;", "correct": false, "selected": false }
           ],
           "correctAnswer": "a"
+        },
+        {
+          "id": "q-union-005",
+          "title": "Union with Three Types",
+          "question": "let value: string | number | boolean = 'Hello';\nvalue = 42;\nvalue = true;\nvalue = null;\nWhat happens on the fourth assignment?",
+          "options": [
+            { "id": "opt-17", "option": "a", "text": "It works fine because null is a valid primitive type", "correct": false, "selected": false },
+            { "id": "opt-18", "option": "b", "text": "TypeScript shows an error because null is not in the union", "correct": true, "selected": false },
+            { "id": "opt-19", "option": "c", "text": "It converts null to undefined", "correct": false, "selected": false },
+            { "id": "opt-20", "option": "d", "text": "It works fine and value becomes null", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "q-union-006",
+          "title": "Union with Three Pipes",
+          "question": "Which of the following shows a correct union type with three possible types?",
+          "options": [
+            { "id": "opt-21", "option": "a", "text": "let data: string | number | boolean;", "correct": true, "selected": false },
+            { "id": "opt-22", "option": "b", "text": "let data: string number boolean;", "correct": false, "selected": false },
+            { "id": "opt-23", "option": "c", "text": "let data: string | number && boolean;", "correct": false, "selected": false },
+            { "id": "opt-24", "option": "d", "text": "let data: string, number, boolean;", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
         }
       ],
       "tasks": [
@@ -302,11 +326,110 @@ export const seedData = {
         },
         {
           "id": "task-union-002",
-          "title": "Union Type with Error",
-          "description": "Create a variable called %data% with union type %string | boolean%. Assign it a %string%, then a %boolean%, and finally try to assign it a %number% to see the error.",
+          "title": "Union with Three Types",
+          "description": "Create a variable called %data% with union type %string | number | boolean%. Assign it a %string%, then a %number%, then a %boolean%.",
           "result": "",
-          "note": "implement in your editor / console and observe the type error",
-          "solution": "let data: string | boolean = 'Hello';\ndata = true;\ndata = 42; // TypeScript shows error",
+          "note": "implement in your editor / console",
+          "solution": "let data: string | number | boolean = 'Hello';\ndata = 42;\ndata = true;",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "objects-section-101",
+      "title": "Objects in TypeScript",
+      "videoID": "15",
+      "questions": [
+        {
+          "id": "q-obj-001",
+          "title": "Object Type Syntax",
+          "question": "Which of the following correctly declares an object type in TypeScript?",
+          "options": [
+            { "id": "opt-1", "option": "a", "text": "let user: { name: string, age: number };", "correct": true, "selected": false },
+            { "id": "opt-2", "option": "b", "text": "let user: object { name: string, age: number };", "correct": false, "selected": false },
+            { "id": "opt-3", "option": "c", "text": "let user: name: string, age: number;", "correct": false, "selected": false },
+            { "id": "opt-4", "option": "d", "text": "let user: { name string, age number };", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "q-obj-002",
+          "title": "Optional Properties",
+          "question": "What does the ? symbol mean after a property name in a TypeScript object type?",
+          "options": [
+            { "id": "opt-5", "option": "a", "text": "The property is required", "correct": false, "selected": false },
+            { "id": "opt-6", "option": "b", "text": "The property is optional", "correct": true, "selected": false },
+            { "id": "opt-7", "option": "c", "text": "The property can only be null", "correct": false, "selected": false },
+            { "id": "opt-8", "option": "d", "text": "The property is a boolean", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "q-obj-003",
+          "title": "Nested Objects",
+          "question": "In the code let user: { address?: { street: string } }, what does address?: mean?",
+          "options": [
+            { "id": "opt-9", "option": "a", "text": "address is required but can be empty", "correct": false, "selected": false },
+            { "id": "opt-10", "option": "b", "text": "address is optional - the object may not have it", "correct": true, "selected": false },
+            { "id": "opt-11", "option": "c", "text": "address must be a string", "correct": false, "selected": false },
+            { "id": "opt-12", "option": "d", "text": "address can only be null", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "q-obj-004",
+          "title": "Union Types in Objects",
+          "question": "In this object type: { id: number | string, name: string }, what types can id be?",
+          "options": [
+            { "id": "opt-13", "option": "a", "text": "Only number", "correct": false, "selected": false },
+            { "id": "opt-14", "option": "b", "text": "Only string", "correct": false, "selected": false },
+            { "id": "opt-15", "option": "c", "text": "Either number or string", "correct": true, "selected": false },
+            { "id": "opt-16", "option": "d", "text": "Both number and string at the same time", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "q-obj-005",
+          "title": "Required vs Optional",
+          "question": "let person: { name?: string } = {}\nperson.name = 'Mike'\nWhy does this code work?",
+          "options": [
+            { "id": "opt-17", "option": "a", "text": "Because name is optional, you can add it later", "correct": true, "selected": false },
+            { "id": "opt-18", "option": "b", "text": "Because TypeScript allows any property on objects", "correct": false, "selected": false },
+            { "id": "opt-19", "option": "c", "text": "Because {} means the object can have anything", "correct": false, "selected": false },
+            { "id": "opt-20", "option": "d", "text": "It would actually show an error", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "q-obj-006",
+          "title": "Object Assignment",
+          "question": "What happens if you try to assign an object without a required property in TypeScript?",
+          "options": [
+            { "id": "opt-21", "option": "a", "text": "TypeScript adds the property automatically", "correct": false, "selected": false },
+            { "id": "opt-22", "option": "b", "text": "TypeScript shows an error that the property is missing", "correct": true, "selected": false },
+            { "id": "opt-23", "option": "c", "text": "It works fine and the property is undefined", "correct": false, "selected": false },
+            { "id": "opt-24", "option": "d", "text": "It converts the object to a different type", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "task-obj-001",
+          "title": "Create a User Object",
+          "description": "Create an object called %user% with properties: %id% (number or string), %name% (string), and %age% (number). Add type annotations.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "let user: {\n  id: number | string,\n  name: string,\n  age: number\n} = {\n  id: 123,\n  name: 'Mike',\n  age: 23\n}",
+          "done": false
+        },
+        {
+          "id": "task-obj-002",
+          "title": "Add an Optional Property",
+          "description": "Create a %person% object with a required %name% (string) and an optional %age% (number). Start with just the name, then add the age later.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "let person: { name: string, age?: number } = {\n  name: 'Mike'\n};\nperson.age = 23;",
           "done": false
         }
       ]
