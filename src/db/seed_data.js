@@ -1,6 +1,6 @@
 export const seedData = {
   id: 114,
-  version: '0.6',
+  version: '0.2',
   allExercises: [
     {
       "id": "primitives-section-101",
@@ -336,6 +336,161 @@ export const seedData = {
       ]
     },
     {
+      "id": "literal-types-section-101",
+      "title": "Literal Types",
+      "videoID": "17",
+      "questions": [
+        {
+          "id": "q-lit-001",
+          "title": "What are Literal Types",
+          "question": "What is a literal type in TypeScript?",
+          "options": [
+            { "id": "opt-1", "option": "a", "text": "A type that only works with numbers", "correct": false, "selected": false },
+            { "id": "opt-2", "option": "b", "text": "A type that can hold any string value", "correct": false, "selected": false },
+            { "id": "opt-3", "option": "c", "text": "A type that means the variable is undefined", "correct": false, "selected": false },
+            { "id": "opt-4", "option": "d", "text": "A type that can only hold a specific exact value", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "d"
+        },
+        {
+          "id": "q-lit-002",
+          "title": "String Literal Syntax",
+          "question": "Which of the following correctly declares a string literal type?",
+          "options": [
+            { "id": "opt-5", "option": "a", "text": "let status = 'active';", "correct": false, "selected": false },
+            { "id": "opt-6", "option": "b", "text": "let status: 'active' = 'active';", "correct": true, "selected": false },
+            { "id": "opt-7", "option": "c", "text": "let status: string = active;", "correct": false, "selected": false },
+            { "id": "opt-8", "option": "d", "text": "let status: string = 'active';", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "q-lit-003",
+          "title": "Literal Type Error",
+          "question": "let direction: 'left' = 'left';\ndirection = 'right';\nWhat happens when you run this code?",
+          "options": [
+            { "id": "opt-9", "option": "a", "text": "TypeScript shows an error because 'right' is not allowed", "correct": true, "selected": false },
+            { "id": "opt-10", "option": "b", "text": "It works fine because direction can be any string", "correct": false, "selected": false },
+            { "id": "opt-11", "option": "c", "text": "direction becomes 'right' automatically", "correct": false, "selected": false },
+            { "id": "opt-12", "option": "d", "text": "The code only works with numbers", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "q-lit-004",
+          "title": "Number Literal Type",
+          "question": "Which of the following is a valid number literal type?",
+          "options": [
+            { "id": "opt-13", "option": "a", "text": "let count: 5 = 10;", "correct": false, "selected": false },
+            { "id": "opt-14", "option": "b", "text": "let count: number = '5';", "correct": false, "selected": false },
+            { "id": "opt-15", "option": "c", "text": "let count: number = 5;", "correct": false, "selected": false },
+            { "id": "opt-16", "option": "d", "text": "let count: 5 = 5;", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "d"
+        },
+        {
+          "id": "q-lit-005",
+          "title": "Literal Type with Union",
+          "question": "let status: 'active' | 'inactive' = 'active';\nstatus = 'inactive';\nstatus = 'pending';\nWhat happens on the third assignment?",
+          "options": [
+            { "id": "opt-17", "option": "a", "text": "It converts 'pending' to 'active'", "correct": false, "selected": false },
+            { "id": "opt-18", "option": "b", "text": "status becomes undefined", "correct": false, "selected": false },
+            { "id": "opt-19", "option": "c", "text": "TypeScript shows an error because 'pending' is not in the union", "correct": true, "selected": false },
+            { "id": "opt-20", "option": "d", "text": "It works fine because union allows any string", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "q-lit-006",
+          "title": "Boolean Literal Type",
+          "question": "Which of these is a boolean literal type?",
+          "options": [
+            { "id": "opt-21", "option": "a", "text": "let isReady: true = false;", "correct": false, "selected": false },
+            { "id": "opt-22", "option": "b", "text": "let isReady: boolean | true;", "correct": false, "selected": false },
+            { "id": "opt-23", "option": "c", "text": "let isReady: true = true;", "correct": true, "selected": false },
+            { "id": "opt-24", "option": "d", "text": "let isReady: boolean = true;", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "c"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "task-lit-001",
+          "title": "String Literal Type",
+          "description": "Create a variable called %status% with a literal type that can only be %'active'%. Then try to reassign it to %'inactive'% to see the error.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "let status: 'active' = 'active';\nstatus = 'inactive'; // TypeScript shows error",
+          "done": false
+        },
+        {
+          "id": "task-lit-002",
+          "title": "Union of Literal Types",
+          "description": "Create a variable called %direction% with a union type of %'up'% | %'down'% | %'left'% | %'right'%. Assign it %'up'%, then %'left'%, then try %'diagonal'% to see the error.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "let direction: 'up' | 'down' | 'left' | 'right' = 'up';\ndirection = 'left';\ndirection = 'diagonal'; // TypeScript shows error",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "any-type-section-101",
+      "title": "The 'any' Type",
+      "videoID": "16",
+      "questions": [
+        {
+          "id": "q-any-001",
+          "title": "What is 'any'",
+          "question": "What does the 'any' type do in TypeScript?",
+          "options": [
+            { "id": "opt-1", "option": "a", "text": "It restricts a variable to only one type", "correct": false, "selected": false },
+            { "id": "opt-2", "option": "b", "text": "It turns off type checking and allows any value", "correct": true, "selected": false },
+            { "id": "opt-3", "option": "c", "text": "It only allows numbers", "correct": false, "selected": false },
+            { "id": "opt-4", "option": "d", "text": "It means the variable is undefined", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "q-any-002",
+          "title": "Reassigning 'any'",
+          "question": "let id: any = '901482';\nid = 123;\nid = { value: 123 };\nWhat happens when you run this code?",
+          "options": [
+            { "id": "opt-5", "option": "a", "text": "TypeScript shows errors for each reassignment", "correct": false, "selected": false },
+            { "id": "opt-6", "option": "b", "text": "It works fine because 'any' allows any type", "correct": true, "selected": false },
+            { "id": "opt-7", "option": "c", "text": "The code only accepts string values", "correct": false, "selected": false },
+            { "id": "opt-8", "option": "d", "text": "TypeScript automatically converts all values to strings", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "q-any-003",
+          "title": "'any' with Arrays",
+          "question": "let users: any = [{ id: 1, name: 'Lee' }];\nusers[0].name = 134;\nusers[0].age = 23;\nWhat happens when you run this code?",
+          "options": [
+            { "id": "opt-9", "option": "a", "text": "TypeScript shows errors because name should be a string", "correct": false, "selected": false },
+            { "id": "opt-10", "option": "b", "text": "It works fine because 'any' allows adding and changing any properties", "correct": true, "selected": false },
+            { "id": "opt-11", "option": "c", "text": "TypeScript shows an error because age doesn't exist", "correct": false, "selected": false },
+            { "id": "opt-12", "option": "d", "text": "Only the first line works, the rest fail", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "q-any-004",
+          "title": "Problems with 'any'",
+          "question": "What is the main disadvantage of using 'any' in TypeScript?",
+          "options": [
+            { "id": "opt-13", "option": "a", "text": "It makes the code run slower", "correct": false, "selected": false },
+            { "id": "opt-14", "option": "b", "text": "It removes type safety and defeats the purpose of TypeScript", "correct": true, "selected": false },
+            { "id": "opt-15", "option": "c", "text": "It only works with strings", "correct": false, "selected": false },
+            { "id": "opt-16", "option": "d", "text": "It causes compilation errors", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        }
+      ],
+      "tasks": []
+    },
+    {
       "id": "objects-section-101",
       "title": "Objects in TypeScript",
       "videoID": "15",
@@ -403,11 +558,11 @@ export const seedData = {
         {
           "id": "q-obj-006",
           "title": "Object Assignment",
-          "question": "What happens if you try to assign an object without a required property in TypeScript?",
+          "question": "let user: { name: string, age: number } = { name: 'Mike' };\nWhat happens when you run this code?",
           "options": [
-            { "id": "opt-21", "option": "a", "text": "TypeScript adds the property automatically", "correct": false, "selected": false },
-            { "id": "opt-22", "option": "b", "text": "TypeScript shows an error that the property is missing", "correct": true, "selected": false },
-            { "id": "opt-23", "option": "c", "text": "It works fine and the property is undefined", "correct": false, "selected": false },
+            { "id": "opt-21", "option": "a", "text": "TypeScript adds age: undefined automatically", "correct": false, "selected": false },
+            { "id": "opt-22", "option": "b", "text": "TypeScript shows an error because age is missing", "correct": true, "selected": false },
+            { "id": "opt-23", "option": "c", "text": "It works fine and age is optional", "correct": false, "selected": false },
             { "id": "opt-24", "option": "d", "text": "It converts the object to a different type", "correct": false, "selected": false }
           ],
           "correctAnswer": "b"
@@ -430,6 +585,261 @@ export const seedData = {
           "result": "",
           "note": "implement in your editor / console",
           "solution": "let person: { name: string, age?: number } = {\n  name: 'Mike'\n};\nperson.age = 23;",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "arrays-section-101",
+      "title": "Arrays in TypeScript",
+      "videoID": "18",
+      "questions": [
+        {
+          "id": "q-arr-001",
+          "title": "Array Type Syntax",
+          "question": "Which of the following correctly declares an array of numbers in TypeScript?",
+          "options": [
+            { "id": "opt-1", "option": "a", "text": "let numbers: number[] = [1, 2, 3];", "correct": true, "selected": false },
+            { "id": "opt-2", "option": "b", "text": "let numbers: []number = [1, 2, 3];", "correct": false, "selected": false },
+            { "id": "opt-3", "option": "c", "text": "let numbers: array<number> = [1, 2, 3];", "correct": false, "selected": false },
+            { "id": "opt-4", "option": "d", "text": "let numbers = [1, 2, 3];", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "q-arr-002",
+          "title": "Array Inference",
+          "question": "const fruits = []\nWhat type does TypeScript infer for 'fruits'?",
+          "options": [
+            { "id": "opt-5", "option": "a", "text": "string[]", "correct": false, "selected": false },
+            { "id": "opt-6", "option": "b", "text": "any[]", "correct": true, "selected": false },
+            { "id": "opt-7", "option": "c", "text": "never[]", "correct": false, "selected": false },
+            { "id": "opt-8", "option": "d", "text": "number[]", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "q-arr-003",
+          "title": "Array Type",
+          "question": "const numbers: number[] = [1, 2, 3, 4];\nnumbers.push('123')\nWhat happens when you run this code?",
+          "options": [
+            { "id": "opt-9", "option": "a", "text": "It works fine and adds '123' to the array", "correct": false, "selected": false },
+            { "id": "opt-10", "option": "b", "text": "TypeScript shows an error because '123' is a string, not a number", "correct": true, "selected": false },
+            { "id": "opt-11", "option": "c", "text": "It converts '123' to a number", "correct": false, "selected": false },
+            { "id": "opt-12", "option": "d", "text": "The array becomes empty", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "q-arr-004",
+          "title": "Spread Operator with Arrays",
+          "question": "const numbers: number[] = [1, 2, 3, 4];\nconst prices = [...numbers, 'hello']\nWhat type does TypeScript infer for 'prices'?",
+          "options": [
+            { "id": "opt-13", "option": "a", "text": "number[]", "correct": false, "selected": false },
+            { "id": "opt-14", "option": "b", "text": "string[]", "correct": false, "selected": false },
+            { "id": "opt-15", "option": "c", "text": "(number | string)[]", "correct": true, "selected": false },
+            { "id": "opt-16", "option": "d", "text": "any[]", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "q-arr-005",
+          "title": "Mixed Array Inference",
+          "question": "const mixed = ['hello', 12, true]\nmixed.push({name: 1})\nWhat type does TypeScript infer for 'mixed' and what happens when pushing an object?",
+          "options": [
+            { "id": "opt-17", "option": "a", "text": "mixed is any[] and the push works fine", "correct": false, "selected": false },
+            { "id": "opt-18", "option": "b", "text": "mixed is (string | number | boolean)[] and TypeScript shows an error when pushing an object", "correct": true, "selected": false },
+            { "id": "opt-19", "option": "c", "text": "mixed is string[] and the push fails", "correct": false, "selected": false },
+            { "id": "opt-20", "option": "d", "text": "mixed is (string | number | boolean | object)[] and the push works", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "q-arr-006",
+          "title": "Explicit Mixed Array",
+          "question": "Which of the following correctly declares an array that can hold strings, numbers, and booleans?",
+          "options": [
+            { "id": "opt-21", "option": "a", "text": "let mixed: string[] | number[] | boolean[] = ['hello', 12, true];", "correct": false, "selected": false },
+            { "id": "opt-22", "option": "b", "text": "let mixed: (string | number | boolean)[] = ['hello', 12, true];", "correct": true, "selected": false },
+            { "id": "opt-23", "option": "c", "text": "let mixed: string | number | boolean[] = ['hello', 12, true];", "correct": false, "selected": false },
+            { "id": "opt-24", "option": "d", "text": "let mixed: any[] = ['hello', 12, true];", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "task-arr-001",
+          "title": "Typed Array",
+          "description": "Create an array of %numbers% called %scores% with values %[10, 20, 30, 40]%. Add the type annotation. Then try to push a %string% to see the error.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "const scores: number[] = [10, 20, 30, 40];\nscores.push('50'); // TypeScript shows error",
+          "done": false
+        },
+        {
+          "id": "task-arr-002",
+          "title": "Mixed Array",
+          "description": "Create an array called %data% that can hold %strings%, %numbers%, and %booleans%. Add values %'Hello'%, %42%, and %true%. Then try to push an %object% %{key: 'value'}% to see the error.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "const data: (string | number | boolean)[] = ['Hello', 42, true];\ndata.push({key: 'value'}); // TypeScript shows error",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "functions-section-101",
+      "title": "Functions in TypeScript",
+      "videoID": "19",
+      "questions": [
+        {
+          "id": "q-fn-001",
+          "title": "Function Parameter Types",
+          "question": "Which of the following correctly declares a function with typed parameters?",
+          "options": [
+            { "id": "opt-1", "option": "a", "text": "function greet(name: string) { return 'Hello ' + name; }", "correct": true, "selected": false },
+            { "id": "opt-2", "option": "b", "text": "function greet(name) { return 'Hello ' + name; }", "correct": false, "selected": false },
+            { "id": "opt-3", "option": "c", "text": "function greet(string name) { return 'Hello ' + name; }", "correct": false, "selected": false },
+            { "id": "opt-4", "option": "d", "text": "function greet(name: string): { return 'Hello ' + name; }", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "q-fn-002",
+          "title": "Optional Parameters",
+          "question": "How do you make a function parameter optional in TypeScript?",
+          "options": [
+            { "id": "opt-5", "option": "a", "text": "function greet(name?) { }", "correct": false, "selected": false },
+            { "id": "opt-6", "option": "b", "text": "function greet(name: string?) { }", "correct": false, "selected": false },
+            { "id": "opt-7", "option": "c", "text": "function greet(name?: string) { }", "correct": true, "selected": false },
+            { "id": "opt-8", "option": "d", "text": "function greet(optional name: string) { }", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "q-fn-003",
+          "title": "Optional Parameter Usage",
+          "question": "function greet(name?: string) { return 'Hello ' + name; }\ngreet();\ngreet('Mike');",
+          "options": [
+            { "id": "opt-9", "option": "a", "text": "Only greet('Mike') is valid, greet() is invalid", "correct": false, "selected": false },
+            { "id": "opt-10", "option": "b", "text": "Only greet() is valid, greet('Mike') is invalid", "correct": false, "selected": false },
+            { "id": "opt-11", "option": "c", "text": "Both greet() and greet('Mike') are valid", "correct": true, "selected": false },
+            { "id": "opt-12", "option": "d", "text": "Neither greet() nor greet('Mike') is valid", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "q-fn-004",
+          "title": "Union Type Parameters",
+          "question": "function display(value: string | number) { console.log(value); }\ndisplay('Hello');\ndisplay(42);\ndisplay(true);",
+          "options": [
+            { "id": "opt-13", "option": "a", "text": "display('Hello') and display(42) are valid, display(true) is invalid", "correct": true, "selected": false },
+            { "id": "opt-14", "option": "b", "text": "display('Hello'), display(42), and display(true) are all valid", "correct": false, "selected": false },
+            { "id": "opt-15", "option": "c", "text": "Only display('Hello') is valid", "correct": false, "selected": false },
+            { "id": "opt-16", "option": "d", "text": "Only display(42) is valid", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "q-fn-005",
+          "title": "Literal Type Parameters",
+          "question": "function setStatus(status: 'active' | 'inactive' | 'pending') { }\nsetStatus('active');\nsetStatus('inactive');\nsetStatus('pending');",
+          "options": [
+            { "id": "opt-17", "option": "a", "text": "setStatus('active'), setStatus('inactive'), and setStatus('pending') are all valid", "correct": true, "selected": false },
+            { "id": "opt-18", "option": "b", "text": "Only setStatus('active') and setStatus('inactive') are valid", "correct": false, "selected": false },
+            { "id": "opt-19", "option": "c", "text": "Only setStatus('pending') is valid", "correct": false, "selected": false },
+            { "id": "opt-20", "option": "d", "text": "None of these calls are valid", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "q-fn-006",
+          "title": "Literal Type Error",
+          "question": "function setStatus(status: 'active' | 'inactive') { }\nsetStatus('pending');",
+          "options": [
+            { "id": "opt-21", "option": "a", "text": "It works fine because status can be any string", "correct": false, "selected": false },
+            { "id": "opt-22", "option": "b", "text": "TypeScript shows an error because 'pending' is not in the allowed literal types", "correct": true, "selected": false },
+            { "id": "opt-23", "option": "c", "text": "It sets status to 'active' automatically", "correct": false, "selected": false },
+            { "id": "opt-24", "option": "d", "text": "It converts 'pending' to undefined", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "q-fn-007",
+          "title": "Mixed Parameter Types",
+          "question": "function createUser(id: number | string, name: string, isActive?: boolean) { }\ncreateUser(1, 'Mike');\ncreateUser('ABC', 'Jane', true);\ncreateUser(true, 'Bob');",
+          "options": [
+            { "id": "opt-25", "option": "a", "text": "createUser(1, 'Mike') and createUser('ABC', 'Jane', true) are valid, createUser(true, 'Bob') is invalid", "correct": true, "selected": false },
+            { "id": "opt-26", "option": "b", "text": "All calls including createUser(true, 'Bob') are valid", "correct": false, "selected": false },
+            { "id": "opt-27", "option": "c", "text": "Only createUser(1, 'Mike') is valid", "correct": false, "selected": false },
+            { "id": "opt-28", "option": "d", "text": "Only createUser('ABC', 'Jane', true) is valid", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "q-fn-008",
+          "title": "Multiple Optional Parameters",
+          "question": "function log(message: string, level?: string, timestamp?: number) { }\nlog('Hello');\nlog('Hello', 'info');\nlog('Hello', 'info', 12345);",
+          "options": [
+            { "id": "opt-29", "option": "a", "text": "Only log('Hello') is valid", "correct": false, "selected": false },
+            { "id": "opt-30", "option": "b", "text": "Only log('Hello', 'info') is valid", "correct": false, "selected": false },
+            { "id": "opt-31", "option": "c", "text": "log('Hello'), log('Hello', 'info'), and log('Hello', 'info', 12345) are all valid", "correct": true, "selected": false },
+            { "id": "opt-32", "option": "d", "text": "None of these calls are valid", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "q-fn-009",
+          "title": "Union with Literal Types",
+          "question": "function sendMessage(type: 'email' | 'sms', content: string | number) { }\nsendMessage('email', 'Hello');\nsendMessage('sms', 12345);\nsendMessage('email', 456);\nsendMessage('email', true);",
+          "options": [
+            { "id": "opt-33", "option": "a", "text": "sendMessage('email', 'Hello'), sendMessage('sms', 12345), and sendMessage('email', 456) are all valid", "correct": true, "selected": false },
+            { "id": "opt-34", "option": "b", "text": "Only sendMessage('email', 'Hello') is valid", "correct": false, "selected": false },
+            { "id": "opt-35", "option": "c", "text": "Only sendMessage('sms', 12345) is valid", "correct": false, "selected": false },
+            { "id": "opt-36", "option": "d", "text": "sendMessage('email', true) is valid", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "q-fn-010",
+          "title": "Optional vs Union",
+          "question": "What is the difference between 'name?: string' and 'name: string | undefined' as a function parameter?",
+          "options": [
+            { "id": "opt-37", "option": "a", "text": "There is no difference between them", "correct": false, "selected": false },
+            { "id": "opt-38", "option": "b", "text": "'name?: string' makes it optional (can be omitted), 'name: string | undefined' requires explicitly passing undefined", "correct": true, "selected": false },
+            { "id": "opt-39", "option": "c", "text": "'name?: string' requires a value, 'name: string | undefined' makes it optional", "correct": false, "selected": false },
+            { "id": "opt-40", "option": "d", "text": "'name?: string' only works with strings, 'name: string | undefined' works with any type", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "task-fn-002",
+          "title": "Optional Parameters",
+          "description": "Create a function called %display% that takes a %message% (string) and an optional %prefix% (string). If prefix is provided, log it with the message. If no prefix is provided, just log the message. Call it with and without the prefix.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "function display(message: string, prefix?: string) {\n  if (prefix) {\n    console.log(prefix + ': ' + message);\n  } else {\n    console.log(message);\n  }\n}\ndisplay('Hello');\ndisplay('World', 'Info');",
+          "done": false
+        },
+        {
+          "id": "task-fn-003",
+          "title": "Union Type Parameters",
+          "description": "Create a function called %printId% that takes an %id% parameter that can be either a %number% or a %string%. Inside the function, log the id. Call it with both a number and a string.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "function printId(id: number | string) {\n  console.log(id);\n}\nprintId(123);\nprintId('ABC123');",
+          "done": false
+        },
+        {
+          "id": "task-fn-004",
+          "title": "Literal Type Parameters",
+          "description": "Create a function called %setStatus% that takes a %status% parameter with literal type %'pending'% | %'approved'% | %'rejected'%. Call it with each valid value and then try %'cancelled'% to see the error.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "function setStatus(status: 'pending' | 'approved' | 'rejected') {\n  console.log('Status:', status);\n}\nsetStatus('pending');\nsetStatus('approved');\nsetStatus('cancelled'); // TypeScript shows error",
           "done": false
         }
       ]
