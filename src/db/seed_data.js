@@ -1,6 +1,6 @@
 export const seedData = {
   id: 114,
-  version: '0.7',
+  version: '0.45',
   allExercises: [
     {
       "id": "primitives-section-1311",
@@ -16,8 +16,8 @@ export const seedData = {
       "id": "primitives-section-101",
       "title": "TypeScript Primitives",
       "videoID": "11",
-      "done": "false",
-      "inProgress": "false",
+      "done": false,
+      "inProgress": false,
       "questions": [
         {
           "id": "q-prim-001",
@@ -117,8 +117,8 @@ export const seedData = {
       "id": "type-inference-section-101",
       "title": "Type Inference",
       "videoID": "12",
-      "done": "false",
-      "inProgress": "false",
+      "done": false,
+      "inProgress": false,
       "questions": [
         {
           "id": "q-inf-001",
@@ -197,8 +197,8 @@ export const seedData = {
       "id": "module-scope-section-101",
       "title": "Module Scope and Variable Conflicts",
       "videoID": "13",
-      "done": "false",
-      "inProgress": "false",
+      "done": false,
+      "inProgress": false,
       "questions": [
         {
           "id": "q-scope-001",
@@ -256,8 +256,8 @@ export const seedData = {
       "id": "union-types-section-101",
       "title": "Union Types",
       "videoID": "14",
-      "done": "false",
-      "inProgress": "false",
+      "done": false,
+      "inProgress": false,
       "questions": [
         {
           "id": "q-union-001",
@@ -357,8 +357,8 @@ export const seedData = {
       "id": "literal-types-section-101",
       "title": "Literal Types",
       "videoID": "17",
-      "done": "false",
-      "inProgress": "false",
+      "done": false,
+      "inProgress": false,
       "questions": [
         {
           "id": "q-lit-001",
@@ -458,8 +458,8 @@ export const seedData = {
       "id": "any-type-section-101",
       "title": "The 'any' Type",
       "videoID": "16",
-      "done": "false",
-      "inProgress": "false",
+      "done": false,
+      "inProgress": false,
       "questions": [
         {
           "id": "q-any-001",
@@ -516,8 +516,8 @@ export const seedData = {
       "id": "objects-section-101",
       "title": "Objects in TypeScript",
       "videoID": "15",
-      "done": "false",
-      "inProgress": "false",
+      "done": false,
+      "inProgress": false,
       "questions": [
         {
           "id": "q-obj-001",
@@ -617,8 +617,8 @@ export const seedData = {
       "id": "arrays-section-101",
       "title": "Arrays in TypeScript",
       "videoID": "18",
-      "done": "false",
-      "inProgress": "false",
+      "done": false,
+      "inProgress": false,
       "questions": [
         {
           "id": "q-arr-001",
@@ -718,8 +718,8 @@ export const seedData = {
       "id": "functions-section-101",
       "title": "Functions in TypeScript",
       "videoID": "19",
-      "done": "false",
-      "inProgress": "false",
+      "done": false,
+      "inProgress": false,
       "questions": [
         {
           "id": "q-fn-001",
@@ -876,8 +876,8 @@ export const seedData = {
       "id": "void-section-101",
       "title": "Void",
       "videoID": "20",
-      "done": "false",
-      "inProgress": "false",
+      "done": false,
+      "inProgress": false,
       "questions": [
         {
           "id": "q-void-001",
@@ -971,8 +971,8 @@ export const seedData = {
       "id": "never-section-101",
       "title": "Never",
       "videoID": "21",
-      "done": "false",
-      "inProgress": "false",
+      "done": false,
+      "inProgress": false,
       "questions": [
         {
           "id": "q-never-001",
@@ -1054,8 +1054,8 @@ export const seedData = {
       "id": "milestone-section-101",
       "title": "Milestone Exercise - All Concepts",
       "videoID": "22",
-      "done": "false",
-      "inProgress": "false",
+      "done": false,
+      "inProgress": false,
       "questions": [
         {
           "id": "q-mil-001",

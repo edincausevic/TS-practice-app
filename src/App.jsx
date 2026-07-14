@@ -14,6 +14,7 @@ function App() {
   const [courseData, setCourseData] = useState(getDB())
   const [stats, setStats] = useState(getStats())
 
+
   function getStats() {
     const allData = getDB()
 
@@ -57,6 +58,7 @@ function App() {
 
   const handleChoseOption = (optionId, questionID) => {
     
+    
     const updatedData = {
       ...courseData,
       allExercises: courseData.allExercises.map(exercise => ({
@@ -77,10 +79,15 @@ function App() {
       }))
     };
 
+
+
     // display exercises
     updatedData.allExercises.forEach(exercise => {
       if(selectedExercise.id === exercise.id) {
-        setSelectedExercise(exercise)
+        
+        const exerciseWithMarker = markMenuItemStatsColor(exercise)
+
+        setSelectedExercise(exerciseWithMarker)
       }
     })
     
@@ -90,6 +97,39 @@ function App() {
     saveDB(updatedData)
 
     setStats(getStats())
+
+  }
+
+  const markMenuItemStatsColor = (exercise) => {
+  
+    // mark menu element
+    const questionsDone = exercise.questions.every(question => 
+      question.options.some(option => option.selected)
+    )
+
+    const someQuestionsDone = exercise.questions.some(question => 
+      question.options.some(option => option.selected)
+    )
+    
+    const tasksDone = exercise.tasks.every(task => task.done)
+    const someTasksDone = exercise.tasks.some(task => task.done)
+    
+    if(someQuestionsDone) {
+      exercise.inProgress = true
+      exercise.done = false
+    }
+
+    if(someTasksDone) {
+      exercise.inProgress = true
+      exercise.done = false
+    }
+
+    if(questionsDone && tasksDone) {
+      exercise.inProgress = false
+      exercise.done = true
+    }
+
+    return exercise
   }
 
   const resetAllExercises = () => {
@@ -98,6 +138,8 @@ function App() {
       ...courseData,
       allExercises: courseData.allExercises.map(exercise => ({
         ...exercise,
+        done: false,
+        inProgress: false,
         questions: exercise.questions.map(q => ({
           ...q,
           options: q.options.map(opt => ({
@@ -125,14 +167,14 @@ function App() {
       })
     }
 
-
     const courseDataWithMarkedTask = {
       ...courseData,
       allExercises: courseData.allExercises.map(exercise => {
-        if(exercise.id === updatedSelectedExercise.id) return updatedSelectedExercise
+        if(exercise.id === updatedSelectedExercise.id) return markMenuItemStatsColor(updatedSelectedExercise)
         return exercise
       })
     }
+   
     setCourseData(courseDataWithMarkedTask)
     setSelectedExercise(updatedSelectedExercise);
 
@@ -155,8 +197,8 @@ function App() {
     const courseDataWithMarkedTask = {
       ...courseData,
       allExercises: courseData.allExercises.map(exercise => {
-        if(exercise.id === updatedSelectedExercise.id) return updatedSelectedExercise
-        return exercise
+        if(exercise.id === updatedSelectedExercise.id) return markMenuItemStatsColor(updatedSelectedExercise)
+        return markMenuItemStatsColor(exercise)
       })
     }
     setCourseData(courseDataWithMarkedTask)
@@ -173,14 +215,16 @@ function App() {
 
     const resetedData = {
       ...selectedExercise,
-        questions: selectedExercise.questions.map(question => ({
-          ...question,
-          options: question.options.map(option => ({
-            ...option,
-            selected: false
-          }))
-        })),
-        tasks: selectedExercise.tasks.map(task => ({...task, done: false}))
+      done: false,
+      inProgress: false,
+      questions: selectedExercise.questions.map(question => ({
+        ...question,
+        options: question.options.map(option => ({
+          ...option,
+          selected: false
+        }))
+      })),
+      tasks: selectedExercise.tasks.map(task => ({...task, done: false}))
     }
     
    

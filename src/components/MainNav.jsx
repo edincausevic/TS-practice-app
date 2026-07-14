@@ -60,7 +60,10 @@ const MainNav = ({displayExercise, data}) => {
                 <a href="#">
                   <i style={{color: listItem.milestone ? '#f37a7a' : '#38bdf8'}}>{videoId} </i> 
                 {listItem.title} 
-                {/* <span className="status-dot" ></span> */}
+                <span className={`status-dot bg-slate-700
+                  ${(listItem.done && !listItem.inProgress) ? '!bg-green-500' : ''}   
+                  ${(!listItem.done && listItem.inProgress) ? '!bg-yellow-500' : ''}   
+                   `} ></span>
                 </a>
               </li>
             )
