@@ -14,8 +14,8 @@ const QuizQuestion = ({question, index, choseOption}) => {
             style={oneDark}
             customStyle={{
               margin: 0,
-              padding: '1rem',
-              fontSize: '1.2rem',
+              padding: '',
+              
               background: '#0b1120',
             }}
           >

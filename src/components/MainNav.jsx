@@ -38,7 +38,7 @@ const MainNav = ({displayExercise, data}) => {
 
             if(listItem.type === 'title') {
               return (
-                <h2 style={{fontSize: '1.2rem', margin: '20px 0px 5px 10px'}}>{listItem.title}</h2>
+                <h2 key={listItem.id} style={{fontSize: '1.2rem', margin: '20px 0px 5px 10px'}}>{listItem.title}</h2>
               )
             }
 
