@@ -490,7 +490,7 @@ code {
     position: relative;
     z-index: 1;
     text-align: center;
-    max-width: 600px;
+    max-width: 700px;
   }
   
   .badge {
@@ -513,7 +513,8 @@ code {
   }
   
   .js-yellow {
-    color: #f7df1e;
+    color: #1e46f7;
+    font-size: 3rem;
   }
   
   .author-name {
