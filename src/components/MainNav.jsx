@@ -35,13 +35,20 @@ const MainNav = ({displayExercise, data}) => {
         <ul className="exercise-list" >
           <h2 className="pl-2 font-bold">Udemy Videos</h2>
           {data?.map((listItem) => {
-            
+
+            if(listItem.type === 'title') {
+              return (
+                <h2 style={{fontSize: '1.2rem', margin: '20px 0px 5px 10px'}}>{listItem.title}</h2>
+              )
+            }
+
             // skip one number for call to review video
             if(listItem.id === 'logical-not-01') {videoId = videoId + 2} 
             else {
               videoId++
             }
 
+            
             return (
               <li 
                 className={`exercise-item ${activeLinkId === listItem.id ? 'active-exercise' : ''}`} 

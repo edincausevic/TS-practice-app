@@ -1,7 +1,17 @@
 export const seedData = {
   id: 114,
-  version: '0.2',
+  version: '0.3',
   allExercises: [
+    {
+      "id": "primitives-section-1311",
+      "type": "title",
+      "title": "Section 2: Starting with Typescript",
+      "videoID": "1121",
+      "questions": [
+      ],
+      "tasks": [
+      ]
+    },
     {
       "id": "primitives-section-101",
       "title": "TypeScript Primitives",
