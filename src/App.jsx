@@ -247,7 +247,7 @@ function App() {
 
   return (
     <>
-      <MainNav data={courseData.allExercises} displayExercise={displayQuestions}/>
+      <MainNav data={courseData.allExercises} displayExercise={displayQuestions} />
 
       <div className="main-panel">
         <Header 

@@ -1,6 +1,6 @@
 export const seedData = {
   id: 114,
-  version: '0.2',
+  version: '0.3',
   allExercises: [
     {
       "id": "primitives-section-1311",
@@ -17,6 +17,7 @@ export const seedData = {
       "id": "primitives-section-101",
       "title": "TypeScript Primitives",
       "videoID": "11",
+      "section": 2,
       "done": false,
       "inProgress": false,
       "questions": [
@@ -118,6 +119,7 @@ export const seedData = {
       "id": "type-inference-section-101",
       "title": "Type Inference",
       "videoID": "12",
+      "section": 2,
       "done": false,
       "inProgress": false,
       "questions": [
@@ -198,6 +200,7 @@ export const seedData = {
       "id": "module-scope-section-101",
       "title": "Module Scope and Variable Conflicts",
       "videoID": "13",
+      "section": 2,
       "done": false,
       "inProgress": false,
       "questions": [
@@ -257,6 +260,7 @@ export const seedData = {
       "id": "union-types-section-101",
       "title": "Union Types",
       "videoID": "14",
+      "section": 2,
       "done": false,
       "inProgress": false,
       "questions": [
@@ -358,6 +362,7 @@ export const seedData = {
       "id": "literal-types-section-101",
       "title": "Literal Types",
       "videoID": "17",
+      "section": 2,
       "done": false,
       "inProgress": false,
       "questions": [
@@ -459,6 +464,7 @@ export const seedData = {
       "id": "any-type-section-101",
       "title": "The 'any' Type",
       "videoID": "16",
+      "section": 2,
       "done": false,
       "inProgress": false,
       "questions": [
@@ -517,6 +523,7 @@ export const seedData = {
       "id": "objects-section-101",
       "title": "Objects in TypeScript",
       "videoID": "15",
+      "section": 2,
       "done": false,
       "inProgress": false,
       "questions": [
@@ -618,6 +625,7 @@ export const seedData = {
       "id": "arrays-section-101",
       "title": "Arrays in TypeScript",
       "videoID": "18",
+      "section": 2,
       "done": false,
       "inProgress": false,
       "questions": [
@@ -719,6 +727,7 @@ export const seedData = {
       "id": "functions-section-101",
       "title": "Functions in TypeScript",
       "videoID": "19",
+      "section": 2,
       "done": false,
       "inProgress": false,
       "questions": [
@@ -877,6 +886,7 @@ export const seedData = {
       "id": "void-section-101",
       "title": "Void",
       "videoID": "20",
+      "section": 2,
       "done": false,
       "inProgress": false,
       "questions": [
@@ -972,6 +982,7 @@ export const seedData = {
       "id": "never-section-101",
       "title": "Never",
       "videoID": "21",
+      "section": 2,
       "done": false,
       "inProgress": false,
       "questions": [
@@ -1055,6 +1066,7 @@ export const seedData = {
       "id": "milestone-section-101",
       "title": "Milestone Exercise - All Concepts",
       "videoID": "22",
+      "section": 2,
       "done": false,
       "milestone": true,
       "inProgress": false,
