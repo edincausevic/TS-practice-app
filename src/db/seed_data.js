@@ -1,12 +1,13 @@
 export const seedData = {
   id: 114,
-  version: '0.45',
+  version: '0.1',
   allExercises: [
     {
       "id": "primitives-section-1311",
       "type": "title",
       "title": "Section 2: Starting with Typescript",
       "videoID": "1121",
+      "sectionExercisesIndex": "1-12",
       "questions": [
       ],
       "tasks": [
@@ -1693,6 +1694,16 @@ export const seedData = {
           "done": false,
         }
       ]
-    }
+    },
+    {
+      "id": "31241",
+      "type": "title",
+      "title": "Section 3: Typescript",
+      "videoID": "1121",
+      "questions": [
+      ],
+      "tasks": [
+      ]
+    },
   ]
 }
