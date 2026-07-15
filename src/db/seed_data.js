@@ -1,6 +1,6 @@
 export const seedData = {
   id: 114,
-  version: '0.1',
+  version: '0.2',
   allExercises: [
     {
       "id": "primitives-section-1311",
@@ -1056,6 +1056,7 @@ export const seedData = {
       "title": "Milestone Exercise - All Concepts",
       "videoID": "22",
       "done": false,
+      "milestone": true,
       "inProgress": false,
       "questions": [
         {

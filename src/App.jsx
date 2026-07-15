@@ -275,11 +275,11 @@ function App() {
               <QuizQuestion key={question.id} index={index} question={question} choseOption={handleChoseOption}/>
             ))}
 
-
+            {selectedExercise?.tasks.length > 0 && 
             <h2 style={{margin: '3.5rem 0 1rem', display: 'flex', gap: '10px', alignItems: 'center'}}>
                 <span style={{background: '#f97316', width: '8px', height: '32px', borderRadius: '8px'}}></span> 
                 <strong>Coding Challenges</strong> — 🔧 implement in your editor
-            </h2>
+            </h2>}
 
             {selectedExercise?.tasks.map(task => {
               return <CodeQuestion 
