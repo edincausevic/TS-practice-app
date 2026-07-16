@@ -84,8 +84,8 @@ const MainNav = ({displayExercise, data}) => {
 
             if(listItem.type === 'title') {
               return (
-                <div key={listItem.id} style={{marginBottom: '25px'}}>
-                  <h2  style={{fontSize: '1.2rem', margin: '20px 0px 5px 10px'}}>{listItem.title}</h2>
+                <div key={listItem.id} style={{marginBottom: '10px'}}>
+                  <h2  style={{fontSize: '1.2rem', margin: '35px 0px 5px 10px'}}>{listItem.title}</h2>
                   <div className="header-stats flex" style={{marginLeft: '10px'}}>
 
                     <div>
@@ -111,7 +111,7 @@ const MainNav = ({displayExercise, data}) => {
                     </div>
 
                 
-                    <div style={{margin: '0px 12px'}}></div>
+                    <div style={{margin: '0px 7px'}}></div>
 
                 
                     <div>
@@ -138,7 +138,7 @@ const MainNav = ({displayExercise, data}) => {
                       <strong>/ 23</strong>
                     </div>
 
-                    <button style={{marginLeft: '25px', color: '#b91c1c', cursor: 'pointer'}}><span>↻</span> Reset</button>
+                    <button style={{marginLeft: '35px', color: '#b91c1c', cursor: 'pointer', fontSize: '16px'}}><span>↻</span> Reset</button>
                   </div>
                 </div>
               )

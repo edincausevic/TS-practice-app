@@ -150,6 +150,10 @@ code {
     box-shadow: 0 0 6px #22c55e;
 }
 
+.header-stats strong {
+    font-size: 16px;
+}
+
 /* ========== MAIN PANEL ========== */
 .main-panel {
     flex: 1;

@@ -1,6 +1,6 @@
 export const seedData = {
   id: '144_TS',
-  version: '0.3',
+  version: '0.1',
   allExercises: [
     {
       "id": "fx8brk4iqkqx8hbp5l8b",
@@ -1729,6 +1729,875 @@ export const seedData = {
       "tasks": [
       ]
     },
-    
+    {
+      "id": "k9p3m7q2v8x5t1w4r6y9",
+      "title": "Type Aliasesp",
+      "videoID": "20",
+      "section": 3,
+      "done": false,
+      "inProgress": false,
+      "questions": [
+        {
+          "id": "a1b2c3d4e5f6g7h8i9j0",
+          "title": "Basic Type Alias",
+          "question": "What is the correct way to define a type alias for a string?",
+          "options": [
+            { "id": "q1w2e3r4t5y6u7i8o9p0", "option": "a", "text": "type Name = string;", "correct": true, "selected": false },
+            { "id": "z1x2c3v4b5n6m7l8k9j0", "option": "b", "text": "interface Name = string;", "correct": false, "selected": false },
+            { "id": "p9o8i7u6y5t4r3e2w1q", "option": "c", "text": "type Name: string;", "correct": false, "selected": false },
+            { "id": "a9s8d7f6g5h4j3k2l1m", "option": "d", "text": "alias Name = string;", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "b2c3d4e5f6g7h8i9j0k1",
+          "title": "Using Type Alias",
+          "question": "type Username = string;\nconst user1: Username = 'Sarah';\nconst user2: Username = 123;",
+          "options": [
+            { "id": "m1n2b3v4c5x6z7l8k9j0", "option": "a", "text": "Both assignments are valid", "correct": false, "selected": false },
+            { "id": "q2w3e4r5t6y7u8i9o0p", "option": "b", "text": "Only user1 is valid", "correct": true, "selected": false },
+            { "id": "a1s2d3f4g5h6j7k8l9m", "option": "c", "text": "Only user2 is valid", "correct": false, "selected": false },
+            { "id": "z9x8c7v6b5n4m3l2k1j", "option": "d", "text": "Neither assignment is valid", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "c3d4e5f6g7h8i9j0k1l2",
+          "title": "Union Type Alias",
+          "question": "type ID = string | number;\nWhich of the following is valid?",
+          "options": [
+            { "id": "p1o2i3u4y5t6r7e8w9q", "option": "a", "text": "let id: ID = true;", "correct": false, "selected": false },
+            { "id": "l9k8j7h6g5f4d3s2a1", "option": "b", "text": "let id: ID = [];", "correct": false, "selected": false },
+            { "id": "m2n3b4v5c6x7z8l9k0", "option": "c", "text": "let id1: ID = 42; let id2: ID = 'user-789';", "correct": true, "selected": false },
+            { "id": "q3w4e5r6t7y8u9i0o1", "option": "d", "text": "let id: ID = null;", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "d4e5f6g7h8i9j0k1l2m3",
+          "title": "Object Type Alias",
+          "question": "When defining a complex User type with type alias, which property can be omitted?",
+          "options": [
+            { "id": "a2s3d4f5g6h7j8k9l0m", "option": "a", "text": "All properties must be provided", "correct": false, "selected": false },
+            { "id": "z1x2c3v4b5n6m7l8k9j", "option": "b", "text": "Only the id property is required", "correct": false, "selected": false },
+            { "id": "q4w5e6r7t8y9u0i1o2", "option": "c", "text": "Only string properties can be optional", "correct": false, "selected": false },
+            { "id": "p3o4i5u6y7t8r9e0w1", "option": "d", "text": "A property marked with ? (optional)", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "d"
+        },
+        {
+          "id": "e5f6g7h8i9j0k1l2m3n4",
+          "title": "Literal Union in Type",
+          "question": "type User = {\n  role: 'USER' | 'ADMIN';\n};\nWhich assignment is valid?",
+          "options": [
+            { "id": "l1k2j3h4g5f6d7s8a9", "option": "a", "text": "role: 'user' (lowercase) is valid", "correct": false, "selected": false },
+            { "id": "m4n5b6v7c8x9z0l1k2", "option": "b", "text": "role: 'Manager' is valid", "correct": false, "selected": false },
+            { "id": "q5w6e7r8t9y0u1i2o3", "option": "c", "text": "role can be any string", "correct": false, "selected": false },
+            { "id": "a3s4d5f6g7h8j9k0l1", "option": "d", "text": "role: 'USER' and role: 'ADMIN' are both valid", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "d"
+        },
+        {
+          "id": "f6g7h8i9j0k1l2m3n4o5",
+          "title": "Using Type Alias in Function",
+          "question": "function showUser(user: User): void {\n  console.log(user.name);\n}",
+          "options": [
+            { "id": "z2x3c4v5b6n7m8l9k0", "option": "a", "text": "The function can only accept objects created with new User()", "correct": false, "selected": false },
+            { "id": "p4o5i6u7y8t9r0e1w2", "option": "b", "text": "The return type should be User, not void", "correct": false, "selected": false },
+            { "id": "q6w7e8r9t0y1u2i3o4", "option": "c", "text": "Type aliases cannot be used as function parameters", "correct": false, "selected": false },
+            { "id": "a5s6d7f8g9h0j1k2l3", "option": "d", "text": "The function accepts any object that matches the User type", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "d"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "t1u2v3w4x5y6z7a8b9c0",
+          "title": "Simple Type Alias",
+          "description": "Create a type alias called %Email% that represents a string. Then declare two variables using this type alias with different email strings.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "type Email = string;\n\nconst email1: Email = 'john@example.com';\nconst email2: Email = 'admin@company.org';",
+          "done": false
+        },
+        {
+          "id": "d1e2f3g4h5i6j7k8l9m0",
+          "title": "Complex User Type",
+          "description": "Create a type alias called %Player% with properties: %id% (string | number), %username% (string), %level% (number), %status% ('ACTIVE' | 'INACTIVE'), and an optional %achievements% (string[] array). Create one object that matches this type.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "type Player = {\n  id: string | number;\n  username: string;\n  level: number;\n  status: 'ACTIVE' | 'INACTIVE';\n  achievements?: string[];\n};\n\nconst player1: Player = {\n  id: 101,\n  username: 'ShadowNinja',\n  level: 42,\n  status: 'ACTIVE',\n  achievements: ['FirstWin', 'SpeedRun']\n};",
+          "done": false
+        },
+        {
+          "id": "n1o2p3q4r5s6t7u8v9w0",
+          "title": "Function with Type Alias",
+          "description": "Using the %Player% type from the previous task, create a function called %displayPlayer% that takes a Player as parameter and logs the username and level.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "function displayPlayer(player: Player): void {\n  console.log(`Player: ${player.username}, Level: ${player.level}`);\n}\n\ndisplayPlayer(player1);",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "x7y8z9w2v4t6r8p5q3m1",
+      "title": "Intersection Types",
+      "videoID": "21",
+      "section": 3,
+      "done": false,
+      "inProgress": false,
+      "questions": [
+        {
+          "id": "q1a2s3d4f5g6h7j8k9l0",
+          "title": "Basic Intersection",
+          "question": "type A = { name: string };\ntype B = { age: number };\ntype C = A & B;",
+          "options": [
+            { "id": "p0o9i8u7y6t5r4e3w2", "option": "a", "text": "C only has properties from type A", "correct": false, "selected": false },
+            { "id": "q1w2e3r4t5y6u7i8o9", "option": "b", "text": "C is the same as type A", "correct": false, "selected": false },
+            { "id": "m9n8b7v6c5x4z3l2k1j", "option": "c", "text": "C requires both name and age properties", "correct": true, "selected": false },
+            { "id": "a9s8d7f6g5h4j3k2l1", "option": "d", "text": "Intersection only works with primitive types", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "b2c3d4e5f6g7h8i9j0k1",
+          "title": "Primitive Intersection",
+          "question": "type Mixed = string & number;",
+          "options": [
+            { "id": "p1o2i3u4y5t6r7e8w9q", "option": "a", "text": "Mixed can be either string or number", "correct": false, "selected": false },
+            { "id": "z9x8c7v6b5n4m3l2k1j", "option": "b", "text": "Mixed becomes the never type", "correct": true, "selected": false },
+            { "id": "l0k9j8h7g6f5d4s3a2", "option": "c", "text": "Mixed is equivalent to any", "correct": false, "selected": false },
+            { "id": "m2n3b4v5c6x7z8l9k0", "option": "d", "text": "This syntax is not allowed", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "c3d4e5f6g7h8i9j0k1l2",
+          "title": "Conflicting Properties",
+          "question": "type X = { id: string };\ntype Y = { id: number };\ntype Z = X & Y;",
+          "options": [
+            { "id": "q2w3e4r5t6y7u8i9o0p", "option": "a", "text": "The id property becomes never (impossible type)", "correct": true, "selected": false },
+            { "id": "a1s2d3f4g5h6j7k8l9m", "option": "b", "text": "id becomes string | number", "correct": false, "selected": false },
+            { "id": "z1x2c3v4b5n6m7l8k9j", "option": "c", "text": "Type Z only keeps properties from X", "correct": false, "selected": false },
+            { "id": "p3o4i5u6y7t8r9e0w1", "option": "d", "text": "This creates a union type", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "d4e5f6g7h8i9j0k1l2m3",
+          "title": "Union in Intersection",
+          "question": "type A = { value: string | number };\ntype B = { value: number | boolean };\ntype C = A & B;",
+          "options": [
+            { "id": "l1k2j3h4g5f6d7s8a9", "option": "a", "text": "value must be of type number", "correct": true, "selected": false },
+            { "id": "m4n5b6v7c8x9z0l1k2", "option": "b", "text": "value can be string | number | boolean", "correct": false, "selected": false },
+            { "id": "q5w6e7r8t9y0u1i2o3", "option": "c", "text": "This intersection is impossible", "correct": false, "selected": false },
+            { "id": "a3s4d5f6g7h8j9k0l1", "option": "d", "text": "value must be string", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "e5f6g7h8i9j0k1l2m3n4",
+          "title": "Merging Object Types",
+          "question": "type User = { id: number; name: string };\ntype Admin = { isAdmin: boolean; isActive?: boolean };\ntype AdminUser = User & Admin;",
+          "options": [
+            { "id": "p4o5i6u7y8t9r0e1w2", "option": "a", "text": "AdminUser only has properties from User", "correct": false, "selected": false },
+            { "id": "q6w7e8r9t0y1u2i3o4", "option": "b", "text": "isActive is required", "correct": false, "selected": false },
+            { "id": "z2x3c4v5b6n7m8l9k0", "option": "c", "text": "AdminUser has id, name, isAdmin, and optional isActive", "correct": true, "selected": false },
+            { "id": "a5s6d7f8g9h0j1k2l3", "option": "d", "text": "The types cannot be combined", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "f6g7h8i9j0k1l2m3n4o5",
+          "title": "Intersection Result",
+          "question": "What is the main purpose of the intersection type operator (&) in TypeScript?",
+          "options": [
+            { "id": "l3k4j5h6g7f8d9s0a1", "option": "a", "text": "To combine multiple types into one (merging properties)", "correct": true, "selected": false },
+            { "id": "m6n7b8v9c0x1z2l3k4", "option": "b", "text": "To create a choice between types (like union | )", "correct": false, "selected": false },
+            { "id": "q8w9e0r1t2y3u4i5o6", "option": "c", "text": "To restrict a type to primitive values only", "correct": false, "selected": false },
+            { "id": "a7s8d9f0g1h2j3k4l5", "option": "d", "text": "To create a new type from a class", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "d1e2f3g4h5i6j7k8l9m0",
+          "title": "User + Admin Intersection",
+          "description": "Create a %User% type (id: number, name: string, isActive: boolean) and an %Admin% type (isAdmin: boolean, permissions?: string[]). Create their intersection %AdminUser% and make a valid object.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "type User = {\n  id: number;\n  name: string;\n  isActive: boolean;\n};\n\ntype Admin = {\n  isAdmin: boolean;\n  permissions?: string[];\n};\n\ntype AdminUser = User & Admin;\n\nconst admin: AdminUser = {\n  id: 1,\n  name: 'Jane Doe',\n  isActive: true,\n  isAdmin: true,\n  permissions: ['read', 'write']\n};",
+          "done": false
+        },
+        {
+          "id": "n1o2p3q4r5s6t7u8v9w0",
+          "title": "Conflicting Intersection",
+          "description": "Create two types that both have a property called %id% but with different types (string and number). Intersect them and try to create an object. What happens?",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "type A = { id: string };\ntype B = { id: number };\ntype C = A & B;\n\n// const test: C = { id: 123 }; // Error - id becomes never",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "ft1u2n3c4t5i6o7n8t9y0p",
+      "title": "Function Types",
+      "videoID": "26",
+      "section": 3,
+      "done": false,
+      "milestone": false,
+      "inProgress": false,
+      "questions": [
+        {
+          "id": "ftq1a2b3c4d5e6f7g8h9i0j",
+          "title": "What is a Function Type",
+          "question": "What is a function type in TypeScript?",
+          "options": [
+            { "id": "fto1a2b3c4d5e6f7g8h9i0j", "option": "a", "text": "A way to define the shape of a function with parameter and return types", "correct": true, "selected": false },
+            { "id": "fto2b3c4d5e6f7g8h9i0j1k", "option": "b", "text": "A way to create a new function", "correct": false, "selected": false },
+            { "id": "fto3c4d5e6f7g8h9i0j1k2l", "option": "c", "text": "A way to store functions in an array", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "ftq2b3c4d5e6f7g8h9i0j1k",
+          "title": "Function Type Syntax",
+          "question": "Which of the following correctly defines a function type that takes a string and returns void?",
+          "options": [
+            { "id": "fto5e6f7g8h9i0j1k2l3m4n", "option": "a", "text": "type Logger = (message: string) => void;", "correct": true, "selected": false },
+            { "id": "fto6f7g8h9i0j1k2l3m4n5o", "option": "b", "text": "type Logger = (string) => void;", "correct": false, "selected": false },
+            { "id": "fto7g8h9i0j1k2l3m4n5o6p", "option": "c", "text": "type Logger = message: string => void;", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "ftq3c4d5e6f7g8h9i0j1k2l",
+          "title": "Using Function Types",
+          "question": "type MathOperation = (a: number, b: number) => number;\nconst add: MathOperation = (a, b) => a + b;\nWhat is the return type of add?",
+          "options": [
+            { "id": "fto9i0j1k2l3m4n5o6p7q8r", "option": "a", "text": "string", "correct": false, "selected": false },
+            { "id": "fto0j1k2l3m4n5o6p7q8r9s", "option": "b", "text": "number", "correct": true, "selected": false },
+            { "id": "fto1k2l3m4n5o6p7q8r9s0t", "option": "c", "text": "void", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "ftq4d5e6f7g8h9i0j1k2l3m",
+          "title": "Function with Different Parameter Names",
+          "question": "type StringTransformer = (input: string) => string;\nconst toUpperCase: StringTransformer = (text) => text.toUpperCase();\nWhy does this work even though the parameter names are different?",
+          "options": [
+            { "id": "fto3m4n5o6p7q8r9s0t1u2v", "option": "a", "text": "TypeScript only cares about the type, not the parameter name", "correct": true, "selected": false },
+            { "id": "fto4n5o6p7q8r9s0t1u2v3w", "option": "b", "text": "TypeScript automatically renames parameters", "correct": false, "selected": false },
+            { "id": "fto5o6p7q8r9s0t1u2v3w4x", "option": "c", "text": "TypeScript ignores function types", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "ftq5e6f7g8h9i0j1k2l3m4n",
+          "title": "Function Type with Optional Parameters",
+          "question": "type Greet = (name: string, greeting?: string) => string;\nconst greet: Greet = (name, greeting = 'Hello') => `${greeting}, ${name}`;\ngreet('John');\ngreet('Max', 'Hallo');\nWhich calls are valid?",
+          "options": [
+            { "id": "fto7q8r9s0t1u2v3w4x5y6z", "option": "a", "text": "Only greet('John') is valid", "correct": false, "selected": false },
+            { "id": "fto8r9s0t1u2v3w4x5y6z7a", "option": "b", "text": "Only greet('Max', 'Hallo') is valid", "correct": false, "selected": false },
+            { "id": "fto9s0t1u2v3w4x5y6z7a8b", "option": "c", "text": "Both greet('John') and greet('Max', 'Hallo') are valid", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "ftq6f7g8h9i0j1k2l3m4n5o",
+          "title": "Function Type with Default Parameter",
+          "question": "type Greet = (name: string, greeting?: string) => string;\nconst greet: Greet = (name, greeting = 'Hello') => `${greeting}, ${name}`;\nWhat happens when you call greet('John')?",
+          "options": [
+            { "id": "fto1u2v3w4x5y6z7a8b9c0d", "option": "a", "text": "It returns 'Hello, John'", "correct": true, "selected": false },
+            { "id": "fto2v3w4x5y6z7a8b9c0d1e", "option": "b", "text": "It returns 'undefined, John'", "correct": false, "selected": false },
+            { "id": "fto3w4x5y6z7a8b9c0d1e2f", "option": "c", "text": "It throws an error", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "ftq7g8h9i0j1k2l3m4n5o6p",
+          "title": "Function Type with Multiple Parameters",
+          "question": "type MathOperation = (a: number, b: number) => number;\nconst multiply: MathOperation = function(a, b) {\n  return a * b;\n};\nWhich of the following is true?",
+          "options": [
+            { "id": "fto5y6z7a8b9c0d1e2f3g4h", "option": "a", "text": "The function works and returns the product of a and b", "correct": true, "selected": false },
+            { "id": "fto6z7a8b9c0d1e2f3g4h5i", "option": "b", "text": "The function is invalid because it uses function keyword", "correct": false, "selected": false },
+            { "id": "fto7a8b9c0d1e2f3g4h5i6j", "option": "c", "text": "The function returns a string", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "ftq9i0j1k2l3m4n5o6p7q8r",
+          "title": "Function Type with Arrow vs Function Keyword",
+          "question": "Which of the following correctly assigns a function to a function type?",
+          "options": [
+            { "id": "fto3g4h5i6j7k8l9m0n1o2p", "option": "a", "text": "const add: MathOperation = (a, b) => a + b;", "correct": false, "selected": false },
+            { "id": "fto4h5i6j7k8l9m0n1o2p3q", "option": "b", "text": "const add: MathOperation = function(a, b) { return a + b; };", "correct": false, "selected": false },
+            { "id": "fto5i6j7k8l9m0n1o2p3q4r", "option": "c", "text": "Both A and B are correct", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "ftq0j1k2l3m4n5o6p7q8r9s",
+          "title": "Function Type Benefits",
+          "question": "What is the main benefit of using function types?",
+          "options": [
+            { "id": "fto7k8l9m0n1o2p3q4r5s6t", "option": "a", "text": "They make functions run faster", "correct": false, "selected": false },
+            { "id": "fto8l9m0n1o2p3q4r5s6t7u", "option": "b", "text": "They automatically implement functions", "correct": false, "selected": false },
+            { "id": "fto9m0n1o2p3q4r5s6t7u8v", "option": "c", "text": "They allow reusing function shapes and provide type safety", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "ftt1a2b3c4d5e6f7g8h9i0j",
+          "title": "Create a Function Type",
+          "description": "Create a function type called %StringFormatter% that takes a %string% and returns a %string%. Then create a function called %toLowerCase% using this type that converts a string to lowercase.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "type StringFormatter = (input: string) => string;\nconst toLowerCase: StringFormatter = (text) => text.toLowerCase();\nconsole.log(toLowerCase('HELLO')); // 'hello'",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "tg1u2a3r4d5s6n7a8r9r0w",
+      "title": "Type Guards and Narrowing",
+      "videoID": "27",
+      "section": 3,
+      "done": false,
+      "milestone": false,
+      "inProgress": false,
+      "questions": [
+        {
+          "id": "tgq1a2b3c4d5e6f7g8h9i0j",
+          "title": "What is Type Narrowing",
+          "question": "What is type narrowing in TypeScript?",
+          "options": [
+            { "id": "tgo1a2b3c4d5e6f7g8h9i0j", "option": "a", "text": "Converting strings to numbers", "correct": false, "selected": false },
+            { "id": "tgo2b3c4d5e6f7g8h9i0j1k", "option": "b", "text": "Creating new types from existing ones", "correct": false, "selected": false },
+            { "id": "tgo3c4d5e6f7g8h9i0j1k2l", "option": "c", "text": "The process of refining a broad type to a more specific type", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "tgq2b3c4d5e6f7g8h9i0j1k",
+          "title": "typeof Type Guard",
+          "question": "Which of the following is a valid use of the typeof type guard?",
+          "options": [
+            { "id": "tgo5e6f7g8h9i0j1k2l3m4n", "option": "a", "text": "if (typeof value === 'string') { }", "correct": true, "selected": false },
+            { "id": "tgo6f7g8h9i0j1k2l3m4n5o", "option": "b", "text": "if (typeof value = 'string') { }", "correct": false, "selected": false },
+            { "id": "tgo7g8h9i0j1k2l3m4n5o6p", "option": "c", "text": "if (typeof value in 'string') { }", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "tgq3c4d5e6f7g8h9i0j1k2l",
+          "title": "When TypeScript Uses Narrowing",
+          "question": "When does TypeScript automatically narrow types?",
+          "options": [
+            { "id": "tgo9i0j1k2l3m4n5o6p7q8r", "option": "a", "text": "Only when you explicitly use the 'as' keyword", "correct": false, "selected": false },
+            { "id": "tgo0j1k2l3m4n5o6p7q8r9s", "option": "b", "text": "When you use type guards like typeof, in, or equality checks", "correct": true, "selected": false },
+            { "id": "tgo1k2l3m4n5o6p7q8r9s0t", "option": "c", "text": "TypeScript never narrows types automatically", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "tgq4d5e6f7g8h9i0j1k2l3m",
+          "title": "in Operator Type Guard",
+          "question": "What does the 'in' operator check for in TypeScript type guards?",
+          "options": [
+            { "id": "tgo3m4n5o6p7q8r9s0t1u2v", "option": "a", "text": "Whether a value is in an array", "correct": false, "selected": false },
+            { "id": "tgo4n5o6p7q8r9s0t1u2v3w", "option": "b", "text": "Whether a property exists in an object", "correct": true, "selected": false },
+            { "id": "tgo5o6p7q8r9s0t1u2v3w4x", "option": "c", "text": "Whether a type is a primitive", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "tgq5e6f7g8h9i0j1k2l3m4n",
+          "title": "Truthiness Narrowing",
+          "question": "What happens in TypeScript when you use a variable in a condition like 'if (value)'?",
+          "options": [
+            { "id": "tgo7q8r9s0t1u2v3w4x5y6z", "option": "a", "text": "TypeScript throws an error", "correct": false, "selected": false },
+            { "id": "tgo8r9s0t1u2v3w4x5y6z7a", "option": "b", "text": "TypeScript converts the value to a string", "correct": false, "selected": false },
+            { "id": "tgo9s0t1u2v3w4x5y6z7a8b", "option": "c", "text": "TypeScript narrows out falsy values like 0, null, undefined, and empty string", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "tgq7g8h9i0j1k2l3m4n5o6p",
+          "title": "typeof Guard with Union Types",
+          "question": "When using 'typeof' on a union type, what does TypeScript do?",
+          "options": [
+            { "id": "tgo5y6z7a8b9c0d1e2f3g4h", "option": "a", "text": "It creates a new union type", "correct": false, "selected": false },
+            { "id": "tgo6z7a8b9c0d1e2f3g4h5i", "option": "b", "text": "It removes all type safety", "correct": false, "selected": false },
+            { "id": "tgo7a8b9c0d1e2f3g4h5i6j", "option": "c", "text": "It narrows the type to the specific type checked", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "tgq8h9i0j1k2l3m4n5o6p7q",
+          "title": "in Operator Use Case",
+          "question": "When is the 'in' operator most useful as a type guard?",
+          "options": [
+            { "id": "tgo9c0d1e2f3g4h5i6j7k8l", "option": "a", "text": "When checking primitive values", "correct": false, "selected": false },
+            { "id": "tgo0d1e2f3g4h5i6j7k8l9m", "option": "b", "text": "When distinguishing between different object types that have different properties", "correct": true, "selected": false },
+            { "id": "tgo1e2f3g4h5i6j7k8l9m0n", "option": "c", "text": "When working with arrays", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "tgq9i0j1k2l3m4n5o6p7q8r",
+          "title": "Type Guard Benefits",
+          "question": "Why are type guards important in TypeScript?",
+          "options": [
+            { "id": "tgo3g4h5i6j7k8l9m0n1o2p", "option": "a", "text": "They make the code run faster", "correct": false, "selected": false },
+            { "id": "tgo4h5i6j7k8l9m0n1o2p3q", "option": "b", "text": "They automatically fix type errors", "correct": false, "selected": false },
+            { "id": "tgo5i6j7k8l9m0n1o2p3q4r", "option": "c", "text": "They allow TypeScript to safely know the type so you can use type-specific methods", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "tgt1a2b3c4d5e6f7g8h9i0j",
+          "title": "typeof Type Guard with Union",
+          "description": "Create a function called %processInput% that takes a parameter %input% of type %string | number | boolean%. Use %typeof% to check each type and log a different message for each: 'String: ...', 'Number: ...', 'Boolean: ...'.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "function processInput(input: string | number | boolean): void {\n  if (typeof input === 'string') {\n    console.log('String:', input);\n  } else if (typeof input === 'number') {\n    console.log('Number:', input);\n  } else {\n    console.log('Boolean:', input);\n  }\n}\nprocessInput('hello');\nprocessInput(42);\nprocessInput(true);",
+          "done": false
+        },
+        {
+          "id": "tgt2b3c4d5e6f7g8h9i0j1k",
+          "title": "in Operator Type Guard",
+          "description": "Create two types: %Phone% with %brand% (string) and %battery% (number), and %Laptop% with %brand% (string) and %ram% (number). Create a function called %printSpecs% that takes %device: Phone | Laptop% and uses the %in% operator to check which property exists. Log the specs accordingly.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "type Phone = { brand: string; battery: number };\ntype Laptop = { brand: string; ram: number };\nfunction printSpecs(device: Phone | Laptop): void {\n  if ('battery' in device) {\n    console.log(`Phone: ${device.brand}, Battery: ${device.battery}h`);\n  } else {\n    console.log(`Laptop: ${device.brand}, RAM: ${device.ram}GB`);\n  }\n}\nprintSpecs({ brand: 'Apple', battery: 20 });\nprintSpecs({ brand: 'Dell', ram: 16 });",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "uk1n2o3w4n5t6y7p8e9r0s",
+      "title": "Unknown Type",
+      "videoID": "28",
+      "section": 3,
+      "done": false,
+      "milestone": false,
+      "inProgress": false,
+      "questions": [
+        {
+          "id": "ukq1a2b3c4d5e6f7g8h9i0j",
+          "title": "What is Unknown",
+          "question": "What is the 'unknown' type in TypeScript?",
+          "options": [
+            { "id": "uko1a2b3c4d5e6f7g8h9i0j", "option": "a", "text": "A type that represents any value but is type-safe", "correct": true, "selected": false },
+            { "id": "uko2b3c4d5e6f7g8h9i0j1k", "option": "b", "text": "A type that only works with strings", "correct": false, "selected": false },
+            { "id": "uko3c4d5e6f7g8h9i0j1k2l", "option": "c", "text": "A type that is the same as 'any'", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "ukq2b3c4d5e6f7g8h9i0j1k",
+          "title": "unknown vs any",
+          "question": "What is the main difference between 'unknown' and 'any'?",
+          "options": [
+            { "id": "uko5e6f7g8h9i0j1k2l3m4n", "option": "a", "text": "unknown requires type checking before use, any does not", "correct": true, "selected": false },
+            { "id": "uko6f7g8h9i0j1k2l3m4n5o", "option": "b", "text": "any requires type checking, unknown does not", "correct": false, "selected": false },
+            { "id": "uko7g8h9i0j1k2l3m4n5o6p", "option": "c", "text": "They are exactly the same", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "ukq3c4d5e6f7g8h9i0j1k2l",
+          "title": "Assigning to unknown",
+          "question": "let data: unknown = 'hello';\nlet message: string = data;\nWhat happens when you run this code?",
+          "options": [
+            { "id": "uko9i0j1k2l3m4n5o6p7q8r", "option": "a", "text": "It works fine because data is a string", "correct": false, "selected": false },
+            { "id": "uko0j1k2l3m4n5o6p7q8r9s", "option": "b", "text": "TypeScript shows an error because unknown cannot be assigned to string without checking", "correct": true, "selected": false },
+            { "id": "uko1k2l3m4n5o6p7q8r9s0t", "option": "c", "text": "It converts data to a string automatically", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "ukq4d5e6f7g8h9i0j1k2l3m",
+          "title": "Type Checking unknown",
+          "question": "let value: unknown = 42;\nif (typeof value === 'number') {\n  console.log(value.toFixed(2));\n}\nWhy does this code work?",
+          "options": [
+            { "id": "uko3m4n5o6p7q8r9s0t1u2v", "option": "a", "text": "Because unknown can be used without any checks", "correct": false, "selected": false },
+            { "id": "uko4n5o6p7q8r9s0t1u2v3w", "option": "b", "text": "Because TypeScript narrows unknown to number after the typeof check", "correct": true, "selected": false },
+            { "id": "uko5o6p7q8r9s0t1u2v3w4x", "option": "c", "text": "TypeScript automatically converts unknown to number", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "ukq6f7g8h9i0j1k2l3m4n5o",
+          "title": "unknown with Different Types",
+          "question": "let value: unknown = 'hello';\nlet num: number = 10;\nvalue = num;\nvalue = true;\nWhat is the type of value after these assignments?",
+          "options": [
+            { "id": "uko1u2v3w4x5y6z7a8b9c0d", "option": "a", "text": "unknown (it can hold any value but stays unknown)", "correct": true, "selected": false },
+            { "id": "uko2v3w4x5y6z7a8b9c0d1e", "option": "b", "text": "boolean", "correct": false, "selected": false },
+            { "id": "uko3w4x5y6z7a8b9c0d1e2f", "option": "c", "text": "string | number | boolean", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "ukq7g8h9i0j1k2l3m4n5o6p",
+          "title": "unknown Operations",
+          "question": "let data: unknown = 'hello';\nconsole.log(data.length);\nWhat happens when you run this code?",
+          "options": [
+            { "id": "uko5y6z7a8b9c0d1e2f3g4h", "option": "a", "text": "It logs '5'", "correct": false, "selected": false },
+            { "id": "uko6z7a8b9c0d1e2f3g4h5i", "option": "b", "text": "TypeScript shows an error because unknown can't be used without type checking", "correct": true, "selected": false },
+            { "id": "uko7a8b9c0d1e2f3g4h5i6j", "option": "c", "text": "It throws a runtime error", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "ukq8h9i0j1k2l3m4n5o6p7q",
+          "title": "When to Use unknown",
+          "question": "When should you use 'unknown' instead of 'any'?",
+          "options": [
+            { "id": "uko9c0d1e2f3g4h5i6j7k8l", "option": "a", "text": "When you want to opt out of type checking", "correct": false, "selected": false },
+            { "id": "uko0d1e2f3g4h5i6j7k8l9m", "option": "b", "text": "When you don't know the type but want type safety", "correct": true, "selected": false },
+            { "id": "uko1e2f3g4h5i6j7k8l9m0n", "option": "c", "text": "When you only work with strings", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "ukq9i0j1k2l3m4n5o6p7q8r",
+          "title": "unknown with Functions",
+          "question": "function processData(data: unknown): void {\n  if (typeof data === 'string') {\n    console.log('String:', data);\n  }\n}\nprocessData('hello');\nprocessData(42);\nWhat happens when processData(42) is called?",
+          "options": [
+            { "id": "uko3g4h5i6j7k8l9m0n1o2p", "option": "a", "text": "It logs 'String: 42'", "correct": false, "selected": false },
+            { "id": "uko4h5i6j7k8l9m0n1o2p3q", "option": "b", "text": "It logs nothing because 42 doesn't pass the typeof check", "correct": true, "selected": false },
+            { "id": "uko5i6j7k8l9m0n1o2p3q4r", "option": "c", "text": "It throws a runtime error", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "ukq0j1k2l3m4n5o6p7q8r9s",
+          "title": "unknown Type Safety",
+          "question": "Why is 'unknown' considered safer than 'any'?",
+          "options": [
+            { "id": "uko7k8l9m0n1o2p3q4r5s6t", "option": "a", "text": "Because unknown requires type checking before operations", "correct": true, "selected": false },
+            { "id": "uko8l9m0n1o2p3q4r5s6t7u", "option": "b", "text": "Because unknown is faster than any", "correct": false, "selected": false },
+            { "id": "uko9m0n1o2p3q4r5s6t7u8v", "option": "c", "text": "Because unknown only works with primitives", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "ukt1a2b3c4d5e6f7g8h9i0j",
+          "title": "Working with unknown",
+          "description": "Create a variable called %data% with type %unknown% and assign it a string value. Then try to log %data.length% without type checking to see the error. Finally, use a %typeof% type guard to safely log the length.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "let data: unknown = 'TypeScript';\n// data.length; // Error: Object is of type 'unknown'\nif (typeof data === 'string') {\n  console.log(data.length); // 10\n}",
+          "done": false
+        },
+      ]
+    },
+    {
+      "id": "nn1a2s3s4e5r6t7i8o9n0p",
+      "title": "Non-null Assertion Operator",
+      "videoID": "29",
+      "section": 3,
+      "done": false,
+      "milestone": false,
+      "inProgress": false,
+      "questions": [
+        {
+          "id": "nnq1a2b3c4d5e6f7g8h9i0j",
+          "title": "What is Non-null Assertion Operator",
+          "question": "What does the non-null assertion operator (!) do in TypeScript?",
+          "options": [
+            { "id": "nno1a2b3c4d5e6f7g8h9i0j", "option": "a", "text": "It checks if a value is null", "correct": false, "selected": false },
+            { "id": "nno2b3c4d5e6f7g8h9i0j1k", "option": "b", "text": "It tells TypeScript that a value is not null or undefined", "correct": true, "selected": false },
+            { "id": "nno3c4d5e6f7g8h9i0j1k2l", "option": "c", "text": "It converts null to undefined", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "nnq2b3c4d5e6f7g8h9i0j1k",
+          "title": "Non-null Assertion Syntax",
+          "question": "Which of the following correctly uses the non-null assertion operator?",
+          "options": [
+            { "id": "nno5e6f7g8h9i0j1k2l3m4n", "option": "a", "text": "let value = maybeValue?;", "correct": false, "selected": false },
+            { "id": "nno6f7g8h9i0j1k2l3m4n5o", "option": "b", "text": "let value = maybeValue!!;", "correct": false, "selected": false },
+            { "id": "nno7g8h9i0j1k2l3m4n5o6p", "option": "c", "text": "let value = maybeValue!;", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "nnq4d5e6f7g8h9i0j1k2l3m",
+          "title": "Non-null Assertion with Objects",
+          "question": "let user: { name: string } | null = { name: 'Mike' };\nlet userName = user!.name;\nWhat does this code do?",
+          "options": [
+            { "id": "nno3m4n5o6p7q8r9s0t1u2v", "option": "a", "text": "It converts user to undefined", "correct": false, "selected": false },
+            { "id": "nno4n5o6p7q8r9s0t1u2v3w", "option": "b", "text": "It works because the ! tells TypeScript user is not null", "correct": true, "selected": false },
+            { "id": "nno5o6p7q8r9s0t1u2v3w4x", "option": "c", "text": "It throws an error because user is null", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "nnq5e6f7g8h9i0j1k2l3m4n",
+          "title": "Non-null Assertion Safety",
+          "question": "What is the risk of using the non-null assertion operator?",
+          "options": [
+            { "id": "nno7q8r9s0t1u2v3w4x5y6z", "option": "a", "text": "It changes the value type to string", "correct": false, "selected": false },
+            { "id": "nno8r9s0t1u2v3w4x5y6z7a", "option": "b", "text": "It makes the code slower", "correct": false, "selected": false },
+            { "id": "nno9s0t1u2v3w4x5y6z7a8b", "option": "c", "text": "It can cause runtime errors if the value is actually null or undefined", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        }
+      ],
+      "tasks": [
+      ]
+    },
+    {
+      "id": "p9q8r7s6t5u4v3w2x1y0",
+      "title": "Tuples",
+      "videoID": "22",
+      "section": 3,
+      "done": false,
+      "inProgress": false,
+      "questions": [
+        {
+          "id": "a1b2c3d4e5f6g7h8i9j0",
+          "title": "Tuple vs Array",
+          "question": "What is the main difference between `[string, number]` and `(string | number)[]`?",
+          "options": [
+            { "id": "z9x8c7v6b5n4m3l2k1j", "option": "a", "text": "They are exactly the same", "correct": false, "selected": false },
+            { "id": "p1o2i3u4y5t6r7e8w9q", "option": "b", "text": "Tuple can only hold numbers", "correct": false, "selected": false },
+            { "id": "l0k9j8h7g6f5d4s3a2", "option": "c", "text": "Array is more strict than tuple", "correct": false, "selected": false },
+            { "id": "m2n3b4v5c6x7z8l9k0", "option": "d", "text": "Tuple has fixed length and ordered types, while array does not", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "d"
+        },
+        {
+          "id": "b2c3d4e5f6g7h8i9j0k1",
+          "title": "Basic Tuple",
+          "question": "const status: [string, number] = ['success', 200];",
+          "options": [
+            { "id": "q2w3e4r5t6y7u8i9o0p", "option": "a", "text": "Order of types doesn't matter", "correct": false, "selected": false },
+            { "id": "a1s2d3f4g5h6j7k8l9m", "option": "b", "text": "This is valid", "correct": true, "selected": false },
+            { "id": "z1x2c3v4b5n6m7l8k9j", "option": "c", "text": "Missing third element", "correct": false, "selected": false },
+            { "id": "p3o4i5u6y7t8r9e0w1", "option": "d", "text": "Should be written as (string | number)[]", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "c3d4e5f6g7h8i9j0k1l2",
+          "title": "Tuple Length",
+          "question": "const status: [string, number] = ['success', 200, 123];",
+          "options": [
+            { "id": "l1k2j3h4g5f6d7s8a9", "option": "a", "text": "It automatically removes the extra element", "correct": false, "selected": false },
+            { "id": "m4n5b6v7c8x9z0l1k2", "option": "b", "text": "This is valid", "correct": false, "selected": false },
+            { "id": "q5w6e7r8t9y0u1i2o3", "option": "c", "text": "Only works if the third element is a string", "correct": false, "selected": false },
+            { "id": "a3s4d5f6g7h8j9k0l1", "option": "d", "text": "TypeScript shows an error (too many elements)", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "d"
+        },
+        {
+          "id": "d4e5f6g7h8i9j0k1l2m3",
+          "title": "Optional Tuple Elements",
+          "question": "type APIEndpoint = [string, string, boolean?, number?];",
+          "options": [
+            { "id": "z2x3c4v5b6n7m8l9k0", "option": "a", "text": "All four elements are required", "correct": false, "selected": false },
+            { "id": "p4o5i6u7y8t9r0e1w2", "option": "b", "text": "Only the boolean can be omitted", "correct": false, "selected": false },
+            { "id": "q6w7e8r9t0y1u2i3o4", "option": "c", "text": "The last two elements are optional", "correct": true, "selected": false },
+            { "id": "a5s6d7f8g9h0j1k2l3", "option": "d", "text": "This is not a valid tuple syntax", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "e5f6g7h8i9j0k1l2m3n4",
+          "title": "Tuple Usage",
+          "question": "const endpoint: [string, string, boolean?] = ['/users', 'GET'];",
+          "options": [
+            { "id": "l3k4j5h6g7f8d9s0a1", "option": "a", "text": "Missing required boolean element", "correct": false, "selected": false },
+            { "id": "m6n7b8v9c0x1z2l3k4", "option": "b", "text": "The order of elements is wrong", "correct": false, "selected": false },
+            { "id": "q8w9e0r1t2y3u4i5o6", "option": "c", "text": "Should use an object instead of tuple", "correct": false, "selected": false },
+            { "id": "a7s8d9f0g1h2j3k4l5", "option": "d", "text": "This is valid because the boolean is optional", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "d"
+        },
+        {
+          "id": "f6g7h8i9j0k1l2m3n4o5",
+          "title": "Tuple Push Behavior",
+          "question": "After defining a tuple with exactly 2 elements, what happens if you call .push()?",
+          "options": [
+            { "id": "z4x5c6v7b8n9m0l1k2", "option": "a", "text": "It always throws a type error", "correct": false, "selected": false },
+            { "id": "p5o6i7u8y9t0r1e2w3", "option": "b", "text": "The tuple automatically becomes a regular array", "correct": false, "selected": false },
+            { "id": "q9w0e1r2t3y4u5i6o7", "option": "c", "text": "TypeScript may allow it even though it breaks the tuple length", "correct": true, "selected": false },
+            { "id": "a8s9d0f1g2h3j4k5l6", "option": "d", "text": "push() is not allowed on tuples", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "c"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "t1u2v3w4x5y6z7a8b9c0",
+          "title": "Basic Tuple",
+          "description": "Create a tuple type called %Response% that holds a %string% (status) and a %number% (code). Declare a variable using this tuple.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "type Response = [string, number];\n\nconst apiResponse: Response = ['success', 200];",
+          "done": false
+        },
+        {
+          "id": "d1e2f3g4h5i6j7k8l9m0",
+          "title": "Tuple with Optionals",
+          "description": "Create a tuple type called %Endpoint% with: %path% (string), %method% (string), optional %auth% (boolean), and optional %timeout% (number). Create 3 different valid endpoints.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "type Endpoint = [string, string, boolean?, number?];\n\nconst e1: Endpoint = ['/users', 'GET'];\nconst e2: Endpoint = ['/posts', 'POST', true];\nconst e3: Endpoint = ['/settings', 'PUT', false, 5000];",
+          "done": false
+        },
+        {
+          "id": "n1o2p3q4r5s6t7u8v9w0",
+          "title": "Tuple Limitations",
+          "description": "Create a tuple with 2 elements. Then try to push a third element to it. Observe what happens.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "const coords: [number, number] = [10, 20];\ncoords.push(30); // Allowed by TypeScript (but breaks tuple strictness)",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "en1u2m3e4r5a6t7o8r9s0p",
+      "title": "Enum",
+      "videoID": "30",
+      "section": 3,
+      "done": false,
+      "milestone": false,
+      "inProgress": false,
+      "questions": [
+        {
+          "id": "enq1a2b3c4d5e6f7g8h9i0j",
+          "title": "What is Enum",
+          "question": "What is an enum in TypeScript?",
+          "options": [
+            { "id": "eno1a2b3c4d5e6f7g8h9i0j", "option": "a", "text": "A way to define a set of named constants", "correct": true, "selected": false },
+            { "id": "eno2b3c4d5e6f7g8h9i0j1k", "option": "b", "text": "A way to create a new variable", "correct": false, "selected": false },
+            { "id": "eno3c4d5e6f7g8h9i0j1k2l", "option": "c", "text": "A way to create a function", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "enq2b3c4d5e6f7g8h9i0j1k",
+          "title": "Enum Syntax",
+          "question": "Which of the following correctly defines an enum?",
+          "options": [
+            { "id": "eno5e6f7g8h9i0j1k2l3m4n", "option": "a", "text": "enum Status { PENDING, APPROVED, REJECTED }", "correct": true, "selected": false },
+            { "id": "eno6f7g8h9i0j1k2l3m4n5o", "option": "b", "text": "type Status = { PENDING, APPROVED, REJECTED }", "correct": false, "selected": false },
+            { "id": "eno7g8h9i0j1k2l3m4n5o6p", "option": "c", "text": "const Status = { PENDING, APPROVED, REJECTED }", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "enq3c4d5e6f7g8h9i0j1k2l",
+          "title": "Using Enum Values",
+          "question": "enum Color { RED, GREEN, BLUE }\nlet myColor: Color = Color.RED;\nWhat is the value of myColor?",
+          "options": [
+            { "id": "eno9i0j1k2l3m4n5o6p7q8r", "option": "a", "text": "'RED'", "correct": false, "selected": false },
+            { "id": "eno0j1k2l3m4n5o6p7q8r9s", "option": "b", "text": "0", "correct": true, "selected": false },
+            { "id": "eno1k2l3m4n5o6p7q8r9s0t", "option": "c", "text": "undefined", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "enq4d5e6f7g8h9i0j1k2l3m",
+          "title": "Enum with Custom Values",
+          "question": "enum Status {\n  PENDING = 'PENDING',\n  APPROVED = 'APPROVED',\n  REJECTED = 'REJECTED'\n}\nWhat type of values does this enum use?",
+          "options": [
+            { "id": "eno3m4n5o6p7q8r9s0t1u2v", "option": "a", "text": "Number values", "correct": false, "selected": false },
+            { "id": "eno4n5o6p7q8r9s0t1u2v3w", "option": "b", "text": "String values", "correct": true, "selected": false },
+            { "id": "eno5o6p7q8r9s0t1u2v3w4x", "option": "c", "text": "Boolean values", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "enq5e6f7g8h9i0j1k2l3m4n",
+          "title": "Enum with Numeric Values",
+          "question": "enum Direction {\n  UP = 1,\n  DOWN = 2,\n  LEFT = 3\n}\nWhat is the value of Direction.LEFT?",
+          "options": [
+            { "id": "eno7q8r9s0t1u2v3w4x5y6z", "option": "a", "text": "'LEFT'", "correct": false, "selected": false },
+            { "id": "eno8r9s0t1u2v3w4x5y6z7a", "option": "b", "text": "3", "correct": true, "selected": false },
+            { "id": "eno9s0t1u2v3w4x5y6z7a8b", "option": "c", "text": "2", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "enq6f7g8h9i0j1k2l3m4n5o",
+          "title": "Enum Benefits",
+          "question": "What is the main benefit of using enums?",
+          "options": [
+            { "id": "eno1u2v3w4x5y6z7a8b9c0d", "option": "a", "text": "They make code more readable with named constants", "correct": true, "selected": false },
+            { "id": "eno2v3w4x5y6z7a8b9c0d1e", "option": "b", "text": "They make code run faster", "correct": false, "selected": false },
+            { "id": "eno3w4x5y6z7a8b9c0d1e2f", "option": "c", "text": "They automatically convert types", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "enq7g8h9i0j1k2l3m4n5o6p",
+          "title": "Enum in Functions",
+          "question": "enum Role { USER, ADMIN, GUEST }\nfunction setRole(role: Role) {\n  console.log(role);\n}\nsetRole(Role.ADMIN);\nWhat is logged to the console?",
+          "options": [
+            { "id": "eno5y6z7a8b9c0d1e2f3g4h", "option": "a", "text": "'ADMIN'", "correct": false, "selected": false },
+            { "id": "eno6z7a8b9c0d1e2f3g4h5i", "option": "b", "text": "1", "correct": true, "selected": false },
+            { "id": "eno7a8b9c0d1e2f3g4h5i6j", "option": "c", "text": "undefined", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "enq9i0j1k2l3m4n5o6p7q8r",
+          "title": "Enum Auto-increment",
+          "question": "enum Status {\n  PENDING = 1,\n  APPROVED,\n  REJECTED\n}\nWhat is the value of Status.REJECTED?",
+          "options": [
+            { "id": "eno3g4h5i6j7k8l9m0n1o2p", "option": "a", "text": "1", "correct": false, "selected": false },
+            { "id": "eno4h5i6j7k8l9m0n1o2p3q", "option": "b", "text": "2", "correct": false, "selected": false },
+            { "id": "eno5i6j7k8l9m0n1o2p3q4r", "option": "c", "text": "3", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "enq0j1k2l3m4n5o6p7q8r9s",
+          "title": "Enum vs Union Type",
+          "question": "What is the difference between an enum and a union type?",
+          "options": [
+            { "id": "eno7k8l9m0n1o2p3q4r5s6t", "option": "a", "text": "Enums create named constants, union types combine types", "correct": true, "selected": false },
+            { "id": "eno8l9m0n1o2p3q4r5s6t7u", "option": "b", "text": "They are exactly the same", "correct": false, "selected": false },
+            { "id": "eno9m0n1o2p3q4r5s6t7u8v", "option": "c", "text": "Enums only work with numbers", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        }
+      ],
+      "tasks": [
+      ]
+    },
+    {
+      "id": "42234i7solwwyst5v8cay",
+      "type": "title",
+      "title": "Section 4: ",
+      "videoID": "414234",
+      "questionsTotal": 0,
+      "tasksTotal": 0,
+      "totalCorrect": 0,
+      "totalFalse": 0,
+      "totalTasksDone": 0,
+      "sectionExercisesIndex": "13-24",
+      "questions": [
+      ],
+      "tasks": [
+      ]
+    },
   ]
 }
