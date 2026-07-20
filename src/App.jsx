@@ -13,7 +13,7 @@ function App() {
 
   const [courseData, setCourseData] = useState(getDB())
   const [selectedExercise, setSelectedExercise] = useState(null)
-  const [stats, setStats] = useState(getStats().appStats)
+  const [stats, setStats] = useState(getStats(getDB()).appStats)
 
 
 
@@ -56,12 +56,12 @@ function App() {
       }
     })
     
-    setCourseData(getStats().allData)
+    setCourseData(getStats(updatedData).allData)
     
     // save on the server
     saveDB(updatedData)
 
-    setStats(getStats().appStats)
+    setStats(getStats(updatedData).appStats)
 
   }
 
@@ -101,19 +101,31 @@ function App() {
     
     const resetData = {
       ...courseData,
-      allExercises: courseData.allExercises.map(exercise => ({
-        ...exercise,
-        done: false,
-        inProgress: false,
-        questions: exercise.questions.map(q => ({
-          ...q,
-          options: q.options.map(opt => ({
-            ...opt,
-            selected: false
-          }))
-        })),
-        tasks: exercise.tasks.map(task => ({...task, done: false}))
-      }))
+      allExercises: courseData.allExercises.map(exercise => {
+        if(exercise.type === 'title') {
+          return {...exercise,
+            questionsTotal: 0,
+            tasksTotal: 0,
+            totalCorrect: 0,
+            totalFalse: 0,
+            totalTasksDone: 0
+          }
+        }
+
+        return ({
+          ...exercise,
+          done: false,
+          inProgress: false,
+          questions: exercise.questions.map(q => ({
+            ...q,
+            options: q.options.map(opt => ({
+              ...opt,
+              selected: false
+            }))
+          })),
+          tasks: exercise.tasks.map(task => ({...task, done: false}))
+        })
+      })
     };
     
     // save on the server
@@ -140,13 +152,13 @@ function App() {
       })
     }
    
-    setCourseData(courseDataWithMarkedTask)
+    setCourseData(getStats(courseDataWithMarkedTask).allData)
     setSelectedExercise(updatedSelectedExercise);
 
     // save on the server
     saveDB(courseDataWithMarkedTask)
 
-    setStats(getStats().appStats)
+    setStats(getStats(courseDataWithMarkedTask).appStats)
   }
 
   const handleUnmarkAsDone = (title, selectedExercise) => {
@@ -166,13 +178,13 @@ function App() {
         return markMenuItemStatsColor(exercise)
       })
     }
-    setCourseData(courseDataWithMarkedTask)
+    setCourseData(getStats(courseDataWithMarkedTask).allData)
     setSelectedExercise(updatedSelectedExercise);
 
     // save on the server
     saveDB(courseDataWithMarkedTask)
 
-    setStats(getStats().appStats)
+    setStats(getStats(courseDataWithMarkedTask).appStats)
   }
 
   const handleReset = () => {
@@ -201,13 +213,13 @@ function App() {
       })
     }
 
-    setCourseData(newData)
+    setCourseData(getStats(newData).allData)
     setSelectedExercise(resetedData);
 
     // // save on the server
     saveDB(newData)
 
-    setStats(getStats().appStats)
+    setStats(getStats(newData).appStats)
   }
 
   return (

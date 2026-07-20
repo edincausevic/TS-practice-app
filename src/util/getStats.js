@@ -1,10 +1,9 @@
-import { getDB } from "../db/init"
 
 
 
 
-function getStats() {
-  const allData = getDB()
+function getStats(allData) {
+  
   
   const questionsTotal = allData.allExercises.reduce((n, e) => { return n + e.questions.length}, 0)
   const tasksTotal = allData.allExercises.reduce((n, e) => { return n + e.tasks.length}, 0)

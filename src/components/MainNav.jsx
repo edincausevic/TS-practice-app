@@ -59,7 +59,7 @@ const MainNav = ({displayExercise, data}) => {
                         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                         <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
                         <line x1="12" y1="17" x2="12.01" y2="17"></line>
-                      </svg>{console.log(listItem)}
+                      </svg>
                       <strong> {listItem.totalCorrect || 0} / </strong>
                       <strong style={{color: '#b91c1c'}}>{listItem.totalFalse || 0} </strong>
                       <strong>/ 112</strong>
@@ -89,7 +89,7 @@ const MainNav = ({displayExercise, data}) => {
                         <line x1="9" y1="16" x2="10" y2="17"></line>
                         <line x1="15" y1="16" x2="15.01" y2="16"></line>
                       </svg>
-                      <strong> 0 </strong>
+                      <strong> {listItem.totalTasksDone || 0} </strong>
                       <strong>/ 23</strong>
                     </div>
 

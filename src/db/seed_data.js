@@ -1,6 +1,6 @@
 export const seedData = {
   id: '144_TS',
-  version: '0.1',
+  version: '0.2',
   allExercises: [
     {
       "id": "fx8brk4iqkqx8hbp5l8b",
