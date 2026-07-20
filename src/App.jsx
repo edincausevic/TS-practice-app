@@ -11,9 +11,9 @@ import getStats from "./util/getStats"
 function App() {
   initDB()
 
-  const [selectedExercise, setSelectedExercise] = useState(null)
   const [courseData, setCourseData] = useState(getDB())
-  const [stats, setStats] = useState(getStats())
+  const [selectedExercise, setSelectedExercise] = useState(null)
+  const [stats, setStats] = useState(getStats().appStats)
 
 
 
@@ -56,12 +56,12 @@ function App() {
       }
     })
     
-    setCourseData(updatedData)
+    setCourseData(getStats().allData)
     
     // save on the server
     saveDB(updatedData)
 
-    setStats(getStats())
+    setStats(getStats().appStats)
 
   }
 
@@ -146,7 +146,7 @@ function App() {
     // save on the server
     saveDB(courseDataWithMarkedTask)
 
-    setStats(getStats())
+    setStats(getStats().appStats)
   }
 
   const handleUnmarkAsDone = (title, selectedExercise) => {
@@ -172,7 +172,7 @@ function App() {
     // save on the server
     saveDB(courseDataWithMarkedTask)
 
-    setStats(getStats())
+    setStats(getStats().appStats)
   }
 
   const handleReset = () => {
@@ -207,7 +207,7 @@ function App() {
     // // save on the server
     saveDB(newData)
 
-    setStats(getStats())
+    setStats(getStats().appStats)
   }
 
   return (

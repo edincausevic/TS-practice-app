@@ -1,11 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import UdemyLogo from "../assets/udemy_logo.png"
-import { getDB } from "../db/init";
 
 const MainNav = ({displayExercise, data}) => {
   const [activeLinkId, setActiveLinkId] = useState()
   let videoId = 7
-
 
 
   return (
@@ -61,9 +59,9 @@ const MainNav = ({displayExercise, data}) => {
                         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                         <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
                         <line x1="12" y1="17" x2="12.01" y2="17"></line>
-                      </svg>
-                      <strong> 0 / </strong>
-                      <strong style={{color: '#b91c1c'}}>0 </strong>
+                      </svg>{console.log(listItem)}
+                      <strong> {listItem.totalCorrect || 0} / </strong>
+                      <strong style={{color: '#b91c1c'}}>{listItem.totalFalse || 0} </strong>
                       <strong>/ 112</strong>
                     </div>
 

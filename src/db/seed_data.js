@@ -1,6 +1,6 @@
 export const seedData = {
   id: '144_TS',
-  version: '0.5',
+  version: '0.1',
   allExercises: [
     {
       "id": "fx8brk4iqkqx8hbp5l8b",
@@ -12,6 +12,7 @@ export const seedData = {
       "totalCorrect": 0,
       "totalFalse": 0,
       "totalTasksDone": 0,
+      "section": 2,
       "sectionExercisesIndex": "1-12",
       "questions": [
       ],
@@ -1723,6 +1724,7 @@ export const seedData = {
       "totalCorrect": 0,
       "totalFalse": 0,
       "totalTasksDone": 0,
+      "section": 3,
       "sectionExercisesIndex": "13-24",
       "questions": [
       ],
