@@ -15,8 +15,6 @@ function App() {
   const [selectedExercise, setSelectedExercise] = useState(null)
   const [stats, setStats] = useState(getStats(getDB()).appStats)
 
-
-
   const displayQuestions = (exerciseData) => {
     setSelectedExercise(exerciseData)
   }
@@ -222,9 +220,53 @@ function App() {
     setStats(getStats(newData).appStats)
   }
 
+  const resetSection = (sectionNum) => {
+  
+      const data = getDB()
+     
+      const newData = data.allExercises.map(exercise => {
+    
+  
+        if(exercise.section === sectionNum) {
+          console.log(exercise)
+  
+          if(exercise.type === 'title') {
+            return {...exercise, 
+              questionsTotal: 0,
+              tasksTotal: 0,
+              totalCorrect: 0,
+              totalFalse: 0,
+              totalTasksDone: 0}
+          }
+  
+          return ({
+            ...exercise,
+            done: false,
+            inProgress: false,
+            questions: exercise.questions.map(q => ({
+              ...q,
+              options: q.options.map(opt => ({
+                ...opt,
+                selected: false
+              }))
+            })),
+            tasks: exercise.tasks.map(task => ({...task, done: false}))
+          })
+        }
+      })
+  
+      console.log('@', newData)
+
+      // save on the server
+      // saveDB(newData)
+
+      // window.location.reload()
+    }
+  
+
   return (
     <>
-      <MainNav data={courseData.allExercises} displayExercise={displayQuestions} />
+      <MainNav data={courseData.allExercises} displayExercise={displayQuestions} resetSection={resetSection}/>
 
       <div className="main-panel">
         <Header 

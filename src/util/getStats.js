@@ -25,6 +25,13 @@ function getStats(allData) {
       totalCorrect: 0,
       totalFalse: 0,
       totalTasksDone: 0
+    },
+    '4': {
+      questionsTotal: 0,
+      tasksTotal: 0,
+      totalCorrect: 0,
+      totalFalse: 0,
+      totalTasksDone: 0
     }
   }
 

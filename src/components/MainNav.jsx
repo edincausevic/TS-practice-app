@@ -1,11 +1,12 @@
 import { useState } from "react";
 import UdemyLogo from "../assets/udemy_logo.png"
+import { getDB, saveDB } from "../db/init";
 
-const MainNav = ({displayExercise, data}) => {
+const MainNav = ({displayExercise, data, resetSection}) => {
   const [activeLinkId, setActiveLinkId] = useState()
   let videoId = 7
 
-
+  
   return (
     <nav className="left-menu">
         <div className="menu-header">
@@ -93,7 +94,7 @@ const MainNav = ({displayExercise, data}) => {
                       <strong>/ 23</strong>
                     </div>
 
-                    <button style={{marginLeft: '35px', color: '#b91c1c', cursor: 'pointer', fontSize: '16px'}}><span>↻</span> Reset</button>
+                    <button onClick={() => resetSection(listItem.section)} style={{marginLeft: '35px', color: '#b91c1c', cursor: 'pointer', fontSize: '16px'}}><span>↻</span> Reset</button>
                   </div>
                 </div>
               )

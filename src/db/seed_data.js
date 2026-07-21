@@ -3127,11 +3127,433 @@ export const seedData = {
       "totalCorrect": 0,
       "totalFalse": 0,
       "totalTasksDone": 0,
+      "section": 4,
       "sectionExercisesIndex": "13-24",
       "questions": [
       ],
       "tasks": [
       ]
     },
+    {
+      "id": "in1t2e3r4f5a6c7e8s9e0c",
+      "title": "Interfaces",
+      "videoID": "32",
+      "section": 4,
+      "done": false,
+      "milestone": false,
+      "inProgress": false,
+      "questions": [
+        {
+          "id": "ifq1a2b3c4d5e6f7g8h9i0j",
+          "title": "Interface Syntax",
+          "question": "Which of the following correctly defines an interface?",
+          "options": [
+            { "id": "ifo1a2b3c4d5e6f7g8h9i0j", "option": "a", "text": "interface Person { name: string; age: number; }", "correct": true, "selected": false },
+            { "id": "ifo2b3c4d5e6f7g8h9i0j1k", "option": "b", "text": "type Person = { name: string; age: number; }", "correct": false, "selected": false },
+            { "id": "ifo3c4d5e6f7g8h9i0j1k2l", "option": "c", "text": "interface Person = { name: string; age: number; }", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "ifq2b3c4d5e6f7g8h9i0j1k",
+          "title": "Method in Interface",
+          "question": "interface Person {\n  name: string;\n  greet(): void;\n}\nWhat does this interface define?",
+          "options": [
+            { "id": "ifo6f7g8h9i0j1k2l3m4n5o", "option": "a", "text": "An object with only a name property", "correct": false, "selected": false },
+            { "id": "ifo7g8h9i0j1k2l3m4n5o6p", "option": "b", "text": "A function that returns void", "correct": false, "selected": false },
+            { "id": "ifo5e6f7g8h9i0j1k2l3m4n", "option": "c", "text": "An object with a name property and a greet method", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "ifq3c4d5e6f7g8h9i0j1k2l",
+          "title": "Interface Method Syntax",
+          "question": "interface User {\n  name: string;\n  printName(): void;\n  logName(): void;\n}\nWhich is the correct way to implement this interface?",
+          "options": [
+            { "id": "ifo9i0j1k2l3m4n5o6p7q8r", "option": "a", "text": "{ name: 'Mike', printName: () => {}, logName() {} }", "correct": true, "selected": false },
+            { "id": "ifo0j1k2l3m4n5o6p7q8r9s", "option": "b", "text": "{ name: 'Mike', printName: {}, logName: {} }", "correct": false, "selected": false },
+            { "id": "ifo1k2l3m4n5o6p7q8r9s0t", "option": "c", "text": "{ name: 'Mike', printName: '', logName: '' }", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "ifq4d5e6f7g8h9i0j1k2l3m",
+          "title": "Interface with Array",
+          "question": "interface Product {\n  id: number;\n  name: string;\n}\nlet products: Product[] = [{ id: 1, name: 'Laptop' }];\nWhat does Product[] mean?",
+          "options": [
+            { "id": "ifo3m4n5o6p7q8r9s0t1u2v", "option": "a", "text": "An array of Product objects", "correct": true, "selected": false },
+            { "id": "ifo4n5o6p7q8r9s0t1u2v3w", "option": "b", "text": "A single Product object", "correct": false, "selected": false },
+            { "id": "ifo5o6p7q8r9s0t1u2v3w4x", "option": "c", "text": "A string array", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "ifq5e6f7g8h9i0j1k2l3m4n",
+          "title": "Extending Interfaces",
+          "question": "interface Person {\n  name: string;\n}\ninterface Employee extends Person {\n  id: number;\n}\nWhat properties does Employee have?",
+          "options": [
+            { "id": "ifo7q8r9s0t1u2v3w4x5y6z", "option": "a", "text": "Only name", "correct": false, "selected": false },
+            { "id": "ifo8r9s0t1u2v3w4x5y6z7a", "option": "b", "text": "Both name and id", "correct": true, "selected": false },
+            { "id": "ifo9s0t1u2v3w4x5y6z7a8b", "option": "c", "text": "Only id", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "ifq6f7g8h9i0j1k2l3m4n5o",
+          "title": "Multiple Inheritance",
+          "question": "interface A { a: string; }\ninterface B { b: number; }\ninterface C extends A, B { c: boolean; }\nWhat properties does C have?",
+          "options": [
+            { "id": "ifo1u2v3w4x5y6z7a8b9c0d", "option": "a", "text": "Only c", "correct": false, "selected": false },
+            { "id": "ifo2v3w4x5y6z7a8b9c0d1e", "option": "b", "text": "a, b, and c", "correct": true, "selected": false },
+            { "id": "ifo3w4x5y6z7a8b9c0d1e2f", "option": "c", "text": "Only a and b", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "ifq8h9i0j1k2l3m4n5o6p7q",
+          "title": "Function Type Interface",
+          "question": "interface MathOperation {\n  (a: number, b: number): number;\n}\nWhat does this interface define?",
+          "options": [
+            { "id": "ifo0d1e2f3g4h5i6j7k8l9m", "option": "a", "text": "An object with two number properties", "correct": false, "selected": false },
+            { "id": "ifo1e2f3g4h5i6j7k8l9m0n", "option": "b", "text": "A function that returns void", "correct": false, "selected": false },
+            { "id": "ifo9c0d1e2f3g4h5i6j7k8l", "option": "c", "text": "A function type that takes two numbers and returns a number", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "ifq9i0j1k2l3m4n5o6p7q8r",
+          "title": "Interface Inheritance",
+          "question": "interface Animal {\n  name: string;\n}\ninterface Dog extends Animal {\n  breed: string;\n}\nconst dog: Dog = { name: 'Rex', breed: 'Labrador' };\nIs this valid?",
+          "options": [
+            { "id": "ifo3g4h5i6j7k8l9m0n1o2p", "option": "a", "text": "Yes, because Dog extends Animal and has all required properties", "correct": true, "selected": false },
+            { "id": "ifo4h5i6j7k8l9m0n1o2p3q", "option": "b", "text": "No, because Dog is missing properties", "correct": false, "selected": false },
+            { "id": "ifo5i6j7k8l9m0n1o2p3q4r", "option": "c", "text": "Only if the name is a string", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "ifq0j1k2l3m4n5o6p7q8r9s",
+          "title": "Interface Implementation",
+          "question": "interface Task {\n  id: number;\n  title: string;\n}\nlet tasks: Task[] = [{ id: 1, title: 'A' }, { id: 2, title: 'B' }];\nIs this code valid?",
+          "options": [
+            { "id": "ifo8l9m0n1o2p3q4r5s6t7u", "option": "a", "text": "No, because id should be a string", "correct": false, "selected": false },
+            { "id": "ifo9m0n1o2p3q4r5s6t7u8v", "option": "b", "text": "No, because title is missing", "correct": false, "selected": false },
+            { "id": "ifo7k8l9m0n1o2p3q4r5s6t", "option": "c", "text": "Yes, both objects match the Task interface", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "ift1a2b3c4d5e6f7g8h9i0j",
+          "title": "Create an Interface for Book",
+          "description": "Create an interface called %Book% with properties: %title% (string), %author% (string), %pages% (number). Then create a book object using this interface.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "interface Book {\n  title: string;\n  author: string;\n  pages: number;\n}\nconst book: Book = {\n  title: 'TypeScript Guide',\n  author: 'Mike',\n  pages: 200\n};",
+          "done": false
+        },
+        {
+          "id": "ift2b3c4d5e6f7g8h9i0j1k",
+          "title": "Create an Interface with Method",
+          "description": "Create an interface called %Calculator% with a method %calculate% that takes two numbers and returns a number. Then create an object that implements this interface.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "interface Calculator {\n  calculate(a: number, b: number): number;\n}\nconst add: Calculator = {\n  calculate: (a, b) => a + b\n};",
+          "done": false
+        },
+        {
+          "id": "ift3c4d5e6f7g8h9i0j1k2l",
+          "title": "Extend an Interface",
+          "description": "Create an interface %Vehicle% with %brand% (string) and %year% (number). Then create an interface %Car% that extends %Vehicle% and adds %doors% (number). Create a car object.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "interface Vehicle {\n  brand: string;\n  year: number;\n}\ninterface Car extends Vehicle {\n  doors: number;\n}\nconst myCar: Car = {\n  brand: 'Toyota',\n  year: 2022,\n  doors: 4\n};",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "iv1t2y3p4e5v6s7t8y9p0e",
+      "title": "Interface vs Type",
+      "videoID": "33",
+      "section": 4,
+      "done": false,
+      "milestone": false,
+      "inProgress": false,
+      "questions": [
+        {
+          "id": "ivq1a2b3c4d5e6f7g8h9i0j",
+          "title": "Interface vs Type - Syntax",
+          "question": "Which of the following correctly defines an interface?",
+          "options": [
+            { "id": "ivo1a2b3c4d5e6f7g8h9i0j", "option": "a", "text": "interface User { name: string; age: number; }", "correct": true, "selected": false },
+            { "id": "ivo2b3c4d5e6f7g8h9i0j1k", "option": "b", "text": "type User { name: string; age: number; }", "correct": false, "selected": false },
+            { "id": "ivo3c4d5e6f7g8h9i0j1k2l", "option": "c", "text": "interface User = { name: string; age: number; }", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "ivq2b3c4d5e6f7g8h9i0j1k",
+          "title": "Type for Union",
+          "question": "Which of the following can define a union type?",
+          "options": [
+            { "id": "ivo5e6f7g8h9i0j1k2l3m4n", "option": "a", "text": "Only type can define union types", "correct": false, "selected": false },
+            { "id": "ivo6f7g8h9i0j1k2l3m4n5o", "option": "b", "text": "Only interface can define union types", "correct": false, "selected": false },
+            { "id": "ivo7g8h9i0j1k2l3m4n5o6p", "option": "c", "text": "Type can define union types, interface cannot", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "ivq3c4d5e6f7g8h9i0j1k2l",
+          "title": "Type for Tuple",
+          "question": "Which of the following can define a tuple?",
+          "options": [
+            { "id": "ivo9i0j1k2l3m4n5o6p7q8r", "option": "a", "text": "Only type can define tuples", "correct": false, "selected": false },
+            { "id": "ivo0j1k2l3m4n5o6p7q8r9s", "option": "b", "text": "Only interface can define tuples", "correct": false, "selected": false },
+            { "id": "ivo1k2l3m4n5o6p7q8r9s0t", "option": "c", "text": "Type can define tuples, interface cannot", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "ivq4d5e6f7g8h9i0j1k2l3m",
+          "title": "Interface Merging",
+          "question": "interface Animal {\n  name: string;\n}\ninterface Animal {\n  age: number;\n}\nWhat happens to the Animal interface?",
+          "options": [
+            { "id": "ivo3m4n5o6p7q8r9s0t1u2v", "option": "a", "text": "It merges and has both name and age", "correct": true, "selected": false },
+            { "id": "ivo4n5o6p7q8r9s0t1u2v3w", "option": "b", "text": "It throws an error because duplicates are not allowed", "correct": false, "selected": false },
+            { "id": "ivo5o6p7q8r9s0t1u2v3w4x", "option": "c", "text": "It keeps only the first one", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "ivq5e6f7g8h9i0j1k2l3m4n",
+          "title": "Type Duplicate Error",
+          "question": "type Animal = { name: string; };\ntype Animal = { age: number; };\nWhat happens when you run this code?",
+          "options": [
+            { "id": "ivo7q8r9s0t1u2v3w4x5y6z", "option": "a", "text": "TypeScript shows an error for duplicate identifier", "correct": true, "selected": false },
+            { "id": "ivo8r9s0t1u2v3w4x5y6z7a", "option": "b", "text": "It merges and has both name and age", "correct": false, "selected": false },
+            { "id": "ivo9s0t1u2v3w4x5y6z7a8b", "option": "c", "text": "It keeps only the second one", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "ivq6f7g8h9i0j1k2l3m4n5o",
+          "title": "Interface Extension",
+          "question": "interface A { a: string; }\ninterface C extends A { b: string; }\nconst obj: C = { a: 'hello', b: 'world' };\nIs this valid?",
+          "options": [
+            { "id": "ivo1u2v3w4x5y6z7a8b9c0d", "option": "a", "text": "Yes, C extends A and has all required properties", "correct": true, "selected": false },
+            { "id": "ivo2v3w4x5y6z7a8b9c0d1e", "option": "b", "text": "No, because C is missing properties", "correct": false, "selected": false },
+            { "id": "ivo3w4x5y6z7a8b9c0d1e2f", "option": "c", "text": "Only if a and b are strings", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "ivq7g8h9i0j1k2l3m4n5o6p",
+          "title": "Interface vs Type - Incompatible Properties",
+          "question": "type C = { x: string } & { x: number };\nWhat happens to the x property?",
+          "options": [
+            { "id": "ivo5y6z7a8b9c0d1e2f3g4h", "option": "a", "text": "It becomes string", "correct": false, "selected": false },
+            { "id": "ivo6z7a8b9c0d1e2f3g4h5i", "option": "b", "text": "It becomes never (impossible type)", "correct": true, "selected": false },
+            { "id": "ivo7a8b9c0d1e2f3g4h5i6j", "option": "c", "text": "It becomes number", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "ivq8h9i0j1k2l3m4n5o6p7q",
+          "title": "Interface vs Type - Extension Error",
+          "question": "interface D extends { x: string }, { x: number } { }\nWhat happens when you run this code?",
+          "options": [
+            { "id": "ivo9c0d1e2f3g4h5i6j7k8l", "option": "a", "text": "It merges and x becomes string | number", "correct": false, "selected": false },
+            { "id": "ivo0d1e2f3g4h5i6j7k8l9m", "option": "b", "text": "TypeScript shows a compiler error immediately", "correct": true, "selected": false },
+            { "id": "ivo1e2f3g4h5i6j7k8l9m0n", "option": "c", "text": "It works and x becomes never", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "ivq9i0j1k2l3m4n5o6p7q8r",
+          "title": "What Interfaces Can Do",
+          "question": "Which of the following can interfaces do that types cannot?",
+          "options": [
+            { "id": "ivo3g4h5i6j7k8l9m0n1o2p", "option": "a", "text": "Create union types", "correct": false, "selected": false },
+            { "id": "ivo4h5i6j7k8l9m0n1o2p3q", "option": "b", "text": "Automatically merge declarations", "correct": true, "selected": false },
+            { "id": "ivo5i6j7k8l9m0n1o2p3q4r", "option": "c", "text": "Create tuple types", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "ivq0j1k2l3m4n5o6p7q8r9s",
+          "title": "What Types Can Do",
+          "question": "Which of the following can types do that interfaces cannot?",
+          "options": [
+            { "id": "ivo7k8l9m0n1o2p3q4r5s6t", "option": "a", "text": "Create unions and tuples", "correct": true, "selected": false },
+            { "id": "ivo8l9m0n1o2p3q4r5s6t7u", "option": "b", "text": "Extend other interfaces", "correct": false, "selected": false },
+            { "id": "ivo9m0n1o2p3q4r5s6t7u8v", "option": "c", "text": "Automatically merge declarations", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "ivt1a2b3c4d5e6f7g8h9i0j",
+          "title": "Create a Status Type",
+          "description": "Create a variable called %taskStatus%. It should only allow three possible values: %'pending'%, %'approved'%, or %'rejected'%. Figure out how to restrict it to only these three values.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "type Status = 'pending' | 'approved' | 'rejected';\nconst taskStatus: Status = 'pending';",
+          "done": false
+        },
+        {
+          "id": "ivt2b3c4d5e6f7g8h9i0j1k",
+          "title": "Create a Product Interface with Merging",
+          "description": "Create a variable called %product%. It should have %id% (number), %name% (string), and %price% (number). First, declare an interface with %id% and %name%. Then declare the same interface again with %price% to demonstrate interface merging. Finally, create the product object.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "interface Product {\n  id: number;\n  name: string;\n}\ninterface Product {\n  price: number;\n}\nconst product: Product = {\n  id: 1,\n  name: 'Laptop',\n  price: 999\n};",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "ty1p2e3o4f5t6y7p8e9o0f",
+      "title": "typeof Operator",
+      "videoID": "34",
+      "section": 4,
+      "done": false,
+      "milestone": false,
+      "inProgress": false,
+      "questions": [
+        {
+          "id": "tyq1a2b3c4d5e6f7g8h9i0j",
+          "title": "typeof with Primitives",
+          "question": "const name = 'Mike';\ntype NameType = typeof name;\nWhat type does NameType represent?",
+          "options": [
+            { "id": "tyo2b3c4d5e6f7g8h9i0j1k", "option": "a", "text": "'Mike'", "correct": false, "selected": false },
+            { "id": "tyo3c4d5e6f7g8h9i0j1k2l", "option": "b", "text": "any", "correct": false, "selected": false },
+            { "id": "tyo1a2b3c4d5e6f7g8h9i0j", "option": "c", "text": "string", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "tyq2b3c4d5e6f7g8h9i0j1k",
+          "title": "typeof with Objects",
+          "question": "const user = { name: 'Mike', age: 23 };\ntype UserType = typeof user;\nWhat type does UserType represent?",
+          "options": [
+            { "id": "tyo5e6f7g8h9i0j1k2l3m4n", "option": "a", "text": "{ name: string; age: number; }", "correct": true, "selected": false },
+            { "id": "tyo6f7g8h9i0j1k2l3m4n5o", "option": "b", "text": "object", "correct": false, "selected": false },
+            { "id": "tyo7g8h9i0j1k2l3m4n5o6p", "option": "c", "text": "any", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "tyq3c4d5e6f7g8h9i0j1k2l",
+          "title": "typeof with Arrays",
+          "question": "const numbers = [1, 2, 3, 4];\ntype NumbersType = typeof numbers;\nWhat type does NumbersType represent?",
+          "options": [
+            { "id": "tyo9i0j1k2l3m4n5o6p7q8r", "option": "a", "text": "number[]", "correct": true, "selected": false },
+            { "id": "tyo0j1k2l3m4n5o6p7q8r9s", "option": "b", "text": "any[]", "correct": false, "selected": false },
+            { "id": "tyo1k2l3m4n5o6p7q8r9s0t", "option": "c", "text": "Array", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "tyq4d5e6f7g8h9i0j1k2l3m",
+          "title": "typeof with Functions",
+          "question": "function greet(name: string): string {\n  return 'Hello ' + name;\n}\ntype GreetType = typeof greet;\nWhat type does GreetType represent?",
+          "options": [
+            { "id": "tyo4n5o6p7q8r9s0t1u2v3w", "option": "a", "text": "Function", "correct": false, "selected": false },
+            { "id": "tyo5o6p7q8r9s0t1u2v3w4x", "option": "b", "text": "any", "correct": false, "selected": false },
+            { "id": "tyo3m4n5o6p7q8r9s0t1u2v", "option": "c", "text": "(name: string) => string", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "tyq5e6f7g8h9i0j1k2l3m4n",
+          "title": "typeof for Reusing Types",
+          "question": "const config = { apiUrl: 'https://api.com', timeout: 5000 };\ntype Config = typeof config;\nconst newConfig: Config = { apiUrl: 'https://newapi.com', timeout: 3000 };\nIs this valid?",
+          "options": [
+            { "id": "tyo7q8r9s0t1u2v3w4x5y6z", "option": "a", "text": "Yes, Config matches the shape of config", "correct": true, "selected": false },
+            { "id": "tyo8r9s0t1u2v3w4x5y6z7a", "option": "b", "text": "No, because Config is not a valid type", "correct": false, "selected": false },
+            { "id": "tyo9s0t1u2v3w4x5y6z7a8b", "option": "c", "text": "Only if the values are the same", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "tyq6f7g8h9i0j1k2l3m4n5o",
+          "title": "typeof with Nested Objects",
+          "question": "const data = { user: { name: 'Mike', age: 23 }, isActive: true };\ntype DataType = typeof data;\nWhat is the type of DataType.user?",
+          "options": [
+            { "id": "tyo1u2v3w4x5y6z7a8b9c0d", "option": "a", "text": "{ name: string; age: number; }", "correct": true, "selected": false },
+            { "id": "tyo2v3w4x5y6z7a8b9c0d1e", "option": "b", "text": "any", "correct": false, "selected": false },
+            { "id": "tyo3w4x5y6z7a8b9c0d1e2f", "option": "c", "text": "object", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "tyq7g8h9i0j1k2l3m4n5o6p",
+          "title": "typeof with Literal Types",
+          "question": "const status = 'pending';\ntype StatusType = typeof status;\nWhat type does StatusType represent?",
+          "options": [
+            { "id": "tyo5y6z7a8b9c0d1e2f3g4h", "option": "a", "text": "string", "correct": false, "selected": false },
+            { "id": "tyo6z7a8b9c0d1e2f3g4h5i", "option": "b", "text": "'pending'", "correct": true, "selected": false },
+            { "id": "tyo7a8b9c0d1e2f3g4h5i6j", "option": "c", "text": "any", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "tyq8h9i0j1k2l3m4n5o6p7q",
+          "title": "typeof with const Assertion",
+          "question": "const colors = ['red', 'green', 'blue'] as const;\ntype ColorsType = typeof colors;\nWhat type does ColorsType represent?",
+          "options": [
+            { "id": "tyo9c0d1e2f3g4h5i6j7k8l", "option": "a", "text": "string[]", "correct": false, "selected": false },
+            { "id": "tyo0d1e2f3g4h5i6j7k8l9m", "option": "b", "text": "readonly ['red', 'green', 'blue']", "correct": true, "selected": false },
+            { "id": "tyo1e2f3g4h5i6j7k8l9m0n", "option": "c", "text": "any[]", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "tyq9i0j1k2l3m4n5o6p7q8r",
+          "title": "typeof vs Runtime typeof",
+          "question": "What is the difference between TypeScript's typeof and JavaScript's typeof?",
+          "options": [
+            { "id": "tyo3g4h5i6j7k8l9m0n1o2p", "option": "a", "text": "TypeScript typeof works at compile-time, JavaScript typeof works at runtime", "correct": true, "selected": false },
+            { "id": "tyo4h5i6j7k8l9m0n1o2p3q", "option": "b", "text": "They are exactly the same", "correct": false, "selected": false },
+            { "id": "tyo5i6j7k8l9m0n1o2p3q4r", "option": "c", "text": "JavaScript typeof works at compile-time", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "tyq0j1k2l3m4n5o6p7q8r9s",
+          "title": "typeof for Extracting Types",
+          "question": "const user = { id: 1, name: 'Mike', isActive: true };\ntype User = typeof user;\nfunction printUser(user: User) { }\nprintUser({ id: 2, name: 'Jane', isActive: false });\nIs this valid?",
+          "options": [
+            { "id": "tyo7k8l9m0n1o2p3q4r5s6t", "option": "a", "text": "Yes, User matches the shape of the user object", "correct": true, "selected": false },
+            { "id": "tyo8l9m0n1o2p3q4r5s6t7u", "option": "b", "text": "No, because User is not a valid type", "correct": false, "selected": false },
+            { "id": "tyo9m0n1o2p3q4r5s6t7u8v", "option": "c", "text": "Only if the id is the same", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "tyt1a2b3c4d5e6f7g8h9i0j",
+          "title": "Extract Type from Object",
+          "description": "Create a object called %settings% with properties %theme% (string), %language% (string), and %notifications% (boolean). Use typeof to create a type from this object. Then create another object called %userSettings% with the same shape.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "const settings = { theme: 'dark', language: 'en', notifications: true };\ntype Settings = typeof settings;\nconst userSettings: Settings = { theme: 'light', language: 'es', notifications: false };",
+          "done": false
+        },
+        {
+          "id": "tyt2b3c4d5e6f7g8h9i0j1k",
+          "title": "Extract Type from Function",
+          "description": "Create a function called %calculate% that takes two numbers and returns their sum. Use typeof to extract its type into a type alias called %CalculateFn%. Then create another function %multiply% that has the same type.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "function calculate(a: number, b: number): number {\n  return a + b;\n}\ntype CalculateFn = typeof calculate;\nconst multiply: CalculateFn = (a, b) => a * b;",
+          "done": false
+        }
+      ]
+    }
   ]
 }
