@@ -6,6 +6,7 @@ import { initDB, saveDB, getDB } from "./db/init"
 import CodeQuestion from "./components/CodeQuestion"
 import Welcome from "./components/Welcome"
 import getStats from "./util/getStats"
+import ScrollToTopButton from "./components/ScrollToTopButton"
 
 
 function App() {
@@ -312,6 +313,7 @@ function App() {
           </div>
           )}
         </main> }
+        <ScrollToTopButton/>
       </div>
     </>
   )
