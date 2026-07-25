@@ -3298,9 +3298,8 @@ export const seedData = {
           "title": "Type for Union",
           "question": "Which of the following can define a union type?",
           "options": [
-            { "id": "ivo5e6f7g8h9i0j1k2l3m4n", "option": "a", "text": "Only type can define union types", "correct": false, "selected": false },
-            { "id": "ivo6f7g8h9i0j1k2l3m4n5o", "option": "b", "text": "Only interface can define union types", "correct": false, "selected": false },
-            { "id": "ivo7g8h9i0j1k2l3m4n5o6p", "option": "c", "text": "Type can define union types, interface cannot", "correct": true, "selected": false }
+            { "id": "ivo5e6f7g8h9i0j1k2l3m4n", "option": "a", "text": "Only type can define union types", "correct": true, "selected": false },
+            { "id": "ivo6f7g8h9i0j1k2l3m4n5o", "option": "b", "text": "Only interface can define union types", "correct": false, "selected": false }
           ],
           "correctAnswer": "c"
         },
@@ -3309,11 +3308,10 @@ export const seedData = {
           "title": "Type for Tuple",
           "question": "Which of the following can define a tuple?",
           "options": [
-            { "id": "ivo9i0j1k2l3m4n5o6p7q8r", "option": "a", "text": "Only type can define tuples", "correct": false, "selected": false },
-            { "id": "ivo0j1k2l3m4n5o6p7q8r9s", "option": "b", "text": "Only interface can define tuples", "correct": false, "selected": false },
-            { "id": "ivo1k2l3m4n5o6p7q8r9s0t", "option": "c", "text": "Type can define tuples, interface cannot", "correct": true, "selected": false }
+            { "id": "ivo0j1k2l3m4n5o6p7q8r9s", "option": "a", "text": "Only interface can define tuples", "correct": false, "selected": false },
+            { "id": "ivo9i0j1k2l3m4n5o6p7q8r", "option": "b", "text": "Only type can define tuples", "correct": true, "selected": false }
           ],
-          "correctAnswer": "c"
+          "correctAnswer": "b"
         },
         {
           "id": "ivq4d5e6f7g8h9i0j1k2l3m",
@@ -3416,7 +3414,7 @@ export const seedData = {
     },
     {
       "id": "ty1p2e3o4f5t6y7p8e9o0f",
-      "title": "typeof Operator",
+      "title": "typeof",
       "videoID": "34",
       "section": 4,
       "done": false,
@@ -3501,17 +3499,6 @@ export const seedData = {
           "correctAnswer": "b"
         },
         {
-          "id": "tyq8h9i0j1k2l3m4n5o6p7q",
-          "title": "typeof with const Assertion",
-          "question": "const colors = ['red', 'green', 'blue'] as const;\ntype ColorsType = typeof colors;\nWhat type does ColorsType represent?",
-          "options": [
-            { "id": "tyo9c0d1e2f3g4h5i6j7k8l", "option": "a", "text": "string[]", "correct": false, "selected": false },
-            { "id": "tyo0d1e2f3g4h5i6j7k8l9m", "option": "b", "text": "readonly ['red', 'green', 'blue']", "correct": true, "selected": false },
-            { "id": "tyo1e2f3g4h5i6j7k8l9m0n", "option": "c", "text": "any[]", "correct": false, "selected": false }
-          ],
-          "correctAnswer": "b"
-        },
-        {
           "id": "tyq9i0j1k2l3m4n5o6p7q8r",
           "title": "typeof vs Runtime typeof",
           "question": "What is the difference between TypeScript's typeof and JavaScript's typeof?",
@@ -3555,6 +3542,1771 @@ export const seedData = {
         }
       ]
     },
-    
+    {
+      "id": "tp1r2e3d4i5c6a7t8e9p0r",
+      "title": "Type Predicate (is)",
+      "videoID": "36",
+      "section": 4,
+      "done": false,
+      "milestone": false,
+      "inProgress": false,
+      "questions": [
+        {
+          "id": "tpq2b3c4d5e6f7g8h9i0j1k",
+          "title": "Type Predicate Syntax",
+          "question": "function isString(value: unknown): value is string {\n  return typeof value === 'string';\n}\nWhat does 'value is string' represent?",
+          "options": [
+            { "id": "tpo5e6f7g8h9i0j1k2l3m4n", "option": "a", "text": "A type predicate that tells TypeScript to narrow the type to string", "correct": true, "selected": false },
+            { "id": "tpo6f7g8h9i0j1k2l3m4n5o", "option": "b", "text": "A function that converts value to string", "correct": false, "selected": false },
+            { "id": "tpo7g8h9i0j1k2l3m4n5o6p", "option": "c", "text": "A type alias for string", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "tpq3c4d5e6f7g8h9i0j1k2l",
+          "title": "Type Predicate with Objects",
+          "question": "type Cat = { meow: () => void };\ntype Dog = { bark: () => void };\nfunction isCat(animal: Cat | Dog): animal is Cat {\n  return (animal as Cat).meow !== undefined;\n}\nWhat does this function do?",
+          "options": [
+            { "id": "tpo9i0j1k2l3m4n5o6p7q8r", "option": "a", "text": "It checks if animal has a meow method and narrows to Cat type", "correct": true, "selected": false },
+            { "id": "tpo0j1k2l3m4n5o6p7q8r9s", "option": "b", "text": "It converts animal to Cat", "correct": false, "selected": false },
+            { "id": "tpo1k2l3m4n5o6p7q8r9s0t", "option": "c", "text": "It creates a new Cat object", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        }
+      ],
+      "tasks": [
+      ]
+    },
+    {
+      "id": "ta1s2s3e4r5t6i7o8n9a0s",
+      "title": "Type Assertion (as)",
+      "videoID": "37",
+      "section": 4,
+      "done": false,
+      "milestone": false,
+      "inProgress": false,
+      "questions": [
+        {
+          "id": "taq1a2b3c4d5e6f7g8h9i0j",
+          "title": "What is Type Assertion",
+          "question": "What does the 'as' keyword do in TypeScript?",
+          "options": [
+            { "id": "tao1a2b3c4d5e6f7g8h9i0j", "option": "a", "text": "It tells TypeScript to treat a value as a different type", "correct": true, "selected": false },
+            { "id": "tao2b3c4d5e6f7g8h9i0j1k", "option": "b", "text": "It converts the value to a different type at runtime", "correct": false, "selected": false },
+            { "id": "tao3c4d5e6f7g8h9i0j1k2l", "option": "c", "text": "It creates a new type alias", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "taq2b3c4d5e6f7g8h9i0j1k",
+          "title": "Type Assertion Syntax",
+          "question": "Which of the following correctly uses type assertion?",
+          "options": [
+            { "id": "tao5e6f7g8h9i0j1k2l3m4n", "option": "a", "text": "let value = someValue as string;", "correct": true, "selected": false },
+            { "id": "tao6f7g8h9i0j1k2l3m4n5o", "option": "b", "text": "let value = someValue is string;", "correct": false, "selected": false },
+            { "id": "tao7g8h9i0j1k2l3m4n5o6p", "option": "c", "text": "let value = someValue like string;", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "taq3c4d5e6f7g8h9i0j1k2l",
+          "title": "Type Assertion with Union",
+          "question": "let value: string | number = 'hello';\nlet str = value as string;\nWhat does this code do?",
+          "options": [
+            { "id": "tao9i0j1k2l3m4n5o6p7q8r", "option": "a", "text": "It tells TypeScript value is a string", "correct": true, "selected": false },
+            { "id": "tao0j1k2l3m4n5o6p7q8r9s", "option": "b", "text": "It converts value to a string at runtime", "correct": false, "selected": false },
+            { "id": "tao1k2l3m4n5o6p7q8r9s0t", "option": "c", "text": "It throws an error", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "taq5e6f7g8h9i0j1k2l3m4n",
+          "title": "Type Assertion with Objects",
+          "question": "interface User { name: string; age: number; }\nconst data = { name: 'Mike', age: 23 } as User;\nWhy would you use 'as User' here?",
+          "options": [
+            { "id": "tao7q8r9s0t1u2v3w4x5y6z", "option": "a", "text": "To tell TypeScript the object matches the User interface", "correct": true, "selected": false },
+            { "id": "tao8r9s0t1u2v3w4x5y6z7a", "option": "b", "text": "To convert the object to a User at runtime", "correct": false, "selected": false },
+            { "id": "tao9s0t1u2v3w4x5y6z7a8b", "option": "c", "text": "To create a new User object", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "taq7g8h9i0j1k2l3m4n5o6p",
+          "title": "Type Assertion with Unknown",
+          "question": "let data: unknown = 'hello';\nlet str = data as string;\nconsole.log(str.toUpperCase());\nWhy does this code work?",
+          "options": [
+            { "id": "tao5y6z7a8b9c0d1e2f3g4h", "option": "a", "text": "Because 'as string' tells TypeScript to treat data as a string", "correct": true, "selected": false },
+            { "id": "tao6z7a8b9c0d1e2f3g4h5i", "option": "b", "text": "Because unknown can be used without type checking", "correct": false, "selected": false },
+            { "id": "tao7a8b9c0d1e2f3g4h5i6j", "option": "c", "text": "Because toUpperCase works on any type", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "taq0j1k2l3m4n5o6p7q8r9s",
+          "title": "Type Assertion Risk",
+          "question": "let value = 'hello' as number;\nWhat is the risk of this code?",
+          "options": [
+            { "id": "tao7k8l9m0n1o2p3q4r5s6t", "option": "a", "text": "It can cause runtime errors if the value isn't actually a number", "correct": true, "selected": false },
+            { "id": "tao8l9m0n1o2p3q4r5s6t7u", "option": "b", "text": "It will always work correctly", "correct": false, "selected": false },
+            { "id": "tao9m0n1o2p3q4r5s6t7u8v", "option": "c", "text": "It converts 'hello' to a number automatically", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "tat2b3c4d5e6f7g8h9i0j1k",
+          "title": "Type Assertion with Unknown",
+          "description": "Create a variable called %data% with type %unknown% and assign it a string value. Then use type assertion to tell TypeScript it's a string. Finally, log its length.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "let data: unknown = 'TypeScript';\nconst str = data as string;\nconsole.log(str.length);",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "re1a2d3o4n5l6y7p8e9r0o",
+      "title": "Readonly",
+      "videoID": "38",
+      "section": 4,
+      "done": false,
+      "milestone": false,
+      "inProgress": false,
+      "questions": [
+        {
+          "id": "req1a2b3c4d5e6f7g8h9i0j",
+          "title": "What is readonly",
+          "question": "What does the 'readonly' keyword do in TypeScript?",
+          "options": [
+            { "id": "reo2b3c4d5e6f7g8h9i0j1k", "option": "a", "text": "It makes a property optional", "correct": false, "selected": false },
+            { "id": "reo1a2b3c4d5e6f7g8h9i0j", "option": "b", "text": "It prevents a property from being modified after initialization", "correct": true, "selected": false },
+            { "id": "reo3c4d5e6f7g8h9i0j1k2l", "option": "c", "text": "It makes a property required", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "req2b3c4d5e6f7g8h9i0j1k",
+          "title": "readonly Property",
+          "question": "interface User {\n  readonly id: number;\n  name: string;\n}\nconst user: User = { id: 1, name: 'Mike' };\nuser.id = 2;\nWhat happens?",
+          "options": [
+            { "id": "reo6f7g8h9i0j1k2l3m4n5o", "option": "a", "text": "It works fine and id becomes 2", "correct": false, "selected": false },
+            { "id": "reo7g8h9i0j1k2l3m4n5o6p", "option": "b", "text": "It throws a runtime error", "correct": false, "selected": false },
+            { "id": "reo5e6f7g8h9i0j1k2l3m4n", "option": "c", "text": "TypeScript shows an error because id is readonly", "correct": true, "selected": false },
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "req3c4d5e6f7g8h9i0j1k2l",
+          "title": "readonly Array",
+          "question": "const numbers: readonly number[] = [1, 2, 3];\nnumbers.push(4);\nWhat happens?",
+          "options": [
+            { "id": "reo9i0j1k2l3m4n5o6p7q8r", "option": "a", "text": "TypeScript shows an error because push is not allowed on readonly arrays", "correct": true, "selected": false },
+            { "id": "reo0j1k2l3m4n5o6p7q8r9s", "option": "b", "text": "It works and 4 is added to the array", "correct": false, "selected": false },
+            { "id": "reo1k2l3m4n5o6p7q8r9s0t", "option": "c", "text": "It creates a new array", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "req4d5e6f7g8h9i0j1k2l3m",
+          "title": "readonly Tuple",
+          "question": "const tuple: readonly [string, number] = ['hello', 42];\ntuple[0] = 'world';\nWhat happens?",
+          "options": [
+            { "id": "reo3m4n5o6p7q8r9s0t1u2v", "option": "a", "text": "TypeScript shows an error because tuples are readonly", "correct": true, "selected": false },
+            { "id": "reo4n5o6p7q8r9s0t1u2v3w", "option": "b", "text": "It works and tuple becomes ['world', 42]", "correct": false, "selected": false },
+            { "id": "reo5o6p7q8r9s0t1u2v3w4x", "option": "c", "text": "It creates a new tuple", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "req9i0j1k2l3m4n5o6p7q8r",
+          "title": "readonly in Interface",
+          "question": "interface Config {\n  readonly apiUrl: string;\n  timeout: number;\n}\nconst config: Config = { apiUrl: 'https://api.com', timeout: 5000 };\nconfig.apiUrl = 'https://newapi.com';\nWhat happens?",
+          "options": [
+            { "id": "reo4h5i6j7k8l9m0n1o2p3q", "option": "a", "text": "It works and apiUrl changes", "correct": false, "selected": false },
+            { "id": "reo3g4h5i6j7k8l9m0n1o2p", "option": "b", "text": "TypeScript shows an error because apiUrl is readonly", "correct": true, "selected": false },
+            { "id": "reo5i6j7k8l9m0n1o2p3q4r", "option": "c", "text": "It throws a runtime error", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "req0j1k2l3m4n5o6p7q8r9s",
+          "title": "readonly with Type Alias",
+          "question": "type Point = {\n  readonly x: number;\n  readonly y: number;\n};\nconst point: Point = { x: 10, y: 20 };\npoint.x = 30;\nWhat happens?",
+          "options": [
+            { "id": "reo7k8l9m0n1o2p3q4r5s6t", "option": "a", "text": "TypeScript shows an error because x is readonly", "correct": true, "selected": false },
+            { "id": "reo8l9m0n1o2p3q4r5s6t7u", "option": "b", "text": "It works and x becomes 30", "correct": false, "selected": false },
+            { "id": "reo9m0n1o2p3q4r5s6t7u8v", "option": "c", "text": "It creates a new point", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "ret1a2b3c4d5e6f7g8h9i0j",
+          "title": "Create a Readonly Interface",
+          "description": "Create an interface called %Product% with %id% (readonly number), %name% (string), and %price% (number). Then create a product object and try to change the id to see the error.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "interface Product {\n  readonly id: number;\n  name: string;\n  price: number;\n}\nconst product: Product = { id: 1, name: 'Laptop', price: 999 };\n// product.id = 2; // Error: Cannot assign to 'id' because it is a read-only property",
+          "done": false
+        },
+        {
+          "id": "ret2b3c4d5e6f7g8h9i0j1k",
+          "title": "Create a Readonly Array",
+          "description": "Create a readonly array called %colors% with values %'red'%, %'green'%, and %'blue'%. Try to push a new value to see the error.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "const colors: readonly string[] = ['red', 'green', 'blue'];\n// colors.push('yellow'); // Error: Property 'push' does not exist on type 'readonly string[]'",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "as1c2o3n4s5t6e7r8t9y0p",
+      "title": "as const",
+      "videoID": "39",
+      "section": 4,
+      "done": false,
+      "milestone": false,
+      "inProgress": false,
+      "questions": [
+        {
+          "id": "asq1a2b3c4d5e6f7g8h9i0j",
+          "title": "What is as const",
+          "question": "What does 'as const' do in TypeScript?",
+          "options": [
+            { "id": "aso1a2b3c4d5e6f7g8h9i0j", "option": "a", "text": "It makes a value mutable", "correct": false, "selected": false },
+            { "id": "aso2b3c4d5e6f7g8h9i0j1k", "option": "b", "text": "It converts a value to a string", "correct": false, "selected": false },
+            { "id": "aso3c4d5e6f7g8h9i0j1k2l", "option": "c", "text": "It makes a value readonly with literal types", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "asq2b3c4d5e6f7g8h9i0j1k",
+          "title": "as const with Array",
+          "question": "const colors = ['red', 'green', 'blue'] as const;\nWhat type does TypeScript infer for colors?",
+          "options": [
+            { "id": "aso5e6f7g8h9i0j1k2l3m4n", "option": "a", "text": "string[]", "correct": false, "selected": false },
+            { "id": "aso6f7g8h9i0j1k2l3m4n5o", "option": "b", "text": "any[]", "correct": false, "selected": false },
+            { "id": "aso7g8h9i0j1k2l3m4n5o6p", "option": "c", "text": "readonly ['red', 'green', 'blue']", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "asq3c4d5e6f7g8h9i0j1k2l",
+          "title": "as const with Object",
+          "question": "const config = { apiUrl: 'https://api.com', timeout: 5000 } as const;\nWhat type does TypeScript infer for config?",
+          "options": [
+            { "id": "aso9i0j1k2l3m4n5o6p7q8r", "option": "a", "text": "{ apiUrl: string; timeout: number; }", "correct": false, "selected": false },
+            { "id": "aso0j1k2l3m4n5o6p7q8r9s", "option": "b", "text": "any", "correct": false, "selected": false },
+            { "id": "aso1k2l3m4n5o6p7q8r9s0t", "option": "c", "text": "{ readonly apiUrl: 'https://api.com'; readonly timeout: 5000; }", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "asq4d5e6f7g8h9i0j1k2l3m",
+          "title": "as const vs const",
+          "question": "What is the difference between 'const' and 'as const'?",
+          "options": [
+            { "id": "aso3m4n5o6p7q8r9s0t1u2v", "option": "a", "text": "const makes the variable immutable, as const makes the value readonly with literal types", "correct": true, "selected": false },
+            { "id": "aso4n5o6p7q8r9s0t1u2v3w", "option": "b", "text": "They are exactly the same", "correct": false, "selected": false },
+            { "id": "aso5o6p7q8r9s0t1u2v3w4x", "option": "c", "text": "as const makes the variable mutable", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "asq5e6f7g8h9i0j1k2l3m4n",
+          "title": "as const with Tuple",
+          "question": "const tuple = [10, 'hello'] as const;\nWhat type does TypeScript infer for tuple?",
+          "options": [
+            { "id": "aso7q8r9s0t1u2v3w4x5y6z", "option": "a", "text": "(number | string)[]", "correct": false, "selected": false },
+            { "id": "aso8r9s0t1u2v3w4x5y6z7a", "option": "b", "text": "readonly [10, 'hello']", "correct": true, "selected": false },
+            { "id": "aso9s0t1u2v3w4x5y6z7a8b", "option": "c", "text": "any[]", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "asq6f7g8h9i0j1k2l3m4n5o",
+          "title": "as const with Nested Object",
+          "question": "const data = { user: { name: 'Mike', age: 23 } } as const;\nCan you change data.user.name?",
+          "options": [
+            { "id": "aso1u2v3w4x5y6z7a8b9c0d", "option": "a", "text": "Yes, because only the top level is readonly", "correct": false, "selected": false },
+            { "id": "aso2v3w4x5y6z7a8b9c0d1e", "option": "b", "text": "Yes, because as const doesn't affect nested objects", "correct": false, "selected": false },
+            { "id": "aso3w4x5y6z7a8b9c0d1e2f", "option": "c", "text": "No, because as const makes all properties readonly", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "asq7g8h9i0j1k2l3m4n5o6p",
+          "title": "as const with String",
+          "question": "const greeting = 'hello' as const;\nWhat type does TypeScript infer for greeting?",
+          "options": [
+            { "id": "aso5y6z7a8b9c0d1e2f3g4h", "option": "a", "text": "string", "correct": false, "selected": false },
+            { "id": "aso6z7a8b9c0d1e2f3g4h5i", "option": "b", "text": "any", "correct": false, "selected": false },
+            { "id": "aso7a8b9c0d1e2f3g4h5i6j", "option": "c", "text": "'hello'", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "asq8h9i0j1k2l3m4n5o6p7q",
+          "title": "as const with Number",
+          "question": "const count = 42 as const;\nWhat type does TypeScript infer for count?",
+          "options": [
+            { "id": "aso9c0d1e2f3g4h5i6j7k8l", "option": "a", "text": "number", "correct": false, "selected": false },
+            { "id": "aso0d1e2f3g4h5i6j7k8l9m", "option": "b", "text": "42", "correct": true, "selected": false },
+            { "id": "aso1e2f3g4h5i6j7k8l9m0n", "option": "c", "text": "any", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "asq0j1k2l3m4n5o6p7q8r9s",
+          "title": "as const with Boolean",
+          "question": "const isActive = true as const;\nWhat type does TypeScript infer for isActive?",
+          "options": [
+            { "id": "aso7k8l9m0n1o2p3q4r5s6t", "option": "a", "text": "boolean", "correct": false, "selected": false },
+            { "id": "aso8l9m0n1o2p3q4r5s6t7u", "option": "b", "text": "any", "correct": false, "selected": false },
+            { "id": "aso9m0n1o2p3q4r5s6t7u8v", "option": "c", "text": "true", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "ast1a2b3c4d5e6f7g8h9i0j",
+          "title": "Create a Readonly Array with as const",
+          "description": "Create an array called %directions% with values %'up'%, %'down'%, %'left'%, and %'right'%. Use %as const% to make it readonly with literal types. Then try to push a new value to see the error.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "const directions = ['up', 'down', 'left', 'right'] as const;\n// directions.push('diagonal'); // Error: Property 'push' does not exist on type",
+          "done": false
+        },
+        {
+          "id": "ast2b3c4d5e6f7g8h9i0j1k",
+          "title": "Create a Readonly Object with as const",
+          "description": "Create an object called %settings% with properties %theme% (string), %language% (string), and %notifications% (boolean). Use %as const% to make all properties readonly with literal types. Try to change a property to see the error.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "const settings = { theme: 'dark', language: 'en', notifications: true } as const;\n// settings.theme = 'light'; // Error: Cannot assign to 'theme' because it is a read-only property",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "s4m1a2b3c4d5e6f7g8h9i0j",
+      "title": "Section 4 Milestone - All Concepts",
+      "videoID": "40",
+      "section": 4,
+      "done": false,
+      "milestone": true,
+      "inProgress": false,
+      "questions": [
+        {
+          "id": "s4q01a2b3c4d5e6f7g8h9i0j",
+          "title": "Interface Syntax",
+          "question": "Which of the following correctly defines an interface?",
+          "options": [
+            { "id": "s4o01a2b3c4d5e6f7g8h9i0j", "option": "a", "text": "interface User { name: string; age: number; }", "correct": true, "selected": false },
+            { "id": "s4o02b3c4d5e6f7g8h9i0j1k", "option": "b", "text": "type User { name: string; age: number; }", "correct": false, "selected": false },
+            { "id": "s4o03c4d5e6f7g8h9i0j1k2l", "option": "c", "text": "interface User = { name: string; age: number; }", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "s4q02b3c4d5e6f7g8h9i0j1k",
+          "title": "Interface Method",
+          "question": "interface Person {\n  name: string;\n  greet(): void;\n}\nWhat does this interface define?",
+          "options": [
+            { "id": "s4o04d5e6f7g8h9i0j1k2l3m", "option": "a", "text": "An object with a name property and a greet method", "correct": true, "selected": false },
+            { "id": "s4o05e6f7g8h9i0j1k2l3m4n", "option": "b", "text": "An object with only a name property", "correct": false, "selected": false },
+            { "id": "s4o06f7g8h9i0j1k2l3m4n5o", "option": "c", "text": "A function that returns void", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "s4q03c4d5e6f7g8h9i0j1k2l",
+          "title": "Extending Interfaces",
+          "question": "interface Animal { name: string; }\ninterface Dog extends Animal { breed: string; }\nWhat properties does Dog have?",
+          "options": [
+            { "id": "s4o07g8h9i0j1k2l3m4n5o6p", "option": "a", "text": "Only name", "correct": false, "selected": false },
+            { "id": "s4o08h9i0j1k2l3m4n5o6p7q", "option": "b", "text": "Only breed", "correct": false, "selected": false },
+            { "id": "s4o09i0j1k2l3m4n5o6p7q8r", "option": "c", "text": "Both name and breed", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "s4q04d5e6f7g8h9i0j1k2l3m",
+          "title": "Interface Merging",
+          "question": "interface Car { brand: string; }\ninterface Car { year: number; }\nWhat happens to the Car interface?",
+          "options": [
+            { "id": "s4o10j0k1l2m3n4o5p6q7r8s", "option": "a", "text": "It merges and has both brand and year", "correct": true, "selected": false },
+            { "id": "s4o11k1l2m3n4o5p6q7r8s9t", "option": "b", "text": "It throws an error", "correct": false, "selected": false },
+            { "id": "s4o12l2m3n4o5p6q7r8s9t0u", "option": "c", "text": "It keeps only the first one", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "s4q05e6f7g8h9i0j1k2l3m4n",
+          "title": "Type Alias for Union",
+          "question": "Which of the following can define a union type?",
+          "options": [
+            { "id": "s4o13m3n4o5p6q7r8s9t0u1v", "option": "a", "text": "Type can define union types, interface cannot", "correct": true, "selected": false },
+            { "id": "s4o14n4o5p6q7r8s9t0u1v2w", "option": "b", "text": "Both type and interface can define union types", "correct": false, "selected": false },
+            { "id": "s4o15o5p6q7r8s9t0u1v2w3x", "option": "c", "text": "Only interface can define union types", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "s4q06f7g8h9i0j1k2l3m4n5o",
+          "title": "typeof with Object",
+          "question": "const user = { name: 'Mike', age: 23 };\ntype UserType = typeof user;\nWhat type does UserType represent?",
+          "options": [
+            { "id": "s4o16p6q7r8s9t0u1v2w3x4y", "option": "a", "text": "{ name: string; age: number; }", "correct": true, "selected": false },
+            { "id": "s4o17q7r8s9t0u1v2w3x4y5z", "option": "b", "text": "object", "correct": false, "selected": false },
+            { "id": "s4o18r8s9t0u1v2w3x4y5z6a", "option": "c", "text": "any", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "s4q07g8h9i0j1k2l3m4n5o6p",
+          "title": "keyof Operator",
+          "question": "interface Product {\n  id: number;\n  name: string;\n  price: number;\n}\ntype ProductKeys = keyof Product;\nWhat type does ProductKeys represent?",
+          "options": [
+            { "id": "s4o19s9t0u1v2w3x4y5z6a7b", "option": "a", "text": "string", "correct": false, "selected": false },
+            { "id": "s4o20t0u1v2w3x4y5z6a7b8c", "option": "b", "text": "number", "correct": false, "selected": false },
+            { "id": "s4o21u1v2w3x4y5z6a7b8c9d", "option": "c", "text": "'id' | 'name' | 'price'", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "s4q08h9i0j1k2l3m4n5o6p7q",
+          "title": "Type Predicate",
+          "question": "function isString(value: unknown): value is string {\n  return typeof value === 'string';\n}\nWhat does 'value is string' represent?",
+          "options": [
+            { "id": "s4o22v2w3x4y5z6a7b8c9d0e", "option": "a", "text": "A type alias for string", "correct": false, "selected": false },
+            { "id": "s4o23w3x4y5z6a7b8c9d0e1f", "option": "b", "text": "A type predicate that tells TypeScript to narrow the type", "correct": true, "selected": false },
+            { "id": "s4o24x4y5z6a7b8c9d0e1f2g", "option": "c", "text": "A function that converts value to string", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "s4q09i0j1k2l3m4n5o6p7q8r",
+          "title": "Type Assertion",
+          "question": "let value: string | number = 'hello';\nlet str = value as string;\nWhat does this code do?",
+          "options": [
+            { "id": "s4o25y5z6a7b8c9d0e1f2g3h", "option": "a", "text": "It tells TypeScript value is a string", "correct": true, "selected": false },
+            { "id": "s4o26z6a7b8c9d0e1f2g3h4i", "option": "b", "text": "It converts value to a string at runtime", "correct": false, "selected": false },
+            { "id": "s4o27a7b8c9d0e1f2g3h4i5j", "option": "c", "text": "It throws an error", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "s4q10j1k2l3m4n5o6p7q8r9s",
+          "title": "readonly Property",
+          "question": "interface User {\n  readonly id: number;\n  name: string;\n}\nconst user: User = { id: 1, name: 'Mike' };\nuser.id = 2;\nWhat happens?",
+          "options": [
+            { "id": "s4o28b8c9d0e1f2g3h4i5j6k", "option": "a", "text": "It throws a runtime error", "correct": false, "selected": false },
+            { "id": "s4o29c9d0e1f2g3h4i5j6k7l", "option": "b", "text": "It works fine and id becomes 2", "correct": false, "selected": false },
+            { "id": "s4o30d0e1f2g3h4i5j6k7l8m", "option": "c", "text": "TypeScript shows an error because id is readonly", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "s4q11k2l3m4n5o6p7q8r9s0t",
+          "title": "as const with Array",
+          "question": "const colors = ['red', 'green', 'blue'] as const;\nWhat type does TypeScript infer for colors?",
+          "options": [
+            { "id": "s4o31e1f2g3h4i5j6k7l8m9n", "option": "a", "text": "readonly ['red', 'green', 'blue']", "correct": true, "selected": false },
+            { "id": "s4o32f2g3h4i5j6k7l8m9n0o", "option": "b", "text": "string[]", "correct": false, "selected": false },
+            { "id": "s4o33g3h4i5j6k7l8m9n0o1p", "option": "c", "text": "any[]", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "s4q12l3m4n5o6p7q8r9s0t1u",
+          "title": "Interface vs Type - Syntax",
+          "question": "Which of the following correctly defines a type alias?",
+          "options": [
+            { "id": "s4o34h4i5j6k7l8m9n0o1p2q", "option": "a", "text": "type User = { name: string; age: number; }", "correct": true, "selected": false },
+            { "id": "s4o35i5j6k7l8m9n0o1p2q3r", "option": "b", "text": "type User { name: string; age: number; }", "correct": false, "selected": false },
+            { "id": "s4o36j6k7l8m9n0o1p2q3r4s", "option": "c", "text": "interface User = { name: string; age: number; }", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "s4q13m4n5o6p7q8r9s0t1u2v",
+          "title": "keyof with typeof",
+          "question": "const settings = { theme: 'dark', language: 'en' };\ntype SettingsKeys = keyof typeof settings;\nWhat type does SettingsKeys represent?",
+          "options": [
+            { "id": "s4o37k7l8m9n0o1p2q3r4s5t", "option": "a", "text": "'theme' | 'language'", "correct": true, "selected": false },
+            { "id": "s4o38l8m9n0o1p2q3r4s5t6u", "option": "b", "text": "string", "correct": false, "selected": false },
+            { "id": "s4o39m9n0o1p2q3r4s5t6u7v", "option": "c", "text": "'dark' | 'en'", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "s4q14n5o6p7q8r9s0t1u2v3w",
+          "title": "Type Predicate with Unknown",
+          "question": "function isNumber(value: unknown): value is number {\n  return typeof value === 'number';\n}\nlet data: unknown = 42;\nif (isNumber(data)) {\n  console.log(data.toFixed(2));\n}\nWhy does this code work?",
+          "options": [
+            { "id": "s4o40n0o1p2q3r4s5t6u7v8w", "option": "a", "text": "Because unknown can be used without type checking", "correct": false, "selected": false },
+            { "id": "s4o41o1p2q3r4s5t6u7v8w9x", "option": "b", "text": "Because isNumber narrows data to number", "correct": true, "selected": false },
+            { "id": "s4o42p2q3r4s5t6u7v8w9x0y", "option": "c", "text": "Because toFixed works on any type", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "s4q16p7q8r9s0t1u2v3w4x5y",
+          "title": "readonly Array",
+          "question": "const numbers: readonly number[] = [1, 2, 3];\nnumbers.push(4);\nWhat happens?",
+          "options": [
+            { "id": "s4o46t6u7v8w9x0y1z2a3b4c", "option": "a", "text": "It works and 4 is added", "correct": false, "selected": false },
+            { "id": "s4o47u7v8w9x0y1z2a3b4c5d", "option": "b", "text": "It creates a new array", "correct": false, "selected": false },
+            { "id": "s4o48v8w9x0y1z2a3b4c5d6e", "option": "c", "text": "TypeScript shows an error because push is not allowed", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "s4q17q8r9s0t1u2v3w4x5y6z",
+          "title": "as const with Object",
+          "question": "const config = { apiUrl: 'https://api.com', timeout: 5000 } as const;\nWhat type does TypeScript infer for config?",
+          "options": [
+            { "id": "s4o49w9x0y1z2a3b4c5d6e7f", "option": "a", "text": "{ apiUrl: string; timeout: number; }", "correct": false, "selected": false },
+            { "id": "s4o50x0y1z2a3b4c5d6e7f8g", "option": "b", "text": "any", "correct": false, "selected": false },
+            { "id": "s4o51y1z2a3b4c5d6e7f8g9h", "option": "c", "text": "{ readonly apiUrl: 'https://api.com'; readonly timeout: 5000; }", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "s4q18r9s0t1u2v3w4x5y6z7a",
+          "title": "What Types Can Do",
+          "question": "Which of the following can types do that interfaces cannot?",
+          "options": [
+            { "id": "s4o52z2a3b4c5d6e7f8g9h0i", "option": "a", "text": "Create unions and tuples", "correct": true, "selected": false },
+            { "id": "s4o53a3b4c5d6e7f8g9h0i1j", "option": "b", "text": "Extend other interfaces", "correct": false, "selected": false },
+            { "id": "s4o54b4c5d6e7f8g9h0i1j2k", "option": "c", "text": "Automatically merge declarations", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "s4q19s0t1u2v3w4x5y6z7a8b",
+          "title": "typeof with Function",
+          "question": "function greet(name: string): string {\n  return 'Hello ' + name;\n}\ntype GreetType = typeof greet;\nWhat type does GreetType represent?",
+          "options": [
+            { "id": "s4o55c5d6e7f8g9h0i1j2k3l", "option": "a", "text": "(name: string) => string", "correct": true, "selected": false },
+            { "id": "s4o56d6e7f8g9h0i1j2k3l4m", "option": "b", "text": "Function", "correct": false, "selected": false },
+            { "id": "s4o57e7f8g9h0i1j2k3l4m5n", "option": "c", "text": "any", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "s4q22v3w4x5y6z7a8b9c0d1e",
+          "title": "as const with String",
+          "question": "const greeting = 'hello' as const;\nWhat type does TypeScript infer for greeting?",
+          "options": [
+            { "id": "s4o64l4m5n6o7p8q9r0s1t2u", "option": "a", "text": "string", "correct": false, "selected": false },
+            { "id": "s4o65m5n6o7p8q9r0s1t2u3v", "option": "b", "text": "'hello'", "correct": true, "selected": false },
+            { "id": "s4o66n6o7p8q9r0s1t2u3v4w", "option": "c", "text": "any", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "s4q23w4x5y6z7a8b9c0d1e2f",
+          "title": "Interface with Array",
+          "question": "interface Product {\n  id: number;\n  name: string;\n}\nlet products: Product[] = [{ id: 1, name: 'Laptop' }];\nWhat does Product[] mean?",
+          "options": [
+            { "id": "s4o67o7p8q9r0s1t2u3v4w5x", "option": "a", "text": "An array of Product objects", "correct": true, "selected": false },
+            { "id": "s4o68p8q9r0s1t2u3v4w5x6y", "option": "b", "text": "A single Product object", "correct": false, "selected": false },
+            { "id": "s4o69q9r0s1t2u3v4w5x6y7z", "option": "c", "text": "A string array", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "s4q25y6z7a8b9c0d1e2f3g4h",
+          "title": "keyof with Optional Properties",
+          "question": "interface Config {\n  url: string;\n  timeout?: number;\n  retries?: number;\n}\ntype ConfigKeys = keyof Config;\nWhat type does ConfigKeys represent?",
+          "options": [
+            { "id": "s4o73u3v4w5x6y7z8a9b0c1d", "option": "a", "text": "'url' | 'timeout' | 'retries'", "correct": true, "selected": false },
+            { "id": "s4o74v4w5x6y7z8a9b0c1d2e", "option": "b", "text": "'timeout' | 'retries'", "correct": false, "selected": false },
+            { "id": "s4o75w5x6y7z8a9b0c1d2e3f", "option": "c", "text": "'url'", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "s4q28b9c0d1e2f3g4h5i6j7k",
+          "title": "keyof with Interface",
+          "question": "interface Animal {\n  name: string;\n  age: number;\n  sound(): void;\n}\ntype AnimalKeys = keyof Animal;\nWhat type does AnimalKeys represent?",
+          "options": [
+            { "id": "s4o82d2e3f4g5h6i7j8k9l0m", "option": "a", "text": "'name' | 'age'", "correct": false, "selected": false },
+            { "id": "s4o83e3f4g5h6i7j8k9l0m1n", "option": "b", "text": "'name' | 'age' | 'sound'", "correct": true, "selected": false },
+            { "id": "s4o84f4g5h6i7j8k9l0m1n2o", "option": "c", "text": "string", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "s4q29c0d1e2f3g4h5i6j7k8l",
+          "title": "Type Predicate vs Type Guard",
+          "question": "What is the difference between a type predicate and a type guard?",
+          "options": [
+            { "id": "s4o85g5h6i7j8k9l0m1n2o3p", "option": "a", "text": "A type guard uses 'is', a type predicate uses 'typeof'", "correct": false, "selected": false },
+            { "id": "s4o86h6i7j8k9l0m1n2o3p4q", "option": "b", "text": "They are exactly the same", "correct": false, "selected": false },
+            { "id": "s4o87i7j8k9l0m1n2o3p4q5r", "option": "c", "text": "A type predicate uses 'is' and narrows types, a type guard uses 'typeof' or 'in'", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "s4q30d1e2f3g4h5i6j7k8l9m",
+          "title": "Interface vs Type - Incompatible Properties",
+          "question": "type C = { x: string } & { x: number };\nWhat happens to the x property?",
+          "options": [
+            { "id": "s4o88j8k9l0m1n2o3p4q5r6s", "option": "a", "text": "It becomes number", "correct": false, "selected": false },
+            { "id": "s4o89k9l0m1n2o3p4q5r6s7t", "option": "b", "text": "It becomes string", "correct": false, "selected": false },
+            { "id": "s4o90l0m1n2o3p4q5r6s7t8u", "option": "c", "text": "It becomes never (impossible type)", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "s4t01a2b3c4d5e6f7g8h9i0j",
+          "title": "Create an Interface for Book",
+          "description": "Create a variable called %book%. It should have %title% (string), %author% (string), %pages% (number), and an optional %genre% (string). Use an interface to define the shape.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "interface Book {\n  title: string;\n  author: string;\n  pages: number;\n  genre?: string;\n}\nconst book: Book = {\n  title: 'TypeScript Guide',\n  author: 'Mike',\n  pages: 200\n};",
+          "done": false
+        },
+        {
+          "id": "s4t02b3c4d5e6f7g8h9i0j1k",
+          "title": "Extract Type from Object",
+          "description": "Create a variable called %settings% with properties %theme% (string) and %language% (string). Use %typeof% to create a type from this variable. Then create another variable called %userSettings% with the same shape.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "const settings = { theme: 'dark', language: 'en' };\ntype Settings = typeof settings;\nconst userSettings: Settings = { theme: 'light', language: 'es' };",
+          "done": false
+        },
+        {
+          "id": "s4t03c4d5e6f7g8h9i0j1k2l",
+          "title": "Extract Keys from Interface",
+          "description": "Create an interface called %Movie% with %title% (string), %year% (number), and %rating% (number). Then create a type that represents all the keys of the Movie interface.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "interface Movie {\n  title: string;\n  year: number;\n  rating: number;\n}\ntype MovieKeys = keyof Movie;",
+          "done": false
+        },
+        {
+          "id": "s4t05e6f7g8h9i0j1k2l3m4n",
+          "title": "Create a Readonly Interface",
+          "description": "Create an interface called %Car% with %id% (readonly number), %brand% (string), and %year% (number). Then create a car object and try to change the id to see the error.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "interface Car {\n  readonly id: number;\n  brand: string;\n  year: number;\n}\nconst car: Car = { id: 1, brand: 'Toyota', year: 2022 };\n// car.id = 2; // Error: Cannot assign to 'id' because it is a read-only property",
+          "done": false
+        },
+        {
+          "id": "s4t06f7g8h9i0j1k2l3m4n5o",
+          "title": "Create a Type Alias for Union",
+          "description": "Create a variable called %status%. It should only allow three possible values: %'pending'%, %'approved'%, or %'rejected'%. Figure out how to restrict it to only these three values.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "type Status = 'pending' | 'approved' | 'rejected';\nconst status: Status = 'pending';",
+          "done": false
+        },
+        {
+          "id": "s4t07g8h9i0j1k2l3m4n5o6p",
+          "title": "Type Assertion with Unknown",
+          "description": "Create a variable called %data% with type %unknown% and assign it a string value. Then use type assertion to tell TypeScript it's a string. Finally, log its length.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "let data: unknown = 'TypeScript';\nconst str = data as string;\nconsole.log(str.length);",
+          "done": false
+        },
+        {
+          "id": "s4t08h9i0j1k2l3m4n5o6p7q",
+          "title": "Create a Readonly Array with as const",
+          "description": "Create an array called %directions% with values %'up'%, %'down'%, %'left'%, and %'right'%. Use %as const% to make it readonly with literal types. Then try to push a new value to see the error.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "const directions = ['up', 'down', 'left', 'right'] as const;\n// directions.push('diagonal'); // Error: Property 'push' does not exist on type",
+          "done": false
+        },
+        {
+          "id": "s4t09i0j1k2l3m4n5o6p7q8r",
+          "title": "Extract Type from Function",
+          "description": "Create a function called %multiply% that takes two numbers and returns their product. Use %typeof% to extract its type into a type alias. Then create another function %divide% that has the same type.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "function multiply(a: number, b: number): number {\n  return a * b;\n}\ntype MathFn = typeof multiply;\nconst divide: MathFn = (a, b) => a / b;",
+          "done": false
+        },
+        {
+          "id": "s4t10j1k2l3m4n5o6p7q8r9s",
+          "title": "Create a Product Interface with Merging",
+          "description": "Create a variable called %product%. It should have %id% (number), %name% (string), and %price% (number). First, declare an interface with %id% and %name%. Then declare the same interface again with %price% to demonstrate interface merging. Finally, create the product object.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "interface Product {\n  id: number;\n  name: string;\n}\ninterface Product {\n  price: number;\n}\nconst product: Product = {\n  id: 1,\n  name: 'Laptop',\n  price: 999\n};",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "z2f124i7solwwyst5v8cay",
+      "type": "title",
+      "title": "Section 5: ",
+      "videoID": "414234",
+      "questionsTotal": 0,
+      "tasksTotal": 0,
+      "totalCorrect": 0,
+      "totalFalse": 0,
+      "totalTasksDone": 0,
+      "section": 5,
+      "sectionExercisesIndex": "13-24",
+      "questions": [
+      ],
+      "tasks": [
+      ]
+    },
+    {
+      "id": "ls1i2t3e4r5a6l7s8t9r0i",
+      "title": "Literal String Merging",
+      "videoID": "41",
+      "section": 5,
+      "done": false,
+      "milestone": false,
+      "inProgress": false,
+      "questions": [
+        {
+          "id": "lsq1a2b3c4d5e6f7g8h9i0j",
+          "title": "Literal String Merging",
+          "question": "What does merging literal strings mean in TypeScript?",
+          "options": [
+            { "id": "lso1a2b3c4d5e6f7g8h9i0j", "option": "a", "text": "Combining two literal strings into one type", "correct": false, "selected": false },
+            { "id": "lso2b3c4d5e6f7g8h9i0j1k", "option": "b", "text": "Creating a new string by concatenating literals", "correct": false, "selected": false },
+            { "id": "lso3c4d5e6f7g8h9i0j1k2l", "option": "c", "text": "Combining string literal types into a union", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "lsq2b3c4d5e6f7g8h9i0j1k",
+          "title": "Union of Literal Strings",
+          "question": "type Color = 'red' | 'green' | 'blue';\ntype Primary = 'red' | 'blue';\ntype Merged = Color | Primary;\nWhat type does Merged represent?",
+          "options": [
+            { "id": "lso5e6f7g8h9i0j1k2l3m4n", "option": "a", "text": "'red' | 'green' | 'blue'", "correct": true, "selected": false },
+            { "id": "lso6f7g8h9i0j1k2l3m4n5o", "option": "b", "text": "'red' | 'blue'", "correct": false, "selected": false },
+            { "id": "lso7g8h9i0j1k2l3m4n5o6p", "option": "c", "text": "string", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "lsq3c4d5e6f7g8h9i0j1k2l",
+          "title": "Merging with Template Literals",
+          "question": "type Prefix = 'get' | 'set';\ntype Suffix = 'User' | 'Product';\ntype MethodName = `${Prefix}${Suffix}`;\nWhat type does MethodName represent?",
+          "options": [
+            { "id": "lso9i0j1k2l3m4n5o6p7q8r", "option": "a", "text": "'getUser' | 'getProduct' | 'setUser' | 'setProduct'", "correct": true, "selected": false },
+            { "id": "lso0j1k2l3m4n5o6p7q8r9s", "option": "b", "text": "'get' | 'set' | 'User' | 'Product'", "correct": false, "selected": false },
+            { "id": "lso1k2l3m4n5o6p7q8r9s0t", "option": "c", "text": "string", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "lsq4d5e6f7g8h9i0j1k2l3m",
+          "title": "Union Type Merging",
+          "question": "type Status = 'pending' | 'approved' | 'rejected';\ntype ExtendedStatus = 'pending' | 'approved' | 'rejected' | 'cancelled';\ntype MergedStatus = Status | ExtendedStatus;\nWhat type does MergedStatus represent?",
+          "options": [
+            { "id": "lso3m4n5o6p7q8r9s0t1u2v", "option": "a", "text": "'pending' | 'approved' | 'rejected'", "correct": false, "selected": false },
+            { "id": "lso4n5o6p7q8r9s0t1u2v3w", "option": "b", "text": "'pending' | 'approved' | 'rejected' | 'cancelled'", "correct": true, "selected": false },
+            { "id": "lso5o6p7q8r9s0t1u2v3w4x", "option": "c", "text": "string", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "lsq6f7g8h9i0j1k2l3m4n5o",
+          "title": "Merging with Intersection",
+          "question": "type A = 'a' | 'b' | 'c';\ntype B = 'b' | 'c' | 'd';\ntype C = A & B;\nWhat type does C represent?",
+          "options": [
+            { "id": "lso1u2v3w4x5y6z7a8b9c0d", "option": "a", "text": "'a' | 'b' | 'c' | 'd'", "correct": false, "selected": false },
+            { "id": "lso2v3w4x5y6z7a8b9c0d1e", "option": "b", "text": "'b' | 'c'", "correct": true, "selected": false },
+            { "id": "lso3w4x5y6z7a8b9c0d1e2f", "option": "c", "text": "never", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "lsq7g8h9i0j1k2l3m4n5o6p",
+          "title": "Merging Literal Strings",
+          "question": "type A = 'hello' | 'world';\ntype B = 'world' | '!';\ntype C = A | B;\nWhat type does C represent?",
+          "options": [
+            { "id": "lso5y6z7a8b9c0d1e2f3g4h", "option": "a", "text": "'hello' | 'world'", "correct": false, "selected": false },
+            { "id": "lso6z7a8b9c0d1e2f3g4h5i", "option": "b", "text": "'world' | '!'", "correct": false, "selected": false },
+            { "id": "lso7a8b9c0d1e2f3g4h5i6j", "option": "c", "text": "'hello' | 'world' | '!'", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "lsq8h9i0j1k2l3m4n5o6p7q",
+          "title": "Template Literal with Multiple Suffixes",
+          "question": "type Prefix = 'get';\ntype Suffix = 'User' | 'Product' | 'Order';\ntype Method = `${Prefix}${Suffix}`;\nWhat type does Method represent?",
+          "options": [
+            { "id": "lso9c0d1e2f3g4h5i6j7k8l", "option": "a", "text": "'getUser' | 'getProduct'", "correct": false, "selected": false },
+            { "id": "lso0d1e2f3g4h5i6j7k8l9m", "option": "b", "text": "'getUser' | 'getProduct' | 'getOrder'", "correct": true, "selected": false },
+            { "id": "lso1e2f3g4h5i6j7k8l9m0n", "option": "c", "text": "string", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "lsq9i0j1k2l3m4n5o6p7q8r",
+          "title": "Merging with Never",
+          "question": "type A = 'a' | 'b';\ntype B = 'c' | 'd';\ntype C = A & B;\nWhat type does C represent?",
+          "options": [
+            { "id": "lso3g4h5i6j7k8l9m0n1o2p", "option": "a", "text": "'a' | 'b' | 'c' | 'd'", "correct": false, "selected": false },
+            { "id": "lso4h5i6j7k8l9m0n1o2p3q", "option": "b", "text": "'a' | 'b'", "correct": false, "selected": false },
+            { "id": "lso5i6j7k8l9m0n1o2p3q4r", "option": "c", "text": "never", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "lsq0j1k2l3m4n5o6p7q8r9s",
+          "title": "Merging with Similar Types",
+          "question": "type A = 'a' | 'b' | 'c';\ntype B = 'a' | 'b';\ntype C = A & B;\nWhat type does C represent?",
+          "options": [
+            { "id": "lso7k8l9m0n1o2p3q4r5s6t", "option": "a", "text": "'a' | 'b' | 'c'", "correct": false, "selected": false },
+            { "id": "lso8l9m0n1o2p3q4r5s6t7u", "option": "b", "text": "'a' | 'b'", "correct": true, "selected": false },
+            { "id": "lso9m0n1o2p3q4r5s6t7u8v", "option": "c", "text": "'c'", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "lst1a2b3c4d5e6f7g8h9i0j",
+          "title": "Create a Type by Merging Literal Strings",
+          "description": "Create two types: %Color% with values %'red'%, %'green'%, and %'blue'%, and %SecondaryColor% with values %'yellow'%, %'purple'%, and %'green'%. Then create a type %AllColors% that merges both types.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "type Color = 'red' | 'green' | 'blue';\ntype SecondaryColor = 'yellow' | 'purple' | 'green';\ntype AllColors = Color | SecondaryColor;",
+          "done": false
+        },
+        {
+          "id": "lst2b3c4d5e6f7g8h9i0j1k",
+          "title": "Create a Template Literal Type",
+          "description": "Create a type %Endpoint% by combining %Method% ('get' | 'post' | 'put' | 'delete') and %Path% ('/users' | '/posts' | '/comments'). Use template literal syntax.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "type Method = 'get' | 'post' | 'put' | 'delete';\ntype Path = '/users' | '/posts' | '/comments';\ntype Endpoint = `${Method}${Path}`;",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "nt1u2p3l4e5s6e7c8t9i0o",
+      "title": "Named Tuples",
+      "videoID": "42",
+      "section": 5,
+      "done": false,
+      "milestone": false,
+      "inProgress": false,
+      "questions": [
+        {
+          "id": "ntq2b3c4d5e6f7g8h9i0j1k",
+          "title": "Named Tuple Syntax",
+          "question": "Which of the following correctly defines a named tuple?",
+          "options": [
+            { "id": "nto5e6f7g8h9i0j1k2l3m4n", "option": "a", "text": "type User = [name: string, age: number];", "correct": true, "selected": false },
+            { "id": "nto6f7g8h9i0j1k2l3m4n5o", "option": "b", "text": "type User = { name: string; age: number; };", "correct": false, "selected": false },
+            { "id": "nto7g8h9i0j1k2l3m4n5o6p", "option": "c", "text": "type User = (name: string, age: number);", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "ntq3c4d5e6f7g8h9i0j1k2l",
+          "title": "Named Tuple Usage",
+          "question": "type Point = [x: number, y: number];\nconst point: Point = [10, 20];\nHow do you access the x value?",
+          "options": [
+            { "id": "nto9i0j1k2l3m4n5o6p7q8r", "option": "a", "text": "point.x", "correct": false, "selected": false },
+            { "id": "nto0j1k2l3m4n5o6p7q8r9s", "option": "b", "text": "point[0]", "correct": true, "selected": false },
+            { "id": "nto1k2l3m4n5o6p7q8r9s0t", "option": "c", "text": "point['x']", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "ntq4d5e6f7g8h9i0j1k2l3m",
+          "title": "Named Tuple Labels",
+          "question": "type Person = [firstName: string, lastName: string, age: number];\nWhat are the labels in this tuple?",
+          "options": [
+            { "id": "nto3m4n5o6p7q8r9s0t1u2v", "option": "a", "text": "'firstName', 'lastName', 'age'", "correct": true, "selected": false },
+            { "id": "nto4n5o6p7q8r9s0t1u2v3w", "option": "b", "text": "0, 1, 2", "correct": false, "selected": false },
+            { "id": "nto5o6p7q8r9s0t1u2v3w4x", "option": "c", "text": "string, string, number", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "ntq5e6f7g8h9i0j1k2l3m4n",
+          "title": "Named Tuple with Optional Elements",
+          "question": "type Config = [url: string, timeout?: number, retries?: number];\nWhich of the following is valid?",
+          "options": [
+            { "id": "nto7q8r9s0t1u2v3w4x5y6z", "option": "a", "text": "['https://api.com']", "correct": false, "selected": false },
+            { "id": "nto8r9s0t1u2v3w4x5y6z7a", "option": "b", "text": "['https://api.com', 5000]", "correct": false, "selected": false },
+            { "id": "nto9s0t1u2v3w4x5y6z7a8b", "option": "c", "text": "All of the above", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "ntq6f7g8h9i0j1k2l3m4n5o",
+          "title": "Named Tuple vs Object",
+          "question": "What is the main difference between a named tuple and an object?",
+          "options": [
+            { "id": "nto1u2v3w4x5y6z7a8b9c0d", "option": "a", "text": "Named tuples are arrays with labels, objects have named properties", "correct": true, "selected": false },
+            { "id": "nto2v3w4x5y6z7a8b9c0d1e", "option": "b", "text": "They are exactly the same", "correct": false, "selected": false },
+            { "id": "nto3w4x5y6z7a8b9c0d1e2f", "option": "c", "text": "Named tuples can only hold strings", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "ntq7g8h9i0j1k2l3m4n5o6p",
+          "title": "Named Tuple with Rest Elements",
+          "question": "type StringTuple = [first: string, ...rest: string[]];\nWhat does this tuple allow?",
+          "options": [
+            { "id": "nto5y6z7a8b9c0d1e2f3g4h", "option": "a", "text": "At least one string, followed by any number of strings", "correct": true, "selected": false },
+            { "id": "nto6z7a8b9c0d1e2f3g4h5i", "option": "b", "text": "Exactly two strings", "correct": false, "selected": false },
+            { "id": "nto7a8b9c0d1e2f3g4h5i6j", "option": "c", "text": "Only one string", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "ntq8h9i0j1k2l3m4n5o6p7q",
+          "title": "Named Tuple with Different Types",
+          "question": "type Response = [status: number, data: string | null, error?: string];\nconst res: Response = [200, 'Success'];\nWhat is the type of res[1]?",
+          "options": [
+            { "id": "nto9c0d1e2f3g4h5i6j7k8l", "option": "a", "text": "string | null", "correct": true, "selected": false },
+            { "id": "nto0d1e2f3g4h5i6j7k8l9m", "option": "b", "text": "number", "correct": false, "selected": false },
+            { "id": "nto1e2f3g4h5i6j7k8l9m0n", "option": "c", "text": "string", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "ntq9i0j1k2l3m4n5o6p7q8r",
+          "title": "Named Tuple Benefits",
+          "question": "What is the benefit of using named tuples over regular tuples?",
+          "options": [
+            { "id": "nto3g4h5i6j7k8l9m0n1o2p", "option": "a", "text": "They make code more readable with descriptive labels", "correct": true, "selected": false },
+            { "id": "nto4h5i6j7k8l9m0n1o2p3q", "option": "b", "text": "They are faster than regular tuples", "correct": false, "selected": false },
+            { "id": "nto5i6j7k8l9m0n1o2p3q4r", "option": "c", "text": "They can hold more elements", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "ntq0j1k2l3m4n5o6p7q8r9s",
+          "title": "Named Tuple with Optional Label",
+          "question": "type Mixed = [string, age?: number, name?: string];\nIs this a valid named tuple?",
+          "options": [
+            { "id": "nto7k8l9m0n1o2p3q4r5s6t", "option": "a", "text": "No, because the first element doesn't have a label", "correct": false, "selected": false },
+            { "id": "nto8l9m0n1o2p3q4r5s6t7u", "option": "b", "text": "Yes, labels are optional for each element", "correct": true, "selected": false },
+            { "id": "nto9m0n1o2p3q4r5s6t7u8v", "option": "c", "text": "No, because labels must be on all elements", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "ntt1a2b3c4d5e6f7g8h9i0j",
+          "title": "Create a Named Tuple",
+          "description": "Create a type called %Employee% that is a named tuple with %id% (number), %name% (string), and %department% (string). Then create an employee tuple.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "type Employee = [id: number, name: string, department: string];\nconst employee: Employee = [1, 'Mike', 'Engineering'];",
+          "done": false
+        },
+        {
+          "id": "ntt2b3c4d5e6f7g8h9i0j1k",
+          "title": "Create a Named Tuple with Optional Elements",
+          "description": "Create a type called %ApiResponse% that is a named tuple with %status% (number), %data% (string), and an optional %error% (string). Then create two responses: one with and one without the error.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "type ApiResponse = [status: number, data: string, error?: string];\nconst success: ApiResponse = [200, 'Success'];\nconst failure: ApiResponse = [404, 'Not Found', 'Resource missing'];",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "is1n2d3e4x5s6i7g8n9a0t",
+      "title": "Index Signatures",
+      "videoID": "43",
+      "section": 5,
+      "done": false,
+      "milestone": false,
+      "inProgress": false,
+      "questions": [
+        {
+          "id": "isq1a2b3c4d5e6f7g8h9i0j",
+          "title": "What is an Index Signature",
+          "question": "What does an index signature do in TypeScript?",
+          "options": [
+            { "id": "iso1a2b3c4d5e6f7g8h9i0j", "option": "a", "text": "It creates a new type alias", "correct": false, "selected": false },
+            { "id": "iso2b3c4d5e6f7g8h9i0j1k", "option": "b", "text": "It allows objects to have dynamic property names", "correct": true, "selected": false },
+            { "id": "iso3c4d5e6f7g8h9i0j1k2l", "option": "c", "text": "It makes all properties readonly", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "isq2b3c4d5e6f7g8h9i0j1k",
+          "title": "Index Signature Syntax",
+          "question": "Which of the following correctly defines an index signature?",
+          "options": [
+            { "id": "iso5e6f7g8h9i0j1k2l3m4n", "option": "a", "text": "interface Dict { [key: string]: string; }", "correct": true, "selected": false },
+            { "id": "iso6f7g8h9i0j1k2l3m4n5o", "option": "b", "text": "interface Dict { key: string; }", "correct": false, "selected": false },
+            { "id": "iso7g8h9i0j1k2l3m4n5o6p", "option": "c", "text": "interface Dict { [string]: string; }", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "isq3c4d5e6f7g8h9i0j1k2l",
+          "title": "Dynamic Properties",
+          "question": "interface Settings {\n  [key: string]: boolean;\n}\nconst settings: Settings = { theme: true, notifications: false };\nIs this valid?",
+          "options": [
+            { "id": "iso9i0j1k2l3m4n5o6p7q8r", "option": "a", "text": "No, because theme is not a valid key", "correct": false, "selected": false },
+            { "id": "iso0j1k2l3m4n5o6p7q8r9s", "option": "b", "text": "No, because index signatures only work with number keys", "correct": false, "selected": false },
+            { "id": "iso1k2l3m4n5o6p7q8r9s0t", "option": "c", "text": "Yes, any string key with boolean value is allowed", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "isq4d5e6f7g8h9i0j1k2l3m",
+          "title": "Index Signature with Mixed Types",
+          "question": "interface Config {\n  appName: string;\n  [key: string]: string | number;\n}\nconst config: Config = { appName: 'MyApp', version: 1.0 };\nIs this valid?",
+          "options": [
+            { "id": "iso3m4n5o6p7q8r9s0t1u2v", "option": "a", "text": "Yes, appName matches string and version matches string | number", "correct": true, "selected": false },
+            { "id": "iso4n5o6p7q8r9s0t1u2v3w", "option": "b", "text": "No, because version should be a string", "correct": false, "selected": false },
+            { "id": "iso5o6p7q8r9s0t1u2v3w4x", "option": "c", "text": "No, because appName doesn't match the index signature", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "isq5e6f7g8h9i0j1k2l3m4n",
+          "title": "Index Signature with Specific Properties",
+          "question": "interface User {\n  id: number;\n  name: string;\n  [key: string]: string | number;\n}\nconst user: User = { id: 1, name: 'Mike', age: 23 };\nIs this valid?",
+          "options": [
+            { "id": "iso7q8r9s0t1u2v3w4x5y6z", "option": "a", "text": "No, because index signature must be the last property", "correct": false, "selected": false },
+            { "id": "iso8r9s0t1u2v3w4x5y6z7a", "option": "b", "text": "Yes, id and name match, age is allowed by index signature", "correct": true, "selected": false },
+            { "id": "iso9s0t1u2v3w4x5y6z7a8b", "option": "c", "text": "No, because age is not a defined property", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "isq6f7g8h9i0j1k2l3m4n5o",
+          "title": "Readonly Index Signature",
+          "question": "interface Dictionary {\n  readonly [key: string]: string;\n}\nconst dict: Dictionary = { greeting: 'Hello' };\ndict.greeting = 'Hi';\nWhat happens?",
+          "options": [
+            { "id": "iso1u2v3w4x5y6z7a8b9c0d", "option": "a", "text": "It works fine and greeting becomes 'Hi'", "correct": false, "selected": false },
+            { "id": "iso2v3w4x5y6z7a8b9c0d1e", "option": "b", "text": "It creates a new property", "correct": false, "selected": false },
+            { "id": "iso3w4x5y6z7a8b9c0d1e2f", "option": "c", "text": "TypeScript shows an error because the index signature is readonly", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "isq7g8h9i0j1k2l3m4n5o6p",
+          "title": "Index Signature with Number Keys",
+          "question": "interface NumberDict {\n  [key: number]: string;\n}\nconst dict: NumberDict = { 1: 'one', 2: 'two' };\nIs this valid?",
+          "options": [
+            { "id": "iso5y6z7a8b9c0d1e2f3g4h", "option": "a", "text": "No, index signatures only work with string keys", "correct": false, "selected": false },
+            { "id": "iso6z7a8b9c0d1e2f3g4h5i", "option": "b", "text": "No, because the values should be numbers", "correct": false, "selected": false },
+            { "id": "iso7a8b9c0d1e2f3g4h5i6j", "option": "c", "text": "Yes, number keys with string values are allowed", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "isq8h9i0j1k2l3m4n5o6p7q",
+          "title": "Index Signature with Union Values",
+          "question": "interface Cache {\n  [key: string]: string | number | boolean;\n}\nconst cache: Cache = { user: 'Mike', count: 10, isActive: true };\nIs this valid?",
+          "options": [
+            { "id": "iso9c0d1e2f3g4h5i6j7k8l", "option": "a", "text": "Yes, all values match the union type", "correct": true, "selected": false },
+            { "id": "iso0d1e2f3g4h5i6j7k8l9m", "option": "b", "text": "No, because boolean is not allowed", "correct": false, "selected": false },
+            { "id": "iso1e2f3g4h5i6j7k8l9m0n", "option": "c", "text": "No, because all values must be the same type", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "isq0j1k2l3m4n5o6p7q8r9s",
+          "title": "Index Signature with Required Properties",
+          "question": "interface Product {\n  id: number;\n  name: string;\n  [key: string]: string | number;\n}\nconst product: Product = { id: 1, name: 'Laptop' };\nIs this valid?",
+          "options": [
+            { "id": "iso7k8l9m0n1o2p3q4r5s6t", "option": "a", "text": "No, because index signature conflicts with id", "correct": false, "selected": false },
+            { "id": "iso8l9m0n1o2p3q4r5s6t7u", "option": "b", "text": "No, because name must be a number", "correct": false, "selected": false },
+            { "id": "iso9m0n1o2p3q4r5s6t7u8v", "option": "c", "text": "Yes, both required properties are present", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "ist1a2b3c4d5e6f7g8h9i0j",
+          "title": "Create an Interface with Index Signature",
+          "description": "Create an interface called %Translations% with an index signature that allows any string key with a string value. Then create a translations object with some key-value pairs.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "interface Translations {\n  [key: string]: string;\n}\nconst translations: Translations = {\n  hello: 'Hola',\n  goodbye: 'Adios',\n  thankYou: 'Gracias'\n};",
+          "done": false
+        },
+        {
+          "id": "ist2b3c4d5e6f7g8h9i0j1k",
+          "title": "Create an Interface with Index Signature and Specific Properties",
+          "description": "Create an interface called %AppConfig% with specific properties %appName% (string) and %version% (number). Then add an index signature that allows any string key with string or number values. Create a config object.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "interface AppConfig {\n  appName: string;\n  version: number;\n  [key: string]: string | number;\n}\nconst config: AppConfig = {\n  appName: 'MyApp',\n  version: 1.0,\n  maxRetries: 3,\n  apiUrl: 'https://api.com'\n};",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "br1a2n3d4e5d6t7y8p9e0s",
+      "title": "Branded Types",
+      "videoID": "44",
+      "section": 5,
+      "done": false,
+      "milestone": false,
+      "inProgress": false,
+      "questions": [
+        {
+          "id": "brq1a2b3c4d5e6f7g8h9i0j",
+          "title": "What are Branded Types",
+          "question": "What is a branded type in TypeScript?",
+          "options": [
+            { "id": "bro1a2b3c4d5e6f7g8h9i0j", "option": "a", "text": "A type that creates a new primitive", "correct": false, "selected": false },
+            { "id": "bro2b3c4d5e6f7g8h9i0j1k", "option": "b", "text": "A type that only works with strings", "correct": false, "selected": false },
+            { "id": "bro3c4d5e6f7g8h9i0j1k2l", "option": "c", "text": "A type that adds a unique brand to distinguish similar types", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "brq2b3c4d5e6f7g8h9i0j1k",
+          "title": "Branded Type Syntax",
+          "question": "Which of the following correctly defines a branded type?",
+          "options": [
+            { "id": "bro5e6f7g8h9i0j1k2l3m4n", "option": "a", "text": "type UserId = string & { __brand: 'UserId' };", "correct": true, "selected": false },
+            { "id": "bro6f7g8h9i0j1k2l3m4n5o", "option": "b", "text": "type UserId = string;", "correct": false, "selected": false },
+            { "id": "bro7g8h9i0j1k2l3m4n5o6p", "option": "c", "text": "type UserId = { __brand: 'UserId' };", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "brq3c4d5e6f7g8h9i0j1k2l",
+          "title": "Branded Type Purpose",
+          "question": "Why would you use a branded type?",
+          "options": [
+            { "id": "bro9i0j1k2l3m4n5o6p7q8r", "option": "a", "text": "To make code run faster", "correct": false, "selected": false },
+            { "id": "bro0j1k2l3m4n5o6p7q8r9s", "option": "b", "text": "To create new primitive types", "correct": false, "selected": false },
+            { "id": "bro1k2l3m4n5o6p7q8r9s0t", "option": "c", "text": "To prevent mixing up values that have the same underlying type", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "brq4d5e6f7g8h9i0j1k2l3m",
+          "title": "Branded Type with Functions",
+          "question": "type UserId = string & { __brand: 'UserId' };\nfunction createUserId(id: string): UserId {\n  return id as UserId;\n}\nfunction getUser(id: UserId) {}\ngetUser('123');\nWhat happens?",
+          "options": [
+            { "id": "bro3m4n5o6p7q8r9s0t1u2v", "option": "a", "text": "It works fine because '123' is a string", "correct": false, "selected": false },
+            { "id": "bro4n5o6p7q8r9s0t1u2v3w", "option": "b", "text": "It converts '123' to UserId automatically", "correct": false, "selected": false },
+            { "id": "bro5o6p7q8r9s0t1u2v3w4x", "option": "c", "text": "TypeScript shows an error because '123' is not a UserId", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "brq5e6f7g8h9i0j1k2l3m4n",
+          "title": "Branded Type with Different Brands",
+          "question": "type UserId = string & { __brand: 'UserId' };\ntype ProductId = string & { __brand: 'ProductId' };\nconst userId: UserId = 'user-123' as UserId;\nconst productId: ProductId = 'product-456' as ProductId;\nuserId = productId;\nWhat happens?",
+          "options": [
+            { "id": "bro7q8r9s0t1u2v3w4x5y6z", "option": "a", "text": "It works because both are strings", "correct": false, "selected": false },
+            { "id": "bro8r9s0t1u2v3w4x5y6z7a", "option": "b", "text": "It converts productId to UserId automatically", "correct": false, "selected": false },
+            { "id": "bro9s0t1u2v3w4x5y6z7a8b", "option": "c", "text": "TypeScript shows an error because UserId and ProductId are different types", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "brq7g8h9i0j1k2l3m4n5o6p",
+          "title": "Branded Type with Optional Brand",
+          "question": "type Email = string & { __brand?: 'Email' };\nconst email: Email = 'test@email.com';\nIs this valid?",
+          "options": [
+            { "id": "bro5y6z7a8b9c0d1e2f3g4h", "option": "a", "text": "No, because the brand is required", "correct": false, "selected": false },
+            { "id": "bro6z7a8b9c0d1e2f3g4h5i", "option": "b", "text": "No, because you must use 'as' to assign", "correct": false, "selected": false },
+            { "id": "bro7a8b9c0d1e2f3g4h5i6j", "option": "c", "text": "Yes, because the brand is optional", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+      ],
+      "tasks": [
+        {
+          "id": "brt1a2b3c4d5e6f7g8h9i0j",
+          "title": "Create a Branded Type for User ID",
+          "description": "Create a branded type called %UserId% that is a string with a brand %'UserId'%. Then create a function %createUserId% that takes a string and returns a %UserId%. Finally, try to assign a plain string to a %UserId% variable to see the error.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "type UserId = string & { __brand: 'UserId' };\nfunction createUserId(id: string): UserId {\n  return id as UserId;\n}\nconst userId: UserId = createUserId('123');\n// const invalid: UserId = '456'; // Error: Type 'string' is not assignable to type 'UserId'",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "sp1r2e3a4d5r6e7s8t9o0p",
+      "title": "Spread and Rest",
+      "videoID": "45",
+      "section": 5,
+      "done": false,
+      "milestone": false,
+      "inProgress": false,
+      "questions": [
+        {
+          "id": "spq1a2b3c4d5e6f7g8h9i0j",
+          "title": "Rest Parameters",
+          "question": "function sum(...numbers: number[]) {\n  return numbers.reduce((a, b) => a + b, 0);\n}\nsum(1, 2, 3);\nWhat does the ...numbers parameter represent?",
+          "options": [
+            { "id": "spo1a2b3c4d5e6f7g8h9i0j", "option": "a", "text": "An array of all remaining arguments", "correct": true, "selected": false },
+            { "id": "spo2b3c4d5e6f7g8h9i0j1k", "option": "b", "text": "A single number", "correct": false, "selected": false },
+            { "id": "spo3c4d5e6f7g8h9i0j1k2l", "option": "c", "text": "A string value", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "spq2b3c4d5e6f7g8h9i0j1k",
+          "title": "Rest Parameters Type Safety",
+          "question": "function greet(name: string, ...messages: string[]) {}\ngreet('Alice', 'Hello', 'Hi', 123);\nWhat happens?",
+          "options": [
+            { "id": "spo5e6f7g8h9i0j1k2l3m4n", "option": "a", "text": "It works because rest parameters can hold any type", "correct": false, "selected": false },
+            { "id": "spo6f7g8h9i0j1k2l3m4n5o", "option": "b", "text": "TypeScript shows an error because 123 is not a string", "correct": true, "selected": false },
+            { "id": "spo7g8h9i0j1k2l3m4n5o6p", "option": "c", "text": "It converts 123 to a string automatically", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "spq3c4d5e6f7g8h9i0j1k2l",
+          "title": "Spread with Objects",
+          "question": "const user = { id: 1, name: 'Alice' };\nconst details = { age: 25, city: 'NYC' };\nconst combined = { ...user, ...details };\nWhat properties does combined have?",
+          "options": [
+            { "id": "spo9i0j1k2l3m4n5o6p7q8r", "option": "a", "text": "Only id and name", "correct": false, "selected": false },
+            { "id": "spo0j1k2l3m4n5o6p7q8r9s", "option": "b", "text": "id, name, age, and city", "correct": true, "selected": false },
+            { "id": "spo1k2l3m4n5o6p7q8r9s0t", "option": "c", "text": "Only age and city", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "spq4d5e6f7g8h9i0j1k2l3m",
+          "title": "Spread Override",
+          "question": "const defaults = { theme: 'dark', notifications: true };\nconst prefs = { theme: 'light' };\nconst settings = { ...defaults, ...prefs };\nWhat is settings.theme?",
+          "options": [
+            { "id": "spo3m4n5o6p7q8r9s0t1u2v", "option": "a", "text": "'dark'", "correct": false, "selected": false },
+            { "id": "spo4n5o6p7q8r9s0t1u2v3w", "option": "b", "text": "'light'", "correct": true, "selected": false },
+            { "id": "spo5o6p7q8r9s0t1u2v3w4x", "option": "c", "text": "undefined", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "spq5e6f7g8h9i0j1k2l3m4n",
+          "title": "Rest with Tuple",
+          "question": "type Combined = [...string[], number];\nconst data: Combined = ['a', 'b', 'c', 42];\nWhat does this tuple allow?",
+          "options": [
+            { "id": "spo7q8r9s0t1u2v3w4x5y6z", "option": "a", "text": "Any number of strings followed by a number", "correct": true, "selected": false },
+            { "id": "spo8r9s0t1u2v3w4x5y6z7a", "option": "b", "text": "Exactly three strings and a number", "correct": false, "selected": false },
+            { "id": "spo9s0t1u2v3w4x5y6z7a8b", "option": "c", "text": "Only strings", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "spq6f7g8h9i0j1k2l3m4n5o",
+          "title": "Spread with Array",
+          "question": "const arr1 = [1, 2, 3];\nconst arr2 = [4, 5, 6];\nconst combined = [...arr1, ...arr2];\nWhat does combined equal?",
+          "options": [
+            { "id": "spo1u2v3w4x5y6z7a8b9c0d", "option": "a", "text": "[1, 2, 3, 4, 5, 6]", "correct": true, "selected": false },
+            { "id": "spo2v3w4x5y6z7a8b9c0d1e", "option": "b", "text": "[4, 5, 6, 1, 2, 3]", "correct": false, "selected": false },
+            { "id": "spo3w4x5y6z7a8b9c0d1e2f", "option": "c", "text": "[1, 2, 3]", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "spq7g8h9i0j1k2l3m4n5o6p",
+          "title": "Spread with Override Order",
+          "question": "const base = { a: 1, b: 2 };\nconst override = { b: 3, c: 4 };\nconst result = { ...base, ...override };\nWhat is result?",
+          "options": [
+            { "id": "spo5y6z7a8b9c0d1e2f3g4h", "option": "a", "text": "{ a: 1, b: 2, c: 4 }", "correct": false, "selected": false },
+            { "id": "spo6z7a8b9c0d1e2f3g4h5i", "option": "b", "text": "{ a: 1, b: 3, c: 4 }", "correct": true, "selected": false },
+            { "id": "spo7a8b9c0d1e2f3g4h5i6j", "option": "c", "text": "{ a: 1, c: 4 }", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "spq8h9i0j1k2l3m4n5o6p7q",
+          "title": "Rest Parameters with Type",
+          "question": "function log(message: string, ...args: (string | number)[]) {}\nlog('Error', 404, 'Not Found', true);\nWhat happens?",
+          "options": [
+            { "id": "spo9c0d1e2f3g4h5i6j7k8l", "option": "a", "text": "It works because true is allowed", "correct": false, "selected": false },
+            { "id": "spo0d1e2f3g4h5i6j7k8l9m", "option": "b", "text": "TypeScript shows an error because true is not a string or number", "correct": true, "selected": false },
+            { "id": "spo1e2f3g4h5i6j7k8l9m0n", "option": "c", "text": "It converts true to a string", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "spq0j1k2l3m4n5o6p7q8r9s",
+          "title": "Rest with Mixed Types",
+          "question": "function process(name: string, ...scores: number[]) {}\nprocess('Alice', 90, 85, '92');\nWhat happens?",
+          "options": [
+            { "id": "spo7k8l9m0n1o2p3q4r5s6t", "option": "a", "text": "It works because rest parameters can hold any type", "correct": false, "selected": false },
+            { "id": "spo8l9m0n1o2p3q4r5s6t7u", "option": "b", "text": "It converts '92' to a number", "correct": false, "selected": false },
+            { "id": "spo9m0n1o2p3q4r5s6t7u8v", "option": "c", "text": "TypeScript shows an error because '92' is not a number", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "spt5e6f7g8h9i0j1k2l3m4n",
+          "title": "Combine Arrays with Spread",
+          "description": "Create two arrays: %fruits% with values %'apple'%, %'banana'%, and %'orange'%, and %vegetables% with values %'carrot'%, %'broccoli'%, and %'spinach'%. Use spread to combine them into a single array called %groceries%.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "const fruits = ['apple', 'banana', 'orange'];\nconst vegetables = ['carrot', 'broccoli', 'spinach'];\nconst groceries = [...fruits, ...vegetables];",
+          "done": false
+        },
+        {
+          "id": "spt6f7g8h9i0j1k2l3m4n5o",
+          "title": "Function with Rest Parameters for Sum",
+          "description": "Create a function called %addAll% that takes any number of numbers and returns their total sum. Call it with different amounts of numbers.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "function addAll(...numbers: number[]): number {\n  return numbers.reduce((total, num) => total + num, 0);\n}\naddAll(1, 2, 3); // 6\naddAll(10, 20, 30, 40); // 100",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "du1n2i3o4n5s6e7c8t9i0o",
+      "title": "Discriminated Unions",
+      "videoID": "46",
+      "section": 5,
+      "done": false,
+      "milestone": false,
+      "inProgress": false,
+      "questions": [
+        {
+          "id": "duq1a2b3c4d5e6f7g8h9i0j",
+          "title": "What is a Discriminated Union",
+          "question": "What is a discriminated union in TypeScript?",
+          "options": [
+            { "id": "duo2b3c4d5e6f7g8h9i0j1k", "option": "a", "text": "A type that combines two interfaces", "correct": false, "selected": false },
+            { "id": "duo3c4d5e6f7g8h9i0j1k2l", "option": "b", "text": "A type that only works with strings", "correct": false, "selected": false },
+            { "id": "duo1a2b3c4d5e6f7g8h9i0j", "option": "c", "text": "A union type with a common property to distinguish between types", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "duq2b3c4d5e6f7g8h9i0j1k",
+          "title": "Discriminated Union Syntax",
+          "question": "Which of the following is a discriminated union?",
+          "options": [
+            { "id": "duo5e6f7g8h9i0j1k2l3m4n", "option": "a", "text": "type Shape = { kind: 'circle'; radius: number } | { kind: 'square'; side: number };", "correct": true, "selected": false },
+            { "id": "duo6f7g8h9i0j1k2l3m4n5o", "option": "b", "text": "type Shape = { kind: string; radius: number; side: number };", "correct": false, "selected": false },
+            { "id": "duo7g8h9i0j1k2l3m4n5o6p", "option": "c", "text": "type Shape = { radius: number } | { side: number };", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "duq3c4d5e6f7g8h9i0j1k2l",
+          "title": "Discriminated Union Discriminator",
+          "question": "type Result = \n  | { status: 'success'; data: string }\n  | { status: 'error'; error: string };\nfunction handle(result: Result) {\n  if (result.status === 'success') {\n    console.log(result.data);\n  }\n}\nWhat is the discriminator property in this union?",
+          "options": [
+            { "id": "duo9i0j1k2l3m4n5o6p7q8r", "option": "a", "text": "data", "correct": false, "selected": false },
+            { "id": "duo0j1k2l3m4n5o6p7q8r9s", "option": "b", "text": "status", "correct": true, "selected": false },
+            { "id": "duo1k2l3m4n5o6p7q8r9s0t", "option": "c", "text": "error", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "duq4d5e6f7g8h9i0j1k2l3m",
+          "title": "Discriminated Union with Type Narrowing",
+          "question": "type Response = \n  | { type: 'success'; value: number }\n  | { type: 'failure'; reason: string };\nfunction process(res: Response) {\n  if (res.type === 'success') {\n    console.log(res.value * 2);\n  }\n}\nWhat does TypeScript know inside the if block?",
+          "options": [
+            { "id": "duo3m4n5o6p7q8r9s0t1u2v", "option": "a", "text": "res is the 'success' type and has a value property", "correct": true, "selected": false },
+            { "id": "duo4n5o6p7q8r9s0t1u2v3w", "option": "b", "text": "res is the 'failure' type", "correct": false, "selected": false },
+            { "id": "duo5o6p7q8r9s0t1u2v3w4x", "option": "c", "text": "res could be either type", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "duq5e6f7g8h9i0j1k2l3m4n",
+          "title": "Discriminated Union with Switch",
+          "question": "type Status = \n  | { state: 'loading' }\n  | { state: 'success'; data: string[] }\n  | { state: 'error'; error: string };\nfunction render(status: Status) {\n  switch (status.state) {\n    case 'loading':\n      return 'Loading...';\n    case 'success':\n      return status.data;\n    case 'error':\n      return status.error;\n  }\n}\nWhat does the switch statement do?",
+          "options": [
+            { "id": "duo8r9s0t1u2v3w4x5y6z7a", "option": "a", "text": "It converts the union to an object", "correct": false, "selected": false },
+            { "id": "duo9s0t1u2v3w4x5y6z7a8b", "option": "b", "text": "It creates a new union type", "correct": false, "selected": false },
+            { "id": "duo7q8r9s0t1u2v3w4x5y6z", "option": "c", "text": "It narrows the type based on the state property", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "duq6f7g8h9i0j1k2l3m4n5o",
+          "title": "Discriminated Union Benefits",
+          "question": "What is the main benefit of using discriminated unions?",
+          "options": [
+            { "id": "duo1u2v3w4x5y6z7a8b9c0d", "option": "a", "text": "They allow TypeScript to automatically narrow types", "correct": true, "selected": false },
+            { "id": "duo2v3w4x5y6z7a8b9c0d1e", "option": "b", "text": "They make code run faster", "correct": false, "selected": false },
+            { "id": "duo3w4x5y6z7a8b9c0d1e2f", "option": "c", "text": "They create new primitive types", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+      ],
+      "tasks": [
+        {
+          "id": "dut1a2b3c4d5e6f7g8h9i0j",
+          "title": "Create a Discriminated Union for API Response",
+          "description": "Create a type called %ApiResponse% that is a discriminated union with %status% as the discriminator. It should have %'success'% with %data% (string) and %'error'% with %message% (string). Then create a function that handles both cases.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "type ApiResponse = \n  | { status: 'success'; data: string }\n  | { status: 'error'; message: string };\nfunction handleResponse(response: ApiResponse) {\n  if (response.status === 'success') {\n    console.log('Data:', response.data);\n  } else {\n    console.log('Error:', response.message);\n  }\n}\nhandleResponse({ status: 'success', data: 'Hello' });\nhandleResponse({ status: 'error', message: 'Something went wrong' });",
+          "done": false
+        },
+        {
+          "id": "dut2b3c4d5e6f7g8h9i0j1k",
+          "title": "Create a Discriminated Union for Shape",
+          "description": "Create a type called %Shape% that is a discriminated union with %kind% as the discriminator. It should have %'circle'% with %radius% (number) and %'rectangle'% with %width% and %height% (both numbers). Create a function that calculates area for both shapes.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "type Shape = \n  | { kind: 'circle'; radius: number }\n  | { kind: 'rectangle'; width: number; height: number };\nfunction getArea(shape: Shape): number {\n  if (shape.kind === 'circle') {\n    return Math.PI * shape.radius ** 2;\n  } else {\n    return shape.width * shape.height;\n  }\n}\ngetArea({ kind: 'circle', radius: 5 });\ngetArea({ kind: 'rectangle', width: 4, height: 6 });",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "fo1v2e3r4l5o6a7d8s9t0y",
+      "title": "Function Overloads",
+      "videoID": "47",
+      "section": 5,
+      "done": false,
+      "milestone": false,
+      "inProgress": false,
+      "questions": [
+        {
+          "id": "foq1a2b3c4d5e6f7g8h9i0j",
+          "title": "What are Function Overloads",
+          "question": "What are function overloads in TypeScript?",
+          "options": [
+            { "id": "foo1a2b3c4d5e6f7g8h9i0j", "option": "a", "text": "Multiple function signatures with the same name but different parameters", "correct": true, "selected": false },
+            { "id": "foo2b3c4d5e6f7g8h9i0j1k", "option": "b", "text": "A way to create multiple functions with different names", "correct": false, "selected": false },
+            { "id": "foo3c4d5e6f7g8h9i0j1k2l", "option": "c", "text": "A way to override functions in classes", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "foq3c4d5e6f7g8h9i0j1k2l",
+          "title": "Function Overloads Example",
+          "question": "function greet(name: string): string;\nfunction greet(name: string, age: number): string;\nfunction greet(name: string, age?: number): string {\n  if (age) {\n    return `Hello ${name}, you are ${age} years old`;\n  }\n  return `Hello ${name}`;\n}\ngreet('Alice');\ngreet('Bob', 25);\nHow many overload signatures does this function have?",
+          "options": [
+            { "id": "foo9i0j1k2l3m4n5o6p7q8r", "option": "a", "text": "1", "correct": false, "selected": false },
+            { "id": "foo0j1k2l3m4n5o6p7q8r9s", "option": "b", "text": "2", "correct": true, "selected": false },
+            { "id": "foo1k2l3m4n5o6p7q8r9s0t", "option": "c", "text": "3", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "foq4d5e6f7g8h9i0j1k2l3m",
+          "title": "Function Overloads Type Safety",
+          "question": "function process(value: string): string;\nfunction process(value: number): number;\nfunction process(value: string | number): string | number {\n  if (typeof value === 'string') {\n    return value.toUpperCase();\n  }\n  return value * 2;\n}\nprocess('hello');\nWhat is the return type of process('hello')?",
+          "options": [
+            { "id": "foo4n5o6p7q8r9s0t1u2v3w", "option": "a", "text": "number", "correct": false, "selected": false },
+            { "id": "foo5o6p7q8r9s0t1u2v3w4x", "option": "b", "text": "string | number", "correct": false, "selected": false },
+            { "id": "foo3m4n5o6p7q8r9s0t1u2v", "option": "c", "text": "string", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "foq5e6f7g8h9i0j1k2l3m4n",
+          "title": "Function Overloads with Different Return Types",
+          "question": "function getValue(id: number): { id: number; name: string };\nfunction getValue(id: string): { id: string; label: string };\nfunction getValue(id: number | string): { id: number | string; name?: string; label?: string } {\n  if (typeof id === 'number') {\n    return { id, name: 'Item' };\n  }\n  return { id, label: 'Label' };\n}\nconst result = getValue(1);\nWhat property does result have?",
+          "options": [
+            { "id": "foo7q8r9s0t1u2v3w4x5y6z", "option": "a", "text": "name", "correct": true, "selected": false },
+            { "id": "foo8r9s0t1u2v3w4x5y6z7a", "option": "b", "text": "label", "correct": false, "selected": false },
+            { "id": "foo9s0t1u2v3w4x5y6z7a8b", "option": "c", "text": "Both name and label", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "foq6f7g8h9i0j1k2l3m4n5o",
+          "title": "Function Overloads with Optional Parameters",
+          "question": "function log(message: string): void;\nfunction log(message: string, level: 'info' | 'error'): void;\nfunction log(message: string, level?: 'info' | 'error'): void {\n  console.log(level ? `[${level}] ${message}` : message);\n}\nlog('Hello');\nlog('Error!', 'error');\nHow many ways can you call this function?",
+          "options": [
+            { "id": "foo1u2v3w4x5y6z7a8b9c0d", "option": "a", "text": "1 way", "correct": false, "selected": false },
+            { "id": "foo2v3w4x5y6z7a8b9c0d1e", "option": "b", "text": "2 ways", "correct": true, "selected": false },
+            { "id": "foo3w4x5y6z7a8b9c0d1e2f", "option": "c", "text": "3 ways", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "foq7g8h9i0j1k2l3m4n5o6p",
+          "title": "Function Overloads with Different Parameter Count",
+          "question": "function format(value: string): string;\nfunction format(value: string, prefix: string): string;\nfunction format(value: string, prefix?: string): string {\n  return prefix ? `${prefix}: ${value}` : value;\n}\nformat('Hello');\nformat('World', 'Msg');\nWhat does format('Hello') return?",
+          "options": [
+            { "id": "foo5y6z7a8b9c0d1e2f3g4h", "option": "a", "text": "'Hello'", "correct": true, "selected": false },
+            { "id": "foo6z7a8b9c0d1e2f3g4h5i", "option": "b", "text": "'Msg: Hello'", "correct": false, "selected": false },
+            { "id": "foo7a8b9c0d1e2f3g4h5i6j", "option": "c", "text": "undefined", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+      ],
+      "tasks": [
+        {
+          "id": "fot1a2b3c4d5e6f7g8h9i0j",
+          "title": "Create Function Overloads for String/Number Conversion",
+          "description": "Create a function called %parseValue% with two overloads: one that takes a string and returns a number, and another that takes a number and returns a string. Implement the function to convert between types.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "function parseValue(value: string): number;\nfunction parseValue(value: number): string;\nfunction parseValue(value: string | number) {\n  if (typeof value === 'string') {\n    return Number(value);\n  }\n  return String(value);\n}\nparseValue('123'); // returns number\nparseValue(456); // returns string",
+          "done": false
+        },
+      ]
+    },
+    {
+      "id": "s5m1a2b3c4d5e6f7g8h9i0j",
+      "title": "Section 5 Milestone - All Concepts",
+      "videoID": "48",
+      "section": 5,
+      "done": false,
+      "milestone": true,
+      "inProgress": false,
+      "questions": [
+        {
+          "id": "s5q01a2b3c4d5e6f7g8h9i0j",
+          "title": "Literal String Merging",
+          "question": "type Status = 'pending' | 'approved';\ntype Extended = 'approved' | 'rejected';\ntype Merged = Status | Extended;\nWhat type does Merged represent?",
+          "options": [
+            { "id": "s5o02b3c4d5e6f7g8h9i0j1k", "option": "a", "text": "'pending' | 'approved' | 'rejected'", "correct": true, "selected": false },
+            { "id": "s5o03c4d5e6f7g8h9i0j1k2l", "option": "b", "text": "'approved' | 'rejected'", "correct": false, "selected": false },
+            { "id": "s5o01a2b3c4d5e6f7g8h9i0j", "option": "c", "text": "'pending' | 'approved'", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "s5q02b3c4d5e6f7g8h9i0j1k",
+          "title": "Template Literal Merging",
+          "question": "type Prefix = 'get' | 'set';\ntype Suffix = 'User' | 'Product';\ntype Method = `${Prefix}${Suffix}`;\nWhat type does Method represent?",
+          "options": [
+            { "id": "s5o05e6f7g8h9i0j1k2l3m4n", "option": "a", "text": "'get' | 'set' | 'User' | 'Product'", "correct": false, "selected": false },
+            { "id": "s5o04d5e6f7g8h9i0j1k2l3m", "option": "b", "text": "'getUser' | 'getProduct' | 'setUser' | 'setProduct'", "correct": true, "selected": false },
+            { "id": "s5o06f7g8h9i0j1k2l3m4n5o", "option": "c", "text": "string", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "s5q03c4d5e6f7g8h9i0j1k2l",
+          "title": "Named Tuples",
+          "question": "type Point = [x: number, y: number];\nconst point: Point = [10, 20];\nHow do you access the x value?",
+          "options": [
+            { "id": "s5o07g8h9i0j1k2l3m4n5o6p", "option": "a", "text": "point[0]", "correct": true, "selected": false },
+            { "id": "s5o08h9i0j1k2l3m4n5o6p7q", "option": "b", "text": "point.x", "correct": false, "selected": false },
+            { "id": "s5o09i0j1k2l3m4n5o6p7q8r", "option": "c", "text": "point['x']", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "s5q04d5e6f7g8h9i0j1k2l3m",
+          "title": "Named Tuples with Optional Elements",
+          "question": "type Config = [url: string, timeout?: number];\nWhich of the following is valid?",
+          "options": [
+            { "id": "s5o10j0k1l2m3n4o5p6q7r8s", "option": "a", "text": "['https://api.com']", "correct": false, "selected": false },
+            { "id": "s5o11k1l2m3n4o5p6q7r8s9t", "option": "b", "text": "['https://api.com', 5000]", "correct": false, "selected": false },
+            { "id": "s5o12l2m3n4o5p6q7r8s9t0u", "option": "c", "text": "All of the above", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "s5q05e6f7g8h9i0j1k2l3m4n",
+          "title": "Index Signatures",
+          "question": "interface Settings {\n  [key: string]: boolean;\n}\nconst settings: Settings = { theme: true, notifications: false };\nIs this valid?",
+          "options": [
+            { "id": "s5o13m3n4o5p6q7r8s9t0u1v", "option": "a", "text": "No, because theme is not a valid key", "correct": false, "selected": false },
+            { "id": "s5o14n4o5p6q7r8s9t0u1v2w", "option": "b", "text": "No, because index signatures only work with number keys", "correct": false, "selected": false },
+            { "id": "s5o15o5p6q7r8s9t0u1v2w3x", "option": "c", "text": "Yes, any string key with boolean value is allowed", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "s5q06f7g8h9i0j1k2l3m4n5o",
+          "title": "Index Signatures with Specific Properties",
+          "question": "interface User {\n  id: number;\n  name: string;\n  [key: string]: string | number;\n}\nconst user: User = { id: 1, name: 'Mike', age: 23 };\nIs this valid?",
+          "options": [
+            { "id": "s5o16p6q7r8s9t0u1v2w3x4y", "option": "a", "text": "No, because age is not a defined property", "correct": false, "selected": false },
+            { "id": "s5o17q7r8s9t0u1v2w3x4y5z", "option": "b", "text": "Yes, id and name match, age is allowed by index signature", "correct": true, "selected": false },
+            { "id": "s5o18r8s9t0u1v2w3x4y5z6a", "option": "c", "text": "No, because index signature must be the last property", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "s5q07g8h9i0j1k2l3m4n5o6p",
+          "title": "Branded Types",
+          "question": "type UserId = string & { __brand: 'UserId' };\nconst userId: UserId = '123' as UserId;\nconst str: string = userId;\nIs this valid?",
+          "options": [
+            { "id": "s5o19s9t0u1v2w3x4y5z6a7b", "option": "a", "text": "Yes, UserId is a string so it can be assigned to string", "correct": true, "selected": false },
+            { "id": "s5o20t0u1v2w3x4y5z6a7b8c", "option": "b", "text": "No, because UserId is a branded type", "correct": false, "selected": false },
+            { "id": "s5o21u1v2w3x4y5z6a7b8c9d", "option": "c", "text": "Only if you use type assertion", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "s5q08h9i0j1k2l3m4n5o6p7q",
+          "title": "Branded Types with Different Brands",
+          "question": "type UserId = string & { __brand: 'UserId' };\ntype ProductId = string & { __brand: 'ProductId' };\nconst userId: UserId = 'user-123' as UserId;\nconst productId: ProductId = 'product-456' as ProductId;\nuserId = productId;\nWhat happens?",
+          "options": [
+            { "id": "s5o22v2w3x4y5z6a7b8c9d0e", "option": "a", "text": "It works because both are strings", "correct": false, "selected": false },
+            { "id": "s5o23w3x4y5z6a7b8c9d0e1f", "option": "b", "text": "TypeScript shows an error because UserId and ProductId are different types", "correct": true, "selected": false },
+            { "id": "s5o24x4y5z6a7b8c9d0e1f2g", "option": "c", "text": "It converts productId to UserId automatically", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "s5q09i0j1k2l3m4n5o6p7q8r",
+          "title": "Rest Parameters",
+          "question": "function sum(...numbers: number[]) {\n  return numbers.reduce((a, b) => a + b, 0);\n}\nsum(1, 2, 3);\nWhat does the ...numbers parameter represent?",
+          "options": [
+            { "id": "s5o25y5z6a7b8c9d0e1f2g3h", "option": "a", "text": "An array of all remaining arguments", "correct": true, "selected": false },
+            { "id": "s5o26z6a7b8c9d0e1f2g3h4i", "option": "b", "text": "A single number", "correct": false, "selected": false },
+            { "id": "s5o27a7b8c9d0e1f2g3h4i5j", "option": "c", "text": "A string value", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "s5q10j1k2l3m4n5o6p7q8r9s",
+          "title": "Spread with Objects",
+          "question": "const user = { id: 1, name: 'Alice' };\nconst details = { age: 25, city: 'NYC' };\nconst combined = { ...user, ...details };\nWhat properties does combined have?",
+          "options": [
+            { "id": "s5o28b8c9d0e1f2g3h4i5j6k", "option": "a", "text": "Only id and name", "correct": false, "selected": false },
+            { "id": "s5o29c9d0e1f2g3h4i5j6k7l", "option": "b", "text": "id, name, age, and city", "correct": true, "selected": false },
+            { "id": "s5o30d0e1f2g3h4i5j6k7l8m", "option": "c", "text": "Only age and city", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "s5q11k2l3m4n5o6p7q8r9s0t",
+          "title": "Spread Override",
+          "question": "const defaults = { theme: 'dark', notifications: true };\nconst prefs = { theme: 'light' };\nconst settings = { ...defaults, ...prefs };\nWhat is settings.theme?",
+          "options": [
+            { "id": "s5o31e1f2g3h4i5j6k7l8m9n", "option": "a", "text": "'dark'", "correct": false, "selected": false },
+            { "id": "s5o32f2g3h4i5j6k7l8m9n0o", "option": "b", "text": "'light'", "correct": true, "selected": false },
+            { "id": "s5o33g3h4i5j6k7l8m9n0o1p", "option": "c", "text": "undefined", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "s5q12l3m4n5o6p7q8r9s0t1u",
+          "title": "Discriminated Unions",
+          "question": "type Result = \n  | { status: 'success'; data: string }\n  | { status: 'error'; error: string };\nWhat is the discriminator in this union?",
+          "options": [
+            { "id": "s5o34h4i5j6k7l8m9n0o1p2q", "option": "a", "text": "data", "correct": false, "selected": false },
+            { "id": "s5o35i5j6k7l8m9n0o1p2q3r", "option": "b", "text": "status", "correct": true, "selected": false },
+            { "id": "s5o36j6k7l8m9n0o1p2q3r4s", "option": "c", "text": "error", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "s5q13m4n5o6p7q8r9s0t1u2v",
+          "title": "Discriminated Unions with Type Narrowing",
+          "question": "type Response = \n  | { type: 'success'; value: number }\n  | { type: 'failure'; reason: string };\nfunction process(res: Response) {\n  if (res.type === 'success') {\n    console.log(res.value * 2);\n  }\n}\nWhat does TypeScript know inside the if block?",
+          "options": [
+            { "id": "s5o37k7l8m9n0o1p2q3r4s5t", "option": "a", "text": "res is the 'success' type and has a value property", "correct": true, "selected": false },
+            { "id": "s5o38l8m9n0o1p2q3r4s5t6u", "option": "b", "text": "res is the 'failure' type", "correct": false, "selected": false },
+            { "id": "s5o39m9n0o1p2q3r4s5t6u7v", "option": "c", "text": "res could be either type", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "s5q14n5o6p7q8r9s0t1u2v3w",
+          "title": "Function Overloads",
+          "question": "function greet(name: string): string;\nfunction greet(name: string, age: number): string;\nfunction greet(name: string, age?: number): string {\n  if (age) {\n    return `Hello ${name}, you are ${age} years old`;\n  }\n  return `Hello ${name}`;\n}\ngreet('Alice');\ngreet('Bob', 25);\nHow many overload signatures does this function have?",
+          "options": [
+            { "id": "s5o40n0o1p2q3r4s5t6u7v8w", "option": "a", "text": "1", "correct": false, "selected": false },
+            { "id": "s5o41o1p2q3r4s5t6u7v8w9x", "option": "b", "text": "2", "correct": true, "selected": false },
+            { "id": "s5o42p2q3r4s5t6u7v8w9x0y", "option": "c", "text": "3", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "s5q16p7q8r9s0t1u2v3w4x5y",
+          "title": "Rest with Tuple",
+          "question": "type Combined = [...string[], number];\nconst data: Combined = ['a', 'b', 'c', 42];\nWhat does this tuple allow?",
+          "options": [
+            { "id": "s5o46t6u7v8w9x0y1z2a3b4c", "option": "a", "text": "Any number of strings followed by a number", "correct": true, "selected": false },
+            { "id": "s5o47u7v8w9x0y1z2a3b4c5d", "option": "b", "text": "Exactly three strings and a number", "correct": false, "selected": false },
+            { "id": "s5o48v8w9x0y1z2a3b4c5d6e", "option": "c", "text": "Only strings", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "s5q17q8r9s0t1u2v3w4x5y6z",
+          "title": "Readonly Index Signature",
+          "question": "interface Dictionary {\n  readonly [key: string]: string;\n}\nconst dict: Dictionary = { greeting: 'Hello' };\ndict.greeting = 'Hi';\nWhat happens?",
+          "options": [
+            { "id": "s5o49w9x0y1z2a3b4c5d6e7f", "option": "a", "text": "It works fine and greeting becomes 'Hi'", "correct": false, "selected": false },
+            { "id": "s5o50x0y1z2a3b4c5d6e7f8g", "option": "b", "text": "TypeScript shows an error because the index signature is readonly", "correct": true, "selected": false },
+            { "id": "s5o51y1z2a3b4c5d6e7f8g9h", "option": "c", "text": "It creates a new property", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "s5q19s0t1u2v3w4x5y6z7a8b",
+          "title": "Branded Type with Number",
+          "question": "type Age = number & { __brand: 'Age' };\nfunction createAge(age: number): Age {\n  return age as Age;\n}\nconst myAge: Age = createAge(25);\nconst num: number = myAge;\nIs this valid?",
+          "options": [
+            { "id": "s5o55c5d6e7f8g9h0i1j2k3l", "option": "a", "text": "No, because Age is a branded type", "correct": false, "selected": false },
+            { "id": "s5o56d6e7f8g9h0i1j2k3l4m", "option": "b", "text": "Yes, Age is a number so it can be assigned to number", "correct": true, "selected": false },
+            { "id": "s5o57e7f8g9h0i1j2k3l4m5n", "option": "c", "text": "Only if you use type assertion", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "s5q20t1u2v3w4x5y6z7a8b9c",
+          "title": "Discriminated Union with Switch",
+          "question": "type Status = \n  | { state: 'loading' }\n  | { state: 'success'; data: string[] }\n  | { state: 'error'; error: string };\nfunction render(status: Status) {\n  switch (status.state) {\n    case 'loading':\n      return 'Loading...';\n    case 'success':\n      return status.data;\n    case 'error':\n      return status.error;\n  }\n}\nWhat does the switch statement do?",
+          "options": [
+            { "id": "s5o58f8g9h0i1j2k3l4m5n6o", "option": "a", "text": "It narrows the type based on the state property", "correct": true, "selected": false },
+            { "id": "s5o59g9h0i1j2k3l4m5n6o7p", "option": "b", "text": "It converts the union to an object", "correct": false, "selected": false },
+            { "id": "s5o60h0i1j2k3l4m5n6o7p8q", "option": "c", "text": "It creates a new union type", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "s5t01a2b3c4d5e6f7g8h9i0j",
+          "title": "Create a Discriminated Union for Payment",
+          "description": "Create a type called %Payment% with %method% as the discriminator. It should have %'card'% with %cardNumber% (string) and %'cash'% with %amount% (number). Create a function that handles both payment types.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "type Payment = \n  | { method: 'card'; cardNumber: string }\n  | { method: 'cash'; amount: number };\nfunction processPayment(payment: Payment) {\n  if (payment.method === 'card') {\n    console.log('Processing card:', payment.cardNumber);\n  } else {\n    console.log('Processing cash:', payment.amount);\n  }\n}\nprocessPayment({ method: 'card', cardNumber: '1234-5678' });\nprocessPayment({ method: 'cash', amount: 50 });",
+          "done": false
+        },
+        {
+          "id": "s5t03c4d5e6f7g8h9i0j1k2l",
+          "title": "Create an Index Signature Interface",
+          "description": "Create an interface called %Config% with an index signature that allows any string key with %string | number% values. Create a config object with some key-value pairs.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "interface Config {\n  [key: string]: string | number;\n}\nconst config: Config = {\n  appName: 'MyApp',\n  version: 1.0,\n  maxRetries: 3\n};",
+          "done": false
+        },
+        {
+          "id": "s5t04d5e6f7g8h9i0j1k2l3m",
+          "title": "Create a Branded Type for Product ID",
+          "description": "Create a branded type called %ProductId% that is a string with a brand %'ProductId'%. Create a function %createProductId% that takes a string and returns a %ProductId%.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "type ProductId = string & { __brand: 'ProductId' };\nfunction createProductId(id: string): ProductId {\n  return id as ProductId;\n}\nconst productId: ProductId = createProductId('prod-123');",
+          "done": false
+        },
+        {
+          "id": "s5t05e6f7g8h9i0j1k2l3m4n",
+          "title": "Create a Named Tuple",
+          "description": "Create a type called %Employee% that is a named tuple with %id% (number), %name% (string), and %department% (string). Then create an employee tuple.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "type Employee = [id: number, name: string, department: string];\nconst employee: Employee = [1, 'Mike', 'Engineering'];",
+          "done": false
+        }
+      ]
+    },
+  
   ]
 }
