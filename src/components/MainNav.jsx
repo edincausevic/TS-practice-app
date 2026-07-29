@@ -13,9 +13,9 @@ const MainNav = ({displayExercise, data, resetSection}) => {
           <h2>📘 TypeScript Drills </h2>
         </div>
         <div className="course-link">
-          <a href="https://www.udemy.com/course/modern-TypeScript-es6-for-react-nextjs-vue-nodejs/?referralCode=6963EBB03103EBCEF1F8" target="_blank" rel="noopener" style={{marginRight: '7px'}}>
+          <a href="https://edincausevic.github.io/course_promotions/" target="_blank" rel="noopener" style={{marginRight: '15px'}}>
           <span><img style={{height: '15px'}} src={UdemyLogo}/></span> 
-          Go to TS Course</a>
+          My Courses</a>
           <a 
             href="https://www.youtube.com/channel/UCxsJ-g3ALVzsn_VCkKfDXxA" 
             target="_blank" 

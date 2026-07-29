@@ -4251,7 +4251,7 @@ export const seedData = {
       ]
     },
     {
-      "id": "z2f124i7solwwyst5v8cay",
+      "id": "z52344i7solwwyst5v8cay",
       "type": "title",
       "title": "Section 5: ",
       "videoID": "414234",
@@ -5307,6 +5307,1098 @@ export const seedData = {
         }
       ]
     },
-  
+    {
+      "id": "z2f124i7solwwyst5v8cay",
+      "type": "title",
+      "title": "Section 6: Utility Types",
+      "videoID": "414234",
+      "questionsTotal": 0,
+      "tasksTotal": 0,
+      "totalCorrect": 0,
+      "totalFalse": 0,
+      "totalTasksDone": 0,
+      "section": 6,
+      "sectionExercisesIndex": "13-24",
+      "questions": [
+      ],
+      "tasks": [
+      ]
+    },
+    {
+      "id": "pr1r2e3q4u5i6r7e8d9o0n",
+      "title": "Partial, Required & Readonly",
+      "videoID": "49",
+      "section": 6,
+      "done": false,
+      "milestone": false,
+      "inProgress": false,
+      "questions": [
+        {
+          "id": "prq1a2b3c4d5e6f7g8h9i0j",
+          "title": "What is Partial",
+          "question": "What does the Partial utility type do in TypeScript?",
+          "options": [
+            { "id": "pro2b3c4d5e6f7g8h9i0j1k", "option": "a", "text": "It makes all properties of a type required", "correct": false, "selected": false },
+            { "id": "pro3c4d5e6f7g8h9i0j1k2l", "option": "b", "text": "It makes all properties readonly", "correct": false, "selected": false },
+            { "id": "pro1a2b3c4d5e6f7g8h9i0j", "option": "c", "text": "It makes all properties of a type optional", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "prq2b3c4d5e6f7g8h9i0j1k",
+          "title": "What is Required",
+          "question": "What does the Required utility type do in TypeScript?",
+          "options": [
+            { "id": "pro5e6f7g8h9i0j1k2l3m4n", "option": "a", "text": "It makes all properties optional", "correct": false, "selected": false },
+            { "id": "pro6f7g8h9i0j1k2l3m4n5o", "option": "b", "text": "It makes all properties required", "correct": true, "selected": false },
+            { "id": "pro7g8h9i0j1k2l3m4n5o6p", "option": "c", "text": "It makes all properties readonly", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "prq3c4d5e6f7g8h9i0j1k2l",
+          "title": "What is Readonly",
+          "question": "What does the Readonly utility type do in TypeScript?",
+          "options": [
+            { "id": "pro9i0j1k2l3m4n5o6p7q8r", "option": "a", "text": "It makes all properties mutable", "correct": false, "selected": false },
+            { "id": "pro0j1k2l3m4n5o6p7q8r9s", "option": "b", "text": "It makes all properties readonly", "correct": true, "selected": false },
+            { "id": "pro1k2l3m4n5o6p7q8r9s0t", "option": "c", "text": "It makes all properties optional", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "prq4d5e6f7g8h9i0j1k2l3m",
+          "title": "Partial Usage",
+          "question": "interface User {\n  id: number;\n  name: string;\n  email: string;\n}\ntype PartialUser = Partial<User>;\nconst user: PartialUser = { name: 'Mike' };\nIs this valid?",
+          "options": [
+            { "id": "pro3m4n5o6p7q8r9s0t1u2v", "option": "a", "text": "Yes, all properties become optional", "correct": true, "selected": false },
+            { "id": "pro4n5o6p7q8r9s0t1u2v3w", "option": "b", "text": "No, because id is required", "correct": false, "selected": false },
+            { "id": "pro5o6p7q8r9s0t1u2v3w4x", "option": "c", "text": "No, because email is required", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "prq5e6f7g8h9i0j1k2l3m4n",
+          "title": "Required Usage",
+          "question": "interface Config {\n  url?: string;\n  timeout?: number;\n}\ntype RequiredConfig = Required<Config>;\nconst config: RequiredConfig = { url: 'https://api.com' };\nIs this valid?",
+          "options": [
+            { "id": "pro7q8r9s0t1u2v3w4x5y6z", "option": "a", "text": "Yes, because url is provided", "correct": false, "selected": false },
+            { "id": "pro8r9s0t1u2v3w4x5y6z7a", "option": "b", "text": "No, because timeout is required now", "correct": true, "selected": false },
+            { "id": "pro9s0t1u2v3w4x5y6z7a8b", "option": "c", "text": "No, because url should be optional", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "prq6f7g8h9i0j1k2l3m4n5o",
+          "title": "Readonly Usage",
+          "question": "interface Product {\n  id: number;\n  name: string;\n}\ntype ReadonlyProduct = Readonly<Product>;\nconst product: ReadonlyProduct = { id: 1, name: 'Laptop' };\nproduct.name = 'Phone';\nWhat happens?",
+          "options": [
+            { "id": "pro1u2v3w4x5y6z7a8b9c0d", "option": "a", "text": "It works fine and name becomes 'Phone'", "correct": false, "selected": false },
+            { "id": "pro2v3w4x5y6z7a8b9c0d1e", "option": "b", "text": "TypeScript shows an error because properties are readonly", "correct": true, "selected": false },
+            { "id": "pro3w4x5y6z7a8b9c0d1e2f", "option": "c", "text": "It creates a new product", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "prq7g8h9i0j1k2l3m4n5o6p",
+          "title": "Partial with Nested Objects",
+          "question": "interface Settings {\n  theme: { dark: boolean; colors: string[] };\n  notifications: boolean;\n}\ntype PartialSettings = Partial<Settings>;\nconst settings: PartialSettings = { theme: { dark: true } };\nIs this valid?",
+          "options": [
+            { "id": "pro6z7a8b9c0d1e2f3g4h5i", "option": "a", "text": "No, because colors is required in theme", "correct": false, "selected": false },
+            { "id": "pro7a8b9c0d1e2f3g4h5i6j", "option": "b", "text": "No, because notifications is required", "correct": false, "selected": false },
+            { "id": "pro5y6z7a8b9c0d1e2f3g4h", "option": "c", "text": "Yes, Partial makes all properties optional", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "prq8h9i0j1k2l3m4n5o6p7q",
+          "title": "Combining Utility Types",
+          "question": "interface User {\n  id: number;\n  name: string;\n  email?: string;\n}\ntype PartialReadonlyUser = Readonly<Partial<User>>;\nconst user: PartialReadonlyUser = { name: 'Mike' };\nuser.name = 'John';\nWhat happens?",
+          "options": [
+            { "id": "pro9c0d1e2f3g4h5i6j7k8l", "option": "a", "text": "It works and name becomes 'John'", "correct": false, "selected": false },
+            { "id": "pro0d1e2f3g4h5i6j7k8l9m", "option": "b", "text": "TypeScript shows an error because properties are readonly", "correct": true, "selected": false },
+            { "id": "pro1e2f3g4h5i6j7k8l9m0n", "option": "c", "text": "It creates a new user", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "prq9i0j1k2l3m4n5o6p7q8r",
+          "title": "Required vs Partial",
+          "question": "interface Post {\n  title: string;\n  content?: string;\n  author: string;\n}\nWhich type would make all properties required?",
+          "options": [
+            { "id": "pro3g4h5i6j7k8l9m0n1o2p", "option": "a", "text": "Partial<Post>", "correct": false, "selected": false },
+            { "id": "pro4h5i6j7k8l9m0n1o2p3q", "option": "b", "text": "Required<Post>", "correct": true, "selected": false },
+            { "id": "pro5i6j7k8l9m0n1o2p3q4r", "option": "c", "text": "Readonly<Post>", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "prq0j1k2l3m4n5o6p7q8r9s",
+          "title": "Readonly vs Partial",
+          "question": "interface Task {\n  id: number;\n  title: string;\n  completed: boolean;\n}\nWhich type would allow updating the completed property?",
+          "options": [
+            { "id": "pro7k8l9m0n1o2p3q4r5s6t", "option": "a", "text": "Partial<Task>", "correct": true, "selected": false },
+            { "id": "pro8l9m0n1o2p3q4r5s6t7u", "option": "b", "text": "Readonly<Task>", "correct": false, "selected": false },
+            { "id": "pro9m0n1o2p3q4r5s6t7u8v", "option": "c", "text": "Required<Task>", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "prt1a2b3c4d5e6f127g8h9i0j",
+          "title": "Create a Partial Update Function",
+          "description": "Create an interface called %User% with %id% (number), %name% (string), and %email% (string). Create a function called %updateUser% that takes an %id% (number) and %updates% (Partial<User>). The function should return a new object that merges the original user with the updates. Log the result.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "interface User {\n  id: number;\n  name: string;\n  email: string;\n}\nfunction updateUser(id: number, updates: Partial<User>): User {\n  const originalUser: User = { id, name: 'Default Name', email: 'default@email.com' };\n  return { ...originalUser, ...updates };\n}\nconst updated = updateUser(1, { name: 'Mike' });\nconsole.log(updated);\nconst updated2 = updateUser(2, { email: 'new@email.com' });\nconsole.log(updated2);",
+          "done": false
+        },
+        {
+          "id": "prt2b3c4d5e6f7g8h9i0j1k",
+          "title": "Create a Readonly Config",
+          "description": "Create an interface %AppConfig% with %apiUrl% (string), %timeout% (number), and %retries% (number). Create a readonly version of this type and try to modify a property to see the error.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "interface AppConfig {\n  apiUrl: string;\n  timeout: number;\n  retries: number;\n}\ntype ReadonlyConfig = Readonly<AppConfig>;\nconst config: ReadonlyConfig = {\n  apiUrl: 'https://api.com',\n  timeout: 5000,\n  retries: 3\n};\n// config.timeout = 6000; // Error: Cannot assign to 'timeout' because it is a read-only property",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "po1p2i3c4k5o6m7i8t9o0n",
+      "title": "Pick and Omit",
+      "videoID": "50",
+      "section": 6,
+      "done": false,
+      "milestone": false,
+      "inProgress": false,
+      "questions": [
+        {
+          "id": "poq1a2b3c4d5e6f7g8h9i0j",
+          "title": "What is Pick",
+          "question": "What does the Pick utility type do in TypeScript?",
+          "options": [
+            { "id": "poo1a2b3c4d5e6f7g8h9i0j", "option": "a", "text": "It creates a new type by excluding specific properties", "correct": false, "selected": false },
+            { "id": "poo2b3c4d5e6f7g8h9i0j1k", "option": "b", "text": "It creates a new type by selecting specific properties", "correct": true, "selected": false },
+            { "id": "poo3c4d5e6f7g8h9i0j1k2l", "option": "c", "text": "It makes all properties optional", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "poq2b3c4d5e6f7g8h9i0j1k",
+          "title": "What is Omit",
+          "question": "What does the Omit utility type do in TypeScript?",
+          "options": [
+            { "id": "poo5e6f7g8h9i0j1k2l3m4n", "option": "a", "text": "It creates a new type by selecting specific properties", "correct": false, "selected": false },
+            { "id": "poo6f7g8h9i0j1k2l3m4n5o", "option": "b", "text": "It makes all properties required", "correct": false, "selected": false },
+            { "id": "poo7g8h9i0j1k2l3m4n5o6p", "option": "c", "text": "It creates a new type by excluding specific properties", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "poq3c4d5e6f7g8h9i0j1k2l",
+          "title": "Pick Syntax",
+          "question": "interface User {\n  id: number;\n  name: string;\n  email: string;\n  age: number;\n}\ntype UserPreview = Pick<User, 'id' | 'name'>;\nWhat properties does UserPreview have?",
+          "options": [
+            { "id": "poo9i0j1k2l3m4n5o6p7q8r", "option": "a", "text": "id, name, and email", "correct": false, "selected": false },
+            { "id": "poo0j1k2l3m4n5o6p7q8r9s", "option": "b", "text": "All properties", "correct": false, "selected": false },
+            { "id": "poo1k2l3m4n5o6p7q8r9s0t", "option": "c", "text": "id and name", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "poq4d5e6f7g8h9i0j1k2l3m",
+          "title": "Omit Syntax",
+          "question": "interface Product {\n  id: number;\n  name: string;\n  price: number;\n  description: string;\n}\ntype ProductSummary = Omit<Product, 'description'>;\nWhat properties does ProductSummary have?",
+          "options": [
+            { "id": "poo4n5o6p7q8r9s0t1u2v3w", "option": "a", "text": "Only id, name, and price", "correct": true, "selected": false },
+            { "id": "poo3m4n5o6p7q8r9s0t1u2v", "option": "b", "text": "All properties including description", "correct": false, "selected": false },
+            { "id": "poo5o6p7q8r9s0t1u2v3w4x", "option": "c", "text": "Only description", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "poq5e6f7g8h9i0j1k2l3m4n",
+          "title": "Pick with Multiple Properties",
+          "question": "interface Post {\n  id: number;\n  title: string;\n  content: string;\n  author: string;\n  createdAt: Date;\n}\ntype PostPreview = Pick<Post, 'title' | 'author' | 'createdAt'>;\nconst post: PostPreview = { title: 'Hello', author: 'Mike', createdAt: new Date() };\nIs this valid?",
+          "options": [
+            { "id": "poo7q8r9s0t1u2v3w4x5y6z", "option": "a", "text": "No, because id is missing", "correct": false, "selected": false },
+            { "id": "poo8r9s0t1u2v3w4x5y6z7a", "option": "b", "text": "Yes, all picked properties are present", "correct": true, "selected": false },
+            { "id": "poo9s0t1u2v3w4x5y6z7a8b", "option": "c", "text": "No, because content is missing", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "poq6f7g8h9i0j1k2l3m4n5o",
+          "title": "Omit with Multiple Properties",
+          "question": "interface Employee {\n  id: number;\n  name: string;\n  salary: number;\n  department: string;\n  password: string;\n}\ntype PublicEmployee = Omit<Employee, 'salary' | 'password'>;\nconst employee: PublicEmployee = { id: 1, name: 'Alice', department: 'Engineering' };\nIs this valid?",
+          "options": [
+            { "id": "poo1u2v3w4x5y6z7a8b9c0d", "option": "a", "text": "No, because salary is required", "correct": false, "selected": false },
+            { "id": "poo2v3w4x5y6z7a8b9c0d1e", "option": "b", "text": "Yes, salary and password are omitted", "correct": true, "selected": false },
+            { "id": "poo3w4x5y6z7a8b9c0d1e2f", "option": "c", "text": "No, because password is required", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "poq7g8h9i0j1k2l3m4n5o6p",
+          "title": "Pick vs Omit",
+          "question": "interface Car {\n  brand: string;\n  model: string;\n  year: number;\n  price: number;\n  vin: string;\n}\nWhich type would you use to create a type with only brand, model, and year?",
+          "options": [
+            { "id": "poo5y6z7a8b9c0d1e2f3g4h", "option": "a", "text": "Omit<Car, 'brand' | 'model' | 'year'>", "correct": false, "selected": false },
+            { "id": "poo6z7a8b9c0d1e2f3g4h5i", "option": "b", "text": "Pick<Car, 'brand' | 'model' | 'year'>", "correct": true, "selected": false },
+            { "id": "poo7a8b9c0d1e2f3g4h5i6j", "option": "c", "text": "Partial<Car>", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "poq8h9i0j1k2l3m4n5o6p7q",
+          "title": "Omit Use Case",
+          "question": "interface User {\n  id: number;\n  username: string;\n  password: string;\n  email: string;\n}\ntype SafeUser = Omit<User, 'password'>;\nconst user: SafeUser = { id: 1, username: 'john', email: 'john@email.com' };\nIs this valid?",
+          "options": [
+            { "id": "poo0d1e2f3g4h5i6j7k8l9m", "option": "a", "text": "Yes, password is omitted so it's safe", "correct": true, "selected": false },
+            { "id": "poo9c0d1e2f3g4h5i6j7k8l", "option": "b", "text": "No, because password is required", "correct": false, "selected": false },
+            { "id": "poo1e2f3g4h5i6j7k8l9m0n", "option": "c", "text": "No, because id is missing", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+      ],
+      "tasks": [
+        {
+          "id": "pot1a2b3c4d5e6f7g8h9i0j",
+          "title": "Create a Pick Type for User Preview",
+          "description": "Create an interface called %User% with %id% (number), %name% (string), %email% (string), and %age% (number). Then create a type called %UserPreview% using %Pick% that only includes %id%, %name%, and %email%. Create a variable using this type.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "interface User {\n  id: number;\n  name: string;\n  email: string;\n  age: number;\n}\ntype UserPreview = Pick<User, 'id' | 'name' | 'email'>;\nconst user: UserPreview = { id: 1, name: 'Mike', email: 'mike@email.com' };",
+          "done": false
+        },
+        {
+          "id": "pot2b3c4d5e6f7g8h9i0j1k",
+          "title": "Create an Omit Type for Sensitive Data",
+          "description": "Create an interface called %Employee% with %id% (number), %name% (string), %salary% (number), %department% (string), and %password% (string). Then create a type called %PublicEmployee% using %Omit% that excludes %salary% and %password%. Create a variable using this type.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "interface Employee {\n  id: number;\n  name: string;\n  salary: number;\n  department: string;\n  password: string;\n}\ntype PublicEmployee = Omit<Employee, 'salary' | 'password'>;\nconst employee: PublicEmployee = { id: 1, name: 'Alice', department: 'Engineering' };",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "ne1x2c3l4u5d6e7n8o9n0e",
+      "title": "NonNullable & Exclude",
+      "videoID": "52",
+      "section": 6,
+      "done": false,
+      "milestone": false,
+      "inProgress": false,
+      "questions": [
+        {
+          "id": "neq1a2b3c4d5e6f7g8h9i0j",
+          "title": "What is NonNullable",
+          "question": "What does the NonNullable utility type do in TypeScript?",
+          "options": [
+            { "id": "neo1a2b3c4d5e6f7g8h9i0j", "option": "a", "text": "It removes null and undefined from a type", "correct": true, "selected": false },
+            { "id": "neo2b3c4d5e6f7g8h9i0j1k", "option": "b", "text": "It makes all properties required", "correct": false, "selected": false },
+            { "id": "neo3c4d5e6f7g8h9i0j1k2l", "option": "c", "text": "It removes specific types from a union", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "neq2b3c4d5e6f7g8h9i0j1k",
+          "title": "What is Exclude",
+          "question": "What does the Exclude utility type do in TypeScript?",
+          "options": [
+            { "id": "neo5e6f7g8h9i0j1k2l3m4n", "option": "a", "text": "It removes null and undefined from a type", "correct": false, "selected": false },
+            { "id": "neo6f7g8h9i0j1k2l3m4n5o", "option": "b", "text": "It removes specific types from a union", "correct": true, "selected": false },
+            { "id": "neo7g8h9i0j1k2l3m4n5o6p", "option": "c", "text": "It makes all properties optional", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "neq3c4d5e6f7g8h9i0j1k2l",
+          "title": "NonNullable Syntax",
+          "question": "type T = string | null | undefined;\ntype U = NonNullable<T>;\nWhat type does U represent?",
+          "options": [
+            { "id": "neo9i0j1k2l3m4n5o6p7q8r", "option": "a", "text": "string | null", "correct": false, "selected": false },
+            { "id": "neo0j1k2l3m4n5o6p7q8r9s", "option": "b", "text": "string", "correct": true, "selected": false },
+            { "id": "neo1k2l3m4n5o6p7q8r9s0t", "option": "c", "text": "string | undefined", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "neq4d5e6f7g8h9i0j1k2l3m",
+          "title": "Exclude Syntax",
+          "question": "type Status = 'pending' | 'approved' | 'rejected' | 'cancelled';\ntype ActiveStatus = Exclude<Status, 'cancelled'>;\nWhat type does ActiveStatus represent?",
+          "options": [
+            { "id": "neo3m4n5o6p7q8r9s0t1u2v", "option": "a", "text": "'pending' | 'approved' | 'rejected'", "correct": true, "selected": false },
+            { "id": "neo4n5o6p7q8r9s0t1u2v3w", "option": "b", "text": "'pending' | 'approved' | 'rejected' | 'cancelled'", "correct": false, "selected": false },
+            { "id": "neo5o6p7q8r9s0t1u2v3w4x", "option": "c", "text": "'cancelled'", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "neq5e6f7g8h9i0j1k2l3m4n",
+          "title": "NonNullable with Union",
+          "question": "type Value = number | string | null | undefined;\ntype NonNullValue = NonNullable<Value>;\nWhat type does NonNullValue represent?",
+          "options": [
+            { "id": "neo7q8r9s0t1u2v3w4x5y6z", "option": "a", "text": "number | string | null", "correct": false, "selected": false },
+            { "id": "neo8r9s0t1u2v3w4x5y6z7a", "option": "b", "text": "number | string | undefined", "correct": false, "selected": false },
+            { "id": "neo9s0t1u2v3w4x5y6z7a8b", "option": "c", "text": "number | string", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "neq6f7g8h9i0j1k2l3m4n5o",
+          "title": "Exclude with Multiple Types",
+          "question": "type AllTypes = string | number | boolean | null | undefined;\ntype Primitives = Exclude<AllTypes, null | undefined>;\nWhat type does Primitives represent?",
+          "options": [
+            { "id": "neo1u2v3w4x5y6z7a8b9c0d", "option": "a", "text": "string | number | boolean", "correct": true, "selected": false },
+            { "id": "neo2v3w4x5y6z7a8b9c0d1e", "option": "b", "text": "string | number | boolean | null", "correct": false, "selected": false },
+            { "id": "neo3w4x5y6z7a8b9c0d1e2f", "option": "c", "text": "string | number | boolean | undefined", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "neq8h9i0j1k2l3m4n5o6p7q",
+          "title": "Exclude with String Literals",
+          "question": "type Colors = 'red' | 'green' | 'blue' | 'yellow' | 'purple';\ntype PrimaryColors = Exclude<Colors, 'yellow' | 'purple'>;\nWhat type does PrimaryColors represent?",
+          "options": [
+            { "id": "neo9c0d1e2f3g4h5i6j7k8l", "option": "a", "text": "'red' | 'green' | 'blue'", "correct": true, "selected": false },
+            { "id": "neo0d1e2f3g4h5i6j7k8l9m", "option": "b", "text": "'yellow' | 'purple'", "correct": false, "selected": false },
+            { "id": "neo1e2f3g4h5i6j7k8l9m0n", "option": "c", "text": "'red' | 'green' | 'blue' | 'yellow' | 'purple'", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "neq0j1k2l3m4n5o6p7q8r9s",
+          "title": "Exclude with Union Types",
+          "question": "type Response = 'success' | 'error' | 'loading' | 'idle';\ntype ReadyResponse = Exclude<Response, 'loading' | 'idle'>;\nconst status: ReadyResponse = 'success';\nIs this valid?",
+          "options": [
+            { "id": "neo7k8l9m0n1o2p3q4r5s6t", "option": "a", "text": "Yes, 'success' is not excluded", "correct": true, "selected": false },
+            { "id": "neo8l9m0n1o2p3q4r5s6t7u", "option": "b", "text": "No, because 'success' is excluded", "correct": false, "selected": false },
+            { "id": "neo9m0n1o2p3q4r5s6t7u8v", "option": "c", "text": "No, because status must be 'loading'", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "net1a2b3c4d5e6f7g8h9i0j",
+          "title": "Create a NonNullable Type for Form Data",
+          "description": "Create a type called %FormData% that can be %string | number | null | undefined%. Then create a type called %SafeData% using %NonNullable%. Create a variable using SafeData.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "type FormData = string | number | null | undefined;\ntype SafeData = NonNullable<FormData>;\nconst data: SafeData = 'hello';",
+          "done": false
+        },
+        {
+          "id": "net2b3c4d5e6f7g8h9i0j1k",
+          "title": "Create an Exclude Type for Status",
+          "description": "Create a type called %OrderStatus% with values %'pending'%, %'processing'%, %'shipped'%, %'delivered'%, and %'cancelled'%. Then create a type called %ActiveStatus% using %Exclude% to remove %'cancelled'% and %'delivered'%. Create a variable using ActiveStatus.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "type OrderStatus = 'pending' | 'processing' | 'shipped' | 'delivered' | 'cancelled';\ntype ActiveStatus = Exclude<OrderStatus, 'cancelled' | 'delivered'>;\nconst status: ActiveStatus = 'processing';",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "rp1r2e3t4u5r6n7p8a9r0a",
+      "title": "ReturnType & Parameters",
+      "videoID": "53",
+      "section": 6,
+      "done": false,
+      "milestone": false,
+      "inProgress": false,
+      "questions": [
+        {
+          "id": "rpq1a2b3c4d5e6f7g8h9i0j",
+          "title": "What is ReturnType",
+          "question": "What does the ReturnType utility type do in TypeScript?",
+          "options": [
+            { "id": "rpo2b3c4d5e6f7g8h9i0j1k", "option": "a", "text": "It extracts the parameter types of a function", "correct": false, "selected": false },
+            { "id": "rpo3c4d5e6f7g8h9i0j1k2l", "option": "b", "text": "It makes all properties required", "correct": false, "selected": false },
+            { "id": "rpo1a2b3c4d5e6f7g8h9i0j", "option": "c", "text": "It extracts the return type of a function", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "rpq2b3c4d5e6f7g8h9i0j1k",
+          "title": "What is Parameters",
+          "question": "What does the Parameters utility type do in TypeScript?",
+          "options": [
+            { "id": "rpo5e6f7g8h9i0j1k2l3m4n", "option": "a", "text": "It extracts the return type of a function", "correct": false, "selected": false },
+            { "id": "rpo6f7g8h9i0j1k2l3m4n5o", "option": "b", "text": "It extracts the parameter types of a function as a tuple", "correct": true, "selected": false },
+            { "id": "rpo7g8h9i0j1k2l3m4n5o6p", "option": "c", "text": "It makes all properties optional", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "rpq3c4d5e6f7g8h9i0j1k2l",
+          "title": "ReturnType Syntax",
+          "question": "function greet(name: string): string {\n  return 'Hello ' + name;\n}\ntype GreetReturn = ReturnType<typeof greet>;\nWhat type does GreetReturn represent?",
+          "options": [
+            { "id": "rpo9i0j1k2l3m4n5o6p7q8r", "option": "a", "text": "string", "correct": true, "selected": false },
+            { "id": "rpo0j1k2l3m4n5o6p7q8r9s", "option": "b", "text": "void", "correct": false, "selected": false },
+            { "id": "rpo1k2l3m4n5o6p7q8r9s0t", "option": "c", "text": "number", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "rpq4d5e6f7g8h9i0j1k2l3m",
+          "title": "Parameters Syntax",
+          "question": "function add(a: number, b: number): number {\n  return a + b;\n}\ntype AddParams = Parameters<typeof add>;\nWhat type does AddParams represent?",
+          "options": [
+            { "id": "rpo3m4n5o6p7q8r9s0t1u2v", "option": "a", "text": "[a: number, b: number]", "correct": true, "selected": false },
+            { "id": "rpo4n5o6p7q8r9s0t1u2v3w", "option": "b", "text": "number", "correct": false, "selected": false },
+            { "id": "rpo5o6p7q8r9s0t1u2v3w4x", "option": "c", "text": "string", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "rpq5e6f7g8h9i0j1k2l3m4n",
+          "title": "ReturnType with Void",
+          "question": "function log(message: string): void {\n  console.log(message);\n}\ntype LogReturn = ReturnType<typeof log>;\nWhat type does LogReturn represent?",
+          "options": [
+            { "id": "rpo7q8r9s0t1u2v3w4x5y6z", "option": "a", "text": "string", "correct": false, "selected": false },
+            { "id": "rpo8r9s0t1u2v3w4x5y6z7a", "option": "b", "text": "void", "correct": true, "selected": false },
+            { "id": "rpo9s0t1u2v3w4x5y6z7a8b", "option": "c", "text": "undefined", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "rpq6f7g8h9i0j1k2l3m4n5o",
+          "title": "Parameters with Multiple Parameters",
+          "question": "function process(id: number, name: string, active: boolean): void {\n  console.log(id, name, active);\n}\ntype ProcessParams = Parameters<typeof process>;\nWhat type does ProcessParams represent?",
+          "options": [
+            { "id": "rpo2v3w4x5y6z7a8b9c0d1e", "option": "a", "text": "number | string | boolean", "correct": false, "selected": false },
+            { "id": "rpo3w4x5y6z7a8b9c0d1e2f", "option": "b", "text": "void", "correct": false, "selected": false },
+            { "id": "rpo1u2v3w4x5y6z7a8b9c0d", "option": "c", "text": "[id: number, name: string, active: boolean]", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "rpq7g8h9i0j1k2l3m4n5o6p",
+          "title": "ReturnType with Object",
+          "question": "function getUser(): { id: number; name: string } {\n  return { id: 1, name: 'Mike' };\n}\ntype User = ReturnType<typeof getUser>;\nWhat type does User represent?",
+          "options": [
+            { "id": "rpo5y6z7a8b9c0d1e2f3g4h", "option": "a", "text": "{ id: number; name: string }", "correct": true, "selected": false },
+            { "id": "rpo6z7a8b9c0d1e2f3g4h5i", "option": "b", "text": "number", "correct": false, "selected": false },
+            { "id": "rpo7a8b9c0d1e2f3g4h5i6j", "option": "c", "text": "string", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "rpq8h9i0j1k2l3m4n5o6p7q",
+          "title": "Parameters with Optional Parameters",
+          "question": "function greet(name: string, greeting?: string): string {\n  return greeting ? `${greeting}, ${name}` : `Hello, ${name}`;\n}\ntype GreetParams = Parameters<typeof greet>;\nWhat type does GreetParams represent?",
+          "options": [
+            { "id": "rpo9c0d1e2f3g4h5i6j7k8l", "option": "a", "text": "[name: string, greeting?: string]", "correct": true, "selected": false },
+            { "id": "rpo0d1e2f3g4h5i6j7k8l9m", "option": "b", "text": "[name: string, greeting: string]", "correct": false, "selected": false },
+            { "id": "rpo1e2f3g4h5i6j7k8l9m0n", "option": "c", "text": "string", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "rpq9i0j1k2l3m4n5o6p7q8r",
+          "title": "ReturnType with Async Function",
+          "question": "async function fetchData(): Promise<string> {\n  return 'data';\n}\ntype Data = ReturnType<typeof fetchData>;\nWhat type does Data represent?",
+          "options": [
+            { "id": "rpo4h5i6j7k8l9m0n1o2p3q", "option": "a", "text": "string", "correct": false, "selected": false },
+            { "id": "rpo3g4h5i6j7k8l9m0n1o2p", "option": "b", "text": "Promise<string>", "correct": true, "selected": false },
+            { "id": "rpo5i6j7k8l9m0n1o2p3q4r", "option": "c", "text": "void", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "rpq0j1k2l3m4n5o6p7q8r9s",
+          "title": "ReturnType vs Parameters Use Case",
+          "question": "function calculate(a: number, b: number): number {\n  return a + b;\n}\ntype CalcParams = Parameters<typeof calculate>;\ntype CalcReturn = ReturnType<typeof calculate>;\nWhat types do CalcParams and CalcReturn represent?",
+          "options": [
+            { "id": "rpo7k8l9m0n1o2p3q4r5s6t", "option": "a", "text": "CalcParams is [a: number, b: number], CalcReturn is number", "correct": true, "selected": false },
+            { "id": "rpo8l9m0n1o2p3q4r5s6t7u", "option": "b", "text": "CalcParams is number, CalcReturn is [a: number, b: number]", "correct": false, "selected": false },
+            { "id": "rpo9m0n1o2p3q4r5s6t7u8v", "option": "c", "text": "Both are number", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "rpt1a2b3c4d5e6f7g8h9i0j",
+          "title": "Create a ReturnType for a Function",
+          "description": "Create a function called %getProduct% that returns an object with %id% (number) and %name% (string). Then use %ReturnType% to extract the return type into a type called %Product%. Create a variable using this type.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "function getProduct() {\n  return { id: 1, name: 'Laptop' };\n}\ntype Product = ReturnType<typeof getProduct>;\nconst product: Product = { id: 2, name: 'Phone' };",
+          "done": false
+        },
+        {
+          "id": "rpt2b3c4d5e6f7g8h9i0j1k",
+          "title": "Create a Parameters Type for a Function",
+          "description": "Create a function called %updateUser% that takes %id% (number), %name% (string), and %email% (string). Then use %Parameters% to extract the parameter types into a type called %UpdateUserParams%. Create a variable using this type as a tuple.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "function updateUser(id: number, name: string, email: string) {\n  console.log(`Updating user ${id} with name ${name} and email ${email}`);\n}\ntype UpdateUserParams = Parameters<typeof updateUser>;\nconst params: UpdateUserParams = [1, 'Mike', 'mike@email.com'];",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "re1c2o3r4d5u6t7y8p9e0s",
+      "title": "Record",
+      "videoID": "54",
+      "section": 6,
+      "done": false,
+      "milestone": false,
+      "inProgress": false,
+      "questions": [
+        {
+          "id": "req2b3c4d5e6f7g8h9i0j1k",
+          "title": "Record Syntax with String Keys",
+          "question": "type UserRoles = Record<string, string>;\nconst roles: UserRoles = { admin: 'Admin', user: 'User' };\nIs this valid?",
+          "options": [
+            { "id": "reo5e6f7g8h9i0j1k2l3m4n", "option": "a", "text": "Yes, Record<string, string> allows any string key with string value", "correct": true, "selected": false },
+            { "id": "reo6f7g8h9i0j1k2l3m4n5o", "option": "b", "text": "No, because the keys must be numbers", "correct": false, "selected": false },
+            { "id": "reo7g8h9i0j1k2l3m4n5o6p", "option": "c", "text": "No, because the values must be numbers", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "req3c4d5e6f7g8h9i0j1k2l",
+          "title": "Record with Union Keys",
+          "question": "type Status = 'pending' | 'approved' | 'rejected';\ntype StatusMessages = Record<Status, string>;\nconst messages: StatusMessages = {\n  pending: 'Waiting for review',\n  approved: 'Approved',\n  rejected: 'Rejected'\n};\nIs this valid?",
+          "options": [
+            { "id": "reo9i0j1k2l3m4n5o6p7q8r", "option": "a", "text": "No, because you can't use union types as keys", "correct": false, "selected": false },
+            { "id": "reo0j1k2l3m4n5o6p7q8r9s", "option": "b", "text": "Yes, all union members are valid keys", "correct": true, "selected": false },
+            { "id": "reo1k2l3m4n5o6p7q8r9s0t", "option": "c", "text": "No, because the values must be numbers", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "req4d5e6f7g8h9i0j1k2l3m",
+          "title": "Record with Number Keys",
+          "question": "type NumberMap = Record<number, string>;\nconst map: NumberMap = { 1: 'one', 2: 'two' };\nIs this valid?",
+          "options": [
+            { "id": "reo3m4n5o6p7q8r9s0t1u2v", "option": "a", "text": "No, because Record only works with string keys", "correct": false, "selected": false },
+            { "id": "reo4n5o6p7q8r9s0t1u2v3w", "option": "b", "text": "Yes, Record works with number keys too", "correct": true, "selected": false },
+            { "id": "reo5o6p7q8r9s0t1u2v3w4x", "option": "c", "text": "No, because the values must be numbers", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "req5e6f7g8h9i0j1k2l3m4n",
+          "title": "Record with Object Values",
+          "question": "type User = { id: number; name: string };\ntype UserMap = Record<string, User>;\nconst users: UserMap = {\n  user1: { id: 1, name: 'Mike' },\n  user2: { id: 2, name: 'Jane' }\n};\nIs this valid?",
+          "options": [
+            { "id": "reo7q8r9s0t1u2v3w4x5y6z", "option": "a", "text": "Yes, Record allows any type as value", "correct": true, "selected": false },
+            { "id": "reo8r9s0t1u2v3w4x5y6z7a", "option": "b", "text": "No, because the values must be primitives", "correct": false, "selected": false },
+            { "id": "reo9s0t1u2v3w4x5y6z7a8b", "option": "c", "text": "No, because the keys must be numbers", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "req6f7g8h9i0j1k2l3m4n5o",
+          "title": "Record vs Index Signature",
+          "question": "What is the difference between Record<string, string> and { [key: string]: string }?",
+          "options": [
+            { "id": "reo1u2v3w4x5y6z7a8b9c0d", "option": "a", "text": "They are exactly the same", "correct": false, "selected": false },
+            { "id": "reo2v3w4x5y6z7a8b9c0d1e", "option": "b", "text": "Record is more concise and can work with unions", "correct": true, "selected": false },
+            { "id": "reo3w4x5y6z7a8b9c0d1e2f", "option": "c", "text": "Record only works with string keys", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "req7g8h9i0j1k2l3m4n5o6p",
+          "title": "Record with Literal Keys",
+          "question": "type Config = Record<'apiUrl' | 'timeout' | 'retries', string | number>;\nconst config: Config = {\n  apiUrl: 'https://api.com',\n  timeout: 5000,\n  retries: 3\n};\nIs this valid?",
+          "options": [
+            { "id": "reo5y6z7a8b9c0d1e2f3g4h", "option": "a", "text": "Yes, all keys are present with valid types", "correct": true, "selected": false },
+            { "id": "reo6z7a8b9c0d1e2f3g4h5i", "option": "b", "text": "No, because timeout must be a string", "correct": false, "selected": false },
+            { "id": "reo7a8b9c0d1e2f3g4h5i6j", "option": "c", "text": "No, because retries must be a string", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "req8h9i0j1k2l3m4n5o6p7q",
+          "title": "Record with Optional Keys",
+          "question": "type Permissions = Record<'read' | 'write' | 'delete', boolean>;\nconst permissions: Permissions = { read: true, write: false };\nIs this valid?",
+          "options": [
+            { "id": "reo9c0d1e2f3g4h5i6j7k8l", "option": "a", "text": "Yes, because optional keys are allowed", "correct": false, "selected": false },
+            { "id": "reo0d1e2f3g4h5i6j7k8l9m", "option": "b", "text": "No, because 'delete' is missing from the object", "correct": true, "selected": false },
+            { "id": "reo1e2f3g4h5i6j7k8l9m0n", "option": "c", "text": "No, because 'write' should be true", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "req9i0j1k2l3m4n5o6p7q8r",
+          "title": "Record with Mapped Types",
+          "question": "type Color = 'red' | 'green' | 'blue';\ntype ColorCode = Record<Color, string>;\nconst codes: ColorCode = { red: '#FF0000', green: '#00FF00', blue: '#0000FF' };\nHow many keys does ColorCode require?",
+          "options": [
+            { "id": "reo3g4h5i6j7k8l9m0n1o2p", "option": "a", "text": "1", "correct": false, "selected": false },
+            { "id": "reo4h5i6j7k8l9m0n1o2p3q", "option": "b", "text": "2", "correct": false, "selected": false },
+            { "id": "reo5i6j7k8l9m0n1o2p3q4r", "option": "c", "text": "3", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+      ],
+      "tasks": [
+        {
+          "id": "ret1a2b3c4d5e6f7g8h9i0j",
+          "title": "Create a Record for User Roles",
+          "description": "Create a type called %Role% with values %'admin'%, %'editor'%, and %'viewer'%. Then create a type called %RolePermissions% using %Record% where each role maps to an array of strings (permissions). Create a variable using this type.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "type Role = 'admin' | 'editor' | 'viewer';\ntype RolePermissions = Record<Role, string[]>;\nconst permissions: RolePermissions = {\n  admin: ['read', 'write', 'delete'],\n  editor: ['read', 'write'],\n  viewer: ['read']\n};",
+          "done": false
+        },
+        {
+          "id": "ret2b3c4d5e6f7g8h9i0j1k",
+          "title": "Create a Record for Product Catalog",
+          "description": "Create a type called %ProductId% as %string%. Create a type called %Product% with %name% (string) and %price% (number). Then use %Record% to create a type called %Catalog% that maps product IDs to products. Create a variable using this type.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "type ProductId = string;\ntype Product = { name: string; price: number };\ntype Catalog = Record<ProductId, Product>;\nconst catalog: Catalog = {\n  'p1': { name: 'Laptop', price: 999 },\n  'p2': { name: 'Phone', price: 599 }\n};",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "sm1t2r3i4n5g6m7a8n9i0p",
+      "title": "String Manipulation Types",
+      "videoID": "55",
+      "section": 6,
+      "done": false,
+      "milestone": false,
+      "inProgress": false,
+      "questions": [
+        {
+          "id": "smq1a2b3c4d5e6f7g8h9i0j",
+          "title": "Uppercase Type",
+          "question": "type Upper = Uppercase<'hello'>;\nWhat type does Upper represent?",
+          "options": [
+            { "id": "smo1a2b3c4d5e6f7g8h9i0j", "option": "a", "text": "'HELLO'", "correct": true, "selected": false },
+            { "id": "smo2b3c4d5e6f7g8h9i0j1k", "option": "b", "text": "'hello'", "correct": false, "selected": false },
+            { "id": "smo3c4d5e6f7g8h9i0j1k2l", "option": "c", "text": "'Hello'", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "smq2b3c4d5e6f7g8h9i0j1k",
+          "title": "Lowercase Type",
+          "question": "type Lower = Lowercase<'WORLD'>;\nWhat type does Lower represent?",
+          "options": [
+            { "id": "smo5e6f7g8h9i0j1k2l3m4n", "option": "a", "text": "'WORLD'", "correct": false, "selected": false },
+            { "id": "smo6f7g8h9i0j1k2l3m4n5o", "option": "b", "text": "'world'", "correct": true, "selected": false },
+            { "id": "smo7g8h9i0j1k2l3m4n5o6p", "option": "c", "text": "'World'", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "smq3c4d5e6f7g8h9i0j1k2l",
+          "title": "Capitalize Type",
+          "question": "type Cap = Capitalize<'typescript'>;\nWhat type does Cap represent?",
+          "options": [
+            { "id": "smo9i0j1k2l3m4n5o6p7q8r", "option": "a", "text": "'Typescript'", "correct": true, "selected": false },
+            { "id": "smo0j1k2l3m4n5o6p7q8r9s", "option": "b", "text": "'typescript'", "correct": false, "selected": false },
+            { "id": "smo1k2l3m4n5o6p7q8r9s0t", "option": "c", "text": "'TYPESCRIPT'", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "smq4d5e6f7g8h9i0j1k2l3m",
+          "title": "Uncapitalize Type",
+          "question": "type Uncap = Uncapitalize<'Hello'>;\nWhat type does Uncap represent?",
+          "options": [
+            { "id": "smo3m4n5o6p7q8r9s0t1u2v", "option": "a", "text": "'Hello'", "correct": false, "selected": false },
+            { "id": "smo4n5o6p7q8r9s0t1u2v3w", "option": "b", "text": "'hELLO'", "correct": false, "selected": false },
+            { "id": "smo5o6p7q8r9s0t1u2v3w4x", "option": "c", "text": "'hello'", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "smq5e6f7g8h9i0j1k2l3m4n",
+          "title": "Uppercase with Template Literal",
+          "question": "type Greeting = `Hello ${Uppercase<'world'>}`;\nWhat type does Greeting represent?",
+          "options": [
+            { "id": "smo7q8r9s0t1u2v3w4x5y6z", "option": "a", "text": "'Hello WORLD'", "correct": true, "selected": false },
+            { "id": "smo8r9s0t1u2v3w4x5y6z7a", "option": "b", "text": "'Hello world'", "correct": false, "selected": false },
+            { "id": "smo9s0t1u2v3w4x5y6z7a8b", "option": "c", "text": "'Hello World'", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "smq6f7g8h9i0j1k2l3m4n5o",
+          "title": "Lowercase with Template Literal",
+          "question": "type Message = `Error: ${Lowercase<'FOUND'>}`;\nWhat type does Message represent?",
+          "options": [
+            { "id": "smo1u2v3w4x5y6z7a8b9c0d", "option": "a", "text": "'Error: FOUND'", "correct": false, "selected": false },
+            { "id": "smo2v3w4x5y6z7a8b9c0d1e", "option": "b", "text": "'Error: found'", "correct": true, "selected": false },
+            { "id": "smo3w4x5y6z7a8b9c0d1e2f", "option": "c", "text": "'Error: Found'", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "smq7g8h9i0j1k2l3m4n5o6p",
+          "title": "Capitalize with Multiple Words",
+          "question": "type Name = Capitalize<'john doe'>;\nWhat type does Name represent?",
+          "options": [
+            { "id": "smo5y6z7a8b9c0d1e2f3g4h", "option": "a", "text": "'John doe'", "correct": true, "selected": false },
+            { "id": "smo6z7a8b9c0d1e2f3g4h5i", "option": "b", "text": "'john doe'", "correct": false, "selected": false },
+            { "id": "smo7a8b9c0d1e2f3g4h5i6j", "option": "c", "text": "'John Doe'", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "smq8h9i0j1k2l3m4n5o6p7q",
+          "title": "Uncapitalize with Multiple Words",
+          "question": "type LowerName = Uncapitalize<'HelloWorld'>;\nWhat type does LowerName represent?",
+          "options": [
+            { "id": "smo9c0d1e2f3g4h5i6j7k8l", "option": "a", "text": "'helloWorld'", "correct": true, "selected": false },
+            { "id": "smo0d1e2f3g4h5i6j7k8l9m", "option": "b", "text": "'HelloWorld'", "correct": false, "selected": false },
+            { "id": "smo1e2f3g4h5i6j7k8l9m0n", "option": "c", "text": "'helloworld'", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "smq9i0j1k2l3m4n5o6p7q8r",
+          "title": "Combining String Manipulations",
+          "question": "type Result = Uncapitalize<Uppercase<'hello'>>;\nWhat type does Result represent?",
+          "options": [
+            { "id": "smo3g4h5i6j7k8l9m0n1o2p", "option": "a", "text": "'HELLO'", "correct": false, "selected": false },
+            { "id": "smo4h5i6j7k8l9m0n1o2p3q", "option": "b", "text": "'hello'", "correct": true, "selected": false },
+            { "id": "smo5i6j7k8l9m0n1o2p3q4r", "option": "c", "text": "'Hello'", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "smq0j1k2l3m4n5o6p7q8r9s",
+          "title": "Capitalize vs Uppercase",
+          "question": "What is the difference between Capitalize<'hello'> and Uppercase<'hello'>?",
+          "options": [
+            { "id": "smo7k8l9m0n1o2p3q4r5s6t", "option": "a", "text": "Capitalize makes first letter uppercase, Uppercase makes all letters uppercase", "correct": true, "selected": false },
+            { "id": "smo8l9m0n1o2p3q4r5s6t7u", "option": "b", "text": "They do the same thing", "correct": false, "selected": false },
+            { "id": "smo9m0n1o2p3q4r5s6t7u8v", "option": "c", "text": "Capitalize makes all letters uppercase, Uppercase makes first letter uppercase", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "smt1a2b3c4d5e6f7g8h9i0j",
+          "title": "Create a Uppercase Type for Status",
+          "description": "Create a type called %Status% with values %'pending'%, %'approved'%, and %'rejected'%. Then create a type %UpperStatus% using %Uppercase% on each status. Create a variable using UpperStatus.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "type Status = 'pending' | 'approved' | 'rejected';\ntype UpperStatus = Uppercase<Status>;\nconst status: UpperStatus = 'PENDING';",
+          "done": false
+        },
+        {
+          "id": "smt2b3c4d5e6f7g8h9i0j1k",
+          "title": "Create a Capitalized Name Type",
+          "description": "Create a type called %Name% with values %'john'%, %'jane'%, and %'bob'%. Then create a type %CapitalizedName% using %Capitalize% on each name. Create a variable using CapitalizedName.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "type Name = 'john' | 'jane' | 'bob';\ntype CapitalizedName = Capitalize<Name>;\nconst name: CapitalizedName = 'John';",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "s6m1a2b3c4d5e6f7g8h9i0j",
+      "title": "Section 6 Milestone - Utility Types",
+      "videoID": "56",
+      "section": 6,
+      "done": false,
+      "milestone": true,
+      "inProgress": false,
+      "questions": [
+        {
+          "id": "s6q01a2b3c4d5e6f7g8h9i0j",
+          "title": "Partial Type",
+          "question": "interface User {\n  id: number;\n  name: string;\n  email: string;\n}\ntype PartialUser = Partial<User>;\nWhich of the following is valid for PartialUser?",
+          "options": [
+            { "id": "s6o01a2b3c4d5e6f7g8h9i0j", "option": "a", "text": "{ id: 1, name: 'Mike' }", "correct": false, "selected": false },
+            { "id": "s6o02b3c4d5e6f7g8h9i0j1k", "option": "b", "text": "{ name: 'Mike' }", "correct": false, "selected": false },
+            { "id": "s6o03c4d5e6f7g8h9i0j1k2l", "option": "c", "text": "Both of the above", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "s6q02b3c4d5e6f7g8h9i0j1k",
+          "title": "Required Type",
+          "question": "interface Config {\n  url?: string;\n  timeout?: number;\n}\ntype RequiredConfig = Required<Config>;\nconst config: RequiredConfig = { url: 'https://api.com' };\nIs this valid?",
+          "options": [
+            { "id": "s6o04d5e6f7g8h9i0j1k2l3m", "option": "a", "text": "Yes, because url is provided", "correct": false, "selected": false },
+            { "id": "s6o05e6f7g8h9i0j1k2l3m4n", "option": "b", "text": "No, because timeout is required", "correct": true, "selected": false },
+            { "id": "s6o06f7g8h9i0j1k2l3m4n5o", "option": "c", "text": "No, because url should be optional", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "s6q03c4d5e6f7g8h9i0j1k2l",
+          "title": "Readonly Type",
+          "question": "interface Task {\n  id: number;\n  title: string;\n}\ntype ReadonlyTask = Readonly<Task>;\nconst task: ReadonlyTask = { id: 1, title: 'Work' };\ntask.title = 'Play';\nWhat happens?",
+          "options": [
+            { "id": "s6o07g8h9i0j1k2l3m4n5o6p", "option": "a", "text": "It works and title becomes 'Play'", "correct": false, "selected": false },
+            { "id": "s6o08h9i0j1k2l3m4n5o6p7q", "option": "b", "text": "TypeScript shows an error because title is readonly", "correct": true, "selected": false },
+            { "id": "s6o09i0j1k2l3m4n5o6p7q8r", "option": "c", "text": "It creates a new task", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "s6q04d5e6f7g8h9i0j1k2l3m",
+          "title": "Pick Type",
+          "question": "interface Product {\n  id: number;\n  name: string;\n  price: number;\n  description: string;\n}\ntype ProductPreview = Pick<Product, 'id' | 'name'>;\nconst product: ProductPreview = { id: 1, name: 'Laptop' };\nIs this valid?",
+          "options": [
+            { "id": "s6o10j0k1l2m3n4o5p6q7r8s", "option": "a", "text": "Yes, only id and name are required", "correct": true, "selected": false },
+            { "id": "s6o11k1l2m3n4o5p6q7r8s9t", "option": "b", "text": "No, because price is missing", "correct": false, "selected": false },
+            { "id": "s6o12l2m3n4o5p6q7r8s9t0u", "option": "c", "text": "No, because description is missing", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "s6q05e6f7g8h9i0j1k2l3m4n",
+          "title": "Omit Type",
+          "question": "interface Employee {\n  id: number;\n  name: string;\n  salary: number;\n  password: string;\n}\ntype PublicEmployee = Omit<Employee, 'salary' | 'password'>;\nconst employee: PublicEmployee = { id: 1, name: 'Alice' };\nIs this valid?",
+          "options": [
+            { "id": "s6o13m3n4o5p6q7r8s9t0u1v", "option": "a", "text": "No, because salary is missing", "correct": false, "selected": false },
+            { "id": "s6o14n4o5p6q7r8s9t0u1v2w", "option": "b", "text": "No, because password is missing", "correct": false, "selected": false },
+            { "id": "s6o15o5p6q7r8s9t0u1v2w3x", "option": "c", "text": "Yes, salary and password are omitted", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "s6q06f7g8h9i0j1k2l3m4n5o",
+          "title": "Record Type",
+          "question": "type Status = 'pending' | 'done';\ntype StatusMessage = Record<Status, string>;\nconst messages: StatusMessage = { pending: 'Waiting', done: 'Complete' };\nIs this valid?",
+          "options": [
+            { "id": "s6o16p6q7r8s9t0u1v2w3x4y", "option": "a", "text": "No, because you can't use union types as keys", "correct": false, "selected": false },
+            { "id": "s6o17q7r8s9t0u1v2w3x4y5z", "option": "b", "text": "Yes, all union members are valid keys", "correct": true, "selected": false },
+            { "id": "s6o18r8s9t0u1v2w3x4y5z6a", "option": "c", "text": "No, because the values must be numbers", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "s6q07g8h9i0j1k2l3m4n5o6p",
+          "title": "NonNullable Type",
+          "question": "type T = string | number | null | undefined;\ntype U = NonNullable<T>;\nWhat type does U represent?",
+          "options": [
+            { "id": "s6o19s9t0u1v2w3x4y5z6a7b", "option": "a", "text": "string | number | null", "correct": false, "selected": false },
+            { "id": "s6o20t0u1v2w3x4y5z6a7b8c", "option": "b", "text": "string | number", "correct": true, "selected": false },
+            { "id": "s6o21u1v2w3x4y5z6a7b8c9d", "option": "c", "text": "string | number | undefined", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "s6q08h9i0j1k2l3m4n5o6p7q",
+          "title": "Exclude Type",
+          "question": "type Colors = 'red' | 'green' | 'blue' | 'yellow';\ntype Primary = Exclude<Colors, 'yellow'>;\nWhat type does Primary represent?",
+          "options": [
+            { "id": "s6o22v2w3x4y5z6a7b8c9d0e", "option": "a", "text": "'red' | 'green' | 'blue'", "correct": true, "selected": false },
+            { "id": "s6o23w3x4y5z6a7b8c9d0e1f", "option": "b", "text": "'yellow'", "correct": false, "selected": false },
+            { "id": "s6o24x4y5z6a7b8c9d0e1f2g", "option": "c", "text": "'red' | 'green' | 'blue' | 'yellow'", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "s6q09i0j1k2l3m4n5o6p7q8r",
+          "title": "ReturnType Type",
+          "question": "function greet(): string {\n  return 'Hello';\n}\ntype GreetReturn = ReturnType<typeof greet>;\nWhat type does GreetReturn represent?",
+          "options": [
+            { "id": "s6o25y5z6a7b8c9d0e1f2g3h", "option": "a", "text": "void", "correct": false, "selected": false },
+            { "id": "s6o26z6a7b8c9d0e1f2g3h4i", "option": "b", "text": "string", "correct": true, "selected": false },
+            { "id": "s6o27a7b8c9d0e1f2g3h4i5j", "option": "c", "text": "number", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "s6q10j1k2l3m4n5o6p7q8r9s",
+          "title": "Parameters Type",
+          "question": "function add(a: number, b: number): number {\n  return a + b;\n}\ntype AddParams = Parameters<typeof add>;\nWhat type does AddParams represent?",
+          "options": [
+            { "id": "s6o28b8c9d0e1f2g3h4i5j6k", "option": "a", "text": "[a: number, b: number]", "correct": true, "selected": false },
+            { "id": "s6o29c9d0e1f2g3h4i5j6k7l", "option": "b", "text": "number", "correct": false, "selected": false },
+            { "id": "s6o30d0e1f2g3h4i5j6k7l8m", "option": "c", "text": "string", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "s6q11k2l3m4n5o6p7q8r9s0t",
+          "title": "Uppercase Type",
+          "question": "type Upper = Uppercase<'typescript'>;\nWhat type does Upper represent?",
+          "options": [
+            { "id": "s6o31e1f2g3h4i5j6k7l8m9n", "option": "a", "text": "'TYPESCRIPT'", "correct": true, "selected": false },
+            { "id": "s6o32f2g3h4i5j6k7l8m9n0o", "option": "b", "text": "'typescript'", "correct": false, "selected": false },
+            { "id": "s6o33g3h4i5j6k7l8m9n0o1p", "option": "c", "text": "'Typescript'", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "s6q12l3m4n5o6p7q8r9s0t1u",
+          "title": "Lowercase Type",
+          "question": "type Lower = Lowercase<'HELLO'>;\nWhat type does Lower represent?",
+          "options": [
+            { "id": "s6o34h4i5j6k7l8m9n0o1p2q", "option": "a", "text": "'HELLO'", "correct": false, "selected": false },
+            { "id": "s6o35i5j6k7l8m9n0o1p2q3r", "option": "b", "text": "'hello'", "correct": true, "selected": false },
+            { "id": "s6o36j6k7l8m9n0o1p2q3r4s", "option": "c", "text": "'Hello'", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "s6q13m4n5o6p7q8r9s0t1u2v",
+          "title": "Capitalize Type",
+          "question": "type Cap = Capitalize<'javascript'>;\nWhat type does Cap represent?",
+          "options": [
+            { "id": "s6o37k7l8m9n0o1p2q3r4s5t", "option": "a", "text": "'javascript'", "correct": false, "selected": false },
+            { "id": "s6o38l8m9n0o1p2q3r4s5t6u", "option": "b", "text": "'JAVASCRIPT'", "correct": false, "selected": false },
+            { "id": "s6o39m9n0o1p2q3r4s5t6u7v", "option": "c", "text": "'Javascript'", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "s6q14n5o6p7q8r9s0t1u2v3w",
+          "title": "Combining Utility Types",
+          "question": "interface Post {\n  id: number;\n  title: string;\n  content: string;\n  author: string;\n}\ntype PostUpdate = Partial<Omit<Post, 'id'>>;\nconst update: PostUpdate = { title: 'New Title' };\nIs this valid?",
+          "options": [
+            { "id": "s6o40n0o1p2q3r4s5t6u7v8w", "option": "a", "text": "Yes, id is omitted and all other properties are optional", "correct": true, "selected": false },
+            { "id": "s6o41o1p2q3r4s5t6u7v8w9x", "option": "b", "text": "No, because id is required", "correct": false, "selected": false },
+            { "id": "s6o42p2q3r4s5t6u7v8w9x0y", "option": "c", "text": "No, because title must be a number", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "s6q15o6p7q8r9s0t1u2v3w4x",
+          "title": "Record with String Values",
+          "question": "type UserRoles = Record<string, string>;\nconst roles: UserRoles = { admin: 'Admin' };\nIs this valid?",
+          "options": [
+            { "id": "s6o43q3r4s5t6u7v8w9x0y1z", "option": "a", "text": "Yes, Record<string, string> allows any string key and value", "correct": true, "selected": false },
+            { "id": "s6o44r4s5t6u7v8w9x0y1z2a", "option": "b", "text": "No, because the key must be a number", "correct": false, "selected": false },
+            { "id": "s6o45s5t6u7v8w9x0y1z2a3b", "option": "c", "text": "No, because the value must be a number", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "s6q16p7q8r9s0t1u2v3w4x5y",
+          "title": "Exclude with Union",
+          "question": "type Response = 'success' | 'error' | 'loading';\ntype Ready = Exclude<Response, 'loading'>;\nconst status: Ready = 'loading';\nIs this valid?",
+          "options": [
+            { "id": "s6o46t6u7v8w9x0y1z2a3b4c", "option": "a", "text": "Yes, 'loading' is valid", "correct": false, "selected": false },
+            { "id": "s6o47u7v8w9x0y1z2a3b4c5d", "option": "b", "text": "No, because 'loading' is excluded", "correct": true, "selected": false },
+            { "id": "s6o48v8w9x0y1z2a3b4c5d6e", "option": "c", "text": "No, because status must be 'error'", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "s6q17q8r9s0t1u2v3w4x5y6z",
+          "title": "ReturnType with Async",
+          "question": "async function fetchData(): Promise<number> {\n  return 42;\n}\ntype Data = ReturnType<typeof fetchData>;\nWhat type does Data represent?",
+          "options": [
+            { "id": "s6o49w9x0y1z2a3b4c5d6e7f", "option": "a", "text": "number", "correct": false, "selected": false },
+            { "id": "s6o50x0y1z2a3b4c5d6e7f8g", "option": "b", "text": "Promise<number>", "correct": true, "selected": false },
+            { "id": "s6o51y1z2a3b4c5d6e7f8g9h", "option": "c", "text": "void", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "s6q18r9s0t1u2v3w4x5y6z7a",
+          "title": "Uncapitalize Type",
+          "question": "type Uncap = Uncapitalize<'World'>;\nWhat type does Uncap represent?",
+          "options": [
+            { "id": "s6o52z2a3b4c5d6e7f8g9h0i", "option": "a", "text": "'world'", "correct": true, "selected": false },
+            { "id": "s6o53a3b4c5d6e7f8g9h0i1j", "option": "b", "text": "'World'", "correct": false, "selected": false },
+            { "id": "s6o54b4c5d6e7f8g9h0i1j2k", "option": "c", "text": "'wORLD'", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "s6q19s0t1u2v3w4x5y6z7a8b",
+          "title": "Readonly with Array",
+          "question": "type Numbers = readonly number[];\nconst nums: Numbers = [1, 2, 3];\nnums.push(4);\nWhat happens?",
+          "options": [
+            { "id": "s6o55c5d6e7f8g9h0i1j2k3l", "option": "a", "text": "It works and 4 is added", "correct": false, "selected": false },
+            { "id": "s6o56d6e7f8g9h0i1j2k3l4m", "option": "b", "text": "TypeScript shows an error because push is not allowed", "correct": true, "selected": false },
+            { "id": "s6o57e7f8g9h0i1j2k3l4m5n", "option": "c", "text": "It creates a new array", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "s6q20t1u2v3w4x5y6z7a8b9c",
+          "title": "Parameters with Optional",
+          "question": "function log(message: string, level?: string): void {\n  console.log(message);\n}\ntype LogParams = Parameters<typeof log>;\nWhat type does LogParams represent?",
+          "options": [
+            { "id": "s6o58f8g9h0i1j2k3l4m5n6o", "option": "a", "text": "[message: string, level?: string]", "correct": true, "selected": false },
+            { "id": "s6o59g9h0i1j2k3l4m5n6o7p", "option": "b", "text": "[message: string, level: string]", "correct": false, "selected": false },
+            { "id": "s6o60h0i1j2k3l4m5n6o7p8q", "option": "c", "text": "string", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "s6t01a2b3c4d5e6f7g8h9i0j",
+          "title": "Create a Partial Update Function",
+          "description": "Create an interface called %User% with %id% (number), %name% (string), and %email% (string). Then create a function called %updateUser% that takes an %id% (number) and a %updates% parameter. The %updates% parameter should use %Partial% so the caller can update any combination of properties. The function should create a default user object with the provided id, then merge the updates onto it using the spread operator, and finally return the merged object. Call the function with different updates to test it.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "interface User {\n  id: number;\n  name: string;\n  email: string;\n}\nfunction updateUser(id: number, updates: Partial<User>): User {\n  const defaultUser: User = { id, name: 'Default Name', email: 'default@email.com' };\n  return { ...defaultUser, ...updates };\n}\nconst result1 = updateUser(1, { name: 'Mike' });\nconsole.log(result1);\nconst result2 = updateUser(2, { email: 'new@email.com' });\nconsole.log(result2);\nconst result3 = updateUser(3, { name: 'Jane', email: 'jane@email.com' });\nconsole.log(result3);",
+          "done": false
+        },
+        {
+          "id": "s6t02b3c4d5e6f7g8h9i0j1k",
+          "title": "Create a Readonly Config",
+          "description": "Create an interface called %AppConfig% with %apiUrl% (string), %timeout% (number), and %retries% (number). Then create a type called %ReadonlyConfig% using the %Readonly% utility type. Create a constant variable called %config% using this readonly type and assign it values. Finally, try to change the %timeout% property to a different value and observe the TypeScript error.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "interface AppConfig {\n  apiUrl: string;\n  timeout: number;\n  retries: number;\n}\ntype ReadonlyConfig = Readonly<AppConfig>;\nconst config: ReadonlyConfig = {\n  apiUrl: 'https://api.com',\n  timeout: 5000,\n  retries: 3\n};\n// config.timeout = 6000; // Error: Cannot assign to 'timeout' because it is a read-only property",
+          "done": false
+        },
+        {
+          "id": "s6t03c4d5e6f7g8h9i0j1k2l",
+          "title": "Create a Pick Type for User Preview",
+          "description": "Create an interface called %User% with %id% (number), %name% (string), %email% (string), and %age% (number). Then create a type called %UserPreview% using the %Pick% utility type that only includes %id%, %name%, and %email%. Finally, create a variable called %user% using this new type and assign it values for the picked properties.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "interface User {\n  id: number;\n  name: string;\n  email: string;\n  age: number;\n}\ntype UserPreview = Pick<User, 'id' | 'name' | 'email'>;\nconst user: UserPreview = { id: 1, name: 'Mike', email: 'mike@email.com' };",
+          "done": false
+        },
+        {
+          "id": "s6t04d5e6f7g8h9i0j1k2l3m",
+          "title": "Create an Omit Type for Safe Employee",
+          "description": "Create an interface called %Employee% with %id% (number), %name% (string), %salary% (number), and %password% (string). Then create a type called %PublicEmployee% using the %Omit% utility type to exclude %salary% and %password% (since these are sensitive). Finally, create a variable called %employee% using this new type and assign it values.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "interface Employee {\n  id: number;\n  name: string;\n  salary: number;\n  password: string;\n}\ntype PublicEmployee = Omit<Employee, 'salary' | 'password'>;\nconst employee: PublicEmployee = { id: 1, name: 'Alice' };",
+          "done": false
+        },
+        {
+          "id": "s6t05e6f7g8h9i0j1k2l3m4n",
+          "title": "Create a Record for Product Catalog",
+          "description": "Create a type called %ProductId% which is a %string%. Create a type called %Product% with %name% (string) and %price% (number). Then use the %Record% utility type to create a type called %Catalog% that maps %ProductId% keys to %Product% values. Finally, create a variable called %catalog% using this type and populate it with at least two products with different IDs.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "type ProductId = string;\ntype Product = { name: string; price: number };\ntype Catalog = Record<ProductId, Product>;\nconst catalog: Catalog = {\n  'p1': { name: 'Laptop', price: 999 },\n  'p2': { name: 'Phone', price: 599 }\n};",
+          "done": false
+        },
+        {
+          "id": "s6t06f7g8h9i0j1k2l3m4n5o",
+          "title": "Create a ReturnType for a Function",
+          "description": "Create a function called %getProduct% that returns an object with %id% (number) and %name% (string) (you can hardcode the values). Then use the %ReturnType% utility type to extract the return type into a type called %Product%. Finally, create a variable called %product% using this new type and assign it different values (not using the function).",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "function getProduct() {\n  return { id: 1, name: 'Laptop' };\n}\ntype Product = ReturnType<typeof getProduct>;\nconst product: Product = { id: 2, name: 'Phone' };",
+          "done": false
+        },
+        {
+          "id": "s6t07g8h9i0j1k2l3m4n5o6p",
+          "title": "Create a Capitalized Name Type",
+          "description": "Create a type called %Name% that is a union of %'john'%, %'jane'%, and %'bob'%. Then create a type called %CapitalizedName% using the %Capitalize% utility type on the %Name% type. Finally, create a variable called %name% using %CapitalizedName% and assign it one of the capitalized values.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "type Name = 'john' | 'jane' | 'bob';\ntype CapitalizedName = Capitalize<Name>;\nconst name: CapitalizedName = 'John';",
+          "done": false
+        }
+      ]
+    }
   ]
 }
