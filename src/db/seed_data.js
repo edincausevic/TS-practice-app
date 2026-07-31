@@ -6399,6 +6399,896 @@ export const seedData = {
           "done": false
         }
       ]
+    },
+    {
+      "id": "z2f124i7solwwyst123cay",
+      "type": "title",
+      "title": "Section 7: Generics",
+      "videoID": "414234",
+      "questionsTotal": 0,
+      "tasksTotal": 0,
+      "totalCorrect": 0,
+      "totalFalse": 0,
+      "totalTasksDone": 0,
+      "section": 7,
+      "sectionExercisesIndex": "13-24",
+      "questions": [
+      ],
+      "tasks": [
+      ]
+    },
+    {
+      "id": "ge1n2e3r4i5c6s7i8n9t0r",
+      "title": "Generics Introduction",
+      "videoID": "57",
+      "section": 7,
+      "done": false,
+      "milestone": false,
+      "inProgress": false,
+      "questions": [
+        {
+          "id": "geq1a2b3c4d5e6f7g8h9i0j",
+          "title": "What are Generics",
+          "question": "What is the purpose of generics in TypeScript?",
+          "options": [
+            { "id": "geo1a2b3c4d5e6f7g8h9i0j", "option": "a", "text": "To create reusable components that work with multiple types", "correct": true, "selected": false },
+            { "id": "geo2b3c4d5e6f7g8h9i0j1k", "option": "b", "text": "To make all types optional", "correct": false, "selected": false },
+            { "id": "geo3c4d5e6f7g8h9i0j1k2l", "option": "c", "text": "To convert types at runtime", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "geq2b3c4d5e6f7g8h9i0j1k",
+          "title": "Generic Function Syntax",
+          "question": "Which of the following correctly defines a generic function?",
+          "options": [
+            { "id": "geo6f7g8h9i0j1k2l3m4n5o", "option": "a", "text": "function doSomething(value: any): any { return value; }", "correct": false, "selected": false },
+            { "id": "geo7g8h9i0j1k2l3m4n5o6p", "option": "b", "text": "function doSomething<T>(value: string): T { return value; }", "correct": false, "selected": false },
+            { "id": "geo5e6f7g8h9i0j1k2l3m4n", "option": "c", "text": "function doSomething<T>(value: T): T { return value; }", "correct": true, "selected": false },
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "geq3c4d5e6f7g8h9i0j1k2l",
+          "title": "Generic Function Usage",
+          "question": "function identity<T>(value: T): T {\n  return value;\n}\nconst result = identity<string>('hello');\nWhat is the type of result?",
+          "options": [
+            { "id": "geo0j1k2l3m4n5o6p7q8r9s", "option": "a", "text": "any", "correct": false, "selected": false },
+            { "id": "geo9i0j1k2l3m4n5o6p7q8r", "option": "b", "text": "string", "correct": true, "selected": false },
+            { "id": "geo1k2l3m4n5o6p7q8r9s0t", "option": "c", "text": "number", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "geq4d5e6f7g8h9i0j1k2l3m",
+          "title": "Generic with Array",
+          "question": "function getFirst<T>(arr: T[]): T {\n  return arr[0];\n}\nconst first = getFirst<number>([10, 20, 30]);\nWhat type does TypeScript infer for 'first'?",
+          "options": [
+            { "id": "geo3m4n5o6p7q8r9s0t1u2v", "option": "a", "text": "number", "correct": true, "selected": false },
+            { "id": "geo4n5o6p7q8r9s0t1u2v3w", "option": "b", "text": "number[]", "correct": false, "selected": false },
+            { "id": "geo5o6p7q8r9s0t1u2v3w4x", "option": "c", "text": "any", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "geq5e6f7g8h9i0j1k2l3m4n",
+          "title": "Generic Arrow Function",
+          "question": "const doSomething = <T>(value: T): T => {\n  return value;\n};\nconst result = doSomething<boolean>(true);\nWhat is the type of result?",
+          "options": [
+            { "id": "geo7q8r9s0t1u2v3w4x5y6z", "option": "a", "text": "true", "correct": false, "selected": false },
+            { "id": "geo8r9s0t1u2v3w4x5y6z7a", "option": "b", "text": "boolean", "correct": true, "selected": false },
+            { "id": "geo9s0t1u2v3w4x5y6z7a8b", "option": "c", "text": "any", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "geq6f7g8h9i0j1k2l3m4n5o",
+          "title": "Generic with Different Types",
+          "question": "function wrapInArray<T>(value: T): T[] {\n  return [value];\n}\nconst result1 = wrapInArray<string>('hello');\nconst result2 = wrapInArray<number>(42);\nWhat are the types of result1 and result2?",
+          "options": [
+            { "id": "geo2v3w4x5y6z7a8b9c0d1e", "option": "a", "text": "result1 is string, result2 is number", "correct": false, "selected": false },
+            { "id": "geo3w4x5y6z7a8b9c0d1e2f", "option": "b", "text": "result1 is any[], result2 is any[]", "correct": false, "selected": false },
+            { "id": "geo1u2v3w4x5y6z7a8b9c0d", "option": "c", "text": "result1 is string[], result2 is number[]", "correct": true, "selected": false },
+          ],
+          "correctAnswer": "b"
+        },
+      ],
+      "tasks": [
+        {
+          "id": "get1a2b3c4d5e6f7g8h9i0j",
+          "title": "Create a Generic Identity Function",
+          "description": "Create a function called %identity% that takes a parameter %value% and returns the same value. The function should be generic, meaning it should work with any type. Use the %<T>% syntax. Test it with a string, a number, and a boolean.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "function identity<T>(value: T): T {\n  return value;\n}\nconst strResult = identity<string>('hello');\nconst numResult = identity<number>(42);\nconst boolResult = identity<boolean>(true);",
+          "done": false
+        },
+        {
+          "id": "get2b3c4d5e6f7g8h9i0j1k",
+          "title": "Create a Generic Arrow Function",
+          "description": "Create an arrow function called %wrapInArray% that takes a value and returns an array containing that value. The function should be generic. Test it with a string and a number.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "const wrapInArray = <T>(value: T): T[] => {\n  return [value];\n};\nconst strResult = wrapInArray<string>('hello');\nconst numResult = wrapInArray<number>(42);",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "mt1p2a3r4a5m6e7t8e9r0s",
+      "title": "Multiple Type Parameters",
+      "videoID": "58",
+      "section": 7,
+      "done": false,
+      "milestone": false,
+      "inProgress": false,
+      "questions": [
+        {
+          "id": "mtq1a2b3c4d5e6f7g8h9i0j",
+          "title": "Multiple Type Parameters Syntax",
+          "question": "Which of the following correctly defines a function with multiple type parameters?",
+          "options": [
+            { "id": "mto1a2b3c4d5e6f7g8h9i0j", "option": "a", "text": "function merge<T, U>(obj1: T, obj2: U): T & U { return { ...obj1, ...obj2 }; }", "correct": true, "selected": false },
+            { "id": "mto2b3c4d5e6f7g8h9i0j1k", "option": "b", "text": "function merge<T>(obj1: T, obj2: T): T { return { ...obj1, ...obj2 }; }", "correct": false, "selected": false },
+            { "id": "mto3c4d5e6f7g8h9i0j1k2l", "option": "c", "text": "function merge(obj1: any, obj2: any): any { return { ...obj1, ...obj2 }; }", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "mtq2b3c4d5e6f7g8h9i0j1k",
+          "title": "Merge Function Return Type",
+          "question": "function merge<T, U>(obj1: T, obj2: U): T & U {\n  return { ...obj1, ...obj2 };\n}\nconst result = merge({ name: 'Alice' }, { age: 30 });\nWhat type does TypeScript infer for 'result'?",
+          "options": [
+            { "id": "mto5e6f7g8h9i0j1k2l3m4n", "option": "a", "text": "{ name: string }", "correct": false, "selected": false },
+            { "id": "mto6f7g8h9i0j1k2l3m4n5o", "option": "b", "text": "{ name: string } & { age: number }", "correct": true, "selected": false },
+            { "id": "mto7g8h9i0j1k2l3m4n5o6p", "option": "c", "text": "{ age: number }", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "mtq3c4d5e6f7g8h9i0j1k2l",
+          "title": "Pair Function Return Type",
+          "question": "function pair<T, U>(first: T, second: U): [T, U] {\n  return [first, second];\n}\nconst result = pair('hello', 42);\nWhat type does TypeScript infer for 'result'?",
+          "options": [
+            { "id": "mto9i0j1k2l3m4n5o6p7q8r", "option": "a", "text": "string[]", "correct": false, "selected": false },
+            { "id": "mto0j1k2l3m4n5o6p7q8r9s", "option": "b", "text": "number[]", "correct": false, "selected": false },
+            { "id": "mto1k2l3m4n5o6p7q8r9s0t", "option": "c", "text": "[string, number]", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "mtq4d5e6f7g8h9i0j1k2l3m",
+          "title": "Pair with Different Types",
+          "question": "function pair<T, U>(first: T, second: U): [T, U] {\n  return [first, second];\n}\nconst result = pair(10, true);\nWhat type does TypeScript infer for 'result'?",
+          "options": [
+            { "id": "mto3m4n5o6p7q8r9s0t1u2v", "option": "a", "text": "[number, boolean]", "correct": true, "selected": false },
+            { "id": "mto4n5o6p7q8r9s0t1u2v3w", "option": "b", "text": "[number, true]", "correct": false, "selected": false },
+            { "id": "mto5o6p7q8r9s0t1u2v3w4x", "option": "c", "text": "(number | boolean)[]", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "mtq5e6f7g8h9i0j1k2l3m4n",
+          "title": "Merge with Multiple Properties",
+          "question": "function merge<T, U>(obj1: T, obj2: U): T & U {\n  return { ...obj1, ...obj2 };\n}\nconst result = merge({ id: 1, name: 'Mike' }, { age: 23, city: 'NYC' });\nWhat properties does result have?",
+          "options": [
+            { "id": "mto7q8r9s0t1u2v3w4x5y6z", "option": "a", "text": "id, name, age, and city", "correct": true, "selected": false },
+            { "id": "mto8r9s0t1u2v3w4x5y6z7a", "option": "b", "text": "Only id and name", "correct": false, "selected": false },
+            { "id": "mto9s0t1u2v3w4x5y6z7a8b", "option": "c", "text": "Only age and city", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "mtq6f7g8h9i0j1k2l3m4n5o",
+          "title": "Type Inference with Multiple Types",
+          "question": "function createPair<T, U>(a: T, b: U): [T, U] {\n  return [a, b];\n}\nconst result = createPair('test', 100);\nWhat type does TypeScript infer for 'result[0]'?",
+          "options": [
+            { "id": "mto1u2v3w4x5y6z7a8b9c0d", "option": "a", "text": "number", "correct": false, "selected": false },
+            { "id": "mto2v3w4x5y6z7a8b9c0d1e", "option": "b", "text": "any", "correct": false, "selected": false },
+            { "id": "mto3w4x5y6z7a8b9c0d1e2f", "option": "c", "text": "string", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "mtq8h9i0j1k2l3m4n5o6p7q",
+          "title": "Pair with Same Types",
+          "question": "function pair<T, U>(first: T, second: U): [T, U] {\n  return [first, second];\n}\nconst result = pair('hello', 'world');\nWhat type does TypeScript infer for 'result'?",
+          "options": [
+            { "id": "mto9c0d1e2f3g4h5i6j7k8l", "option": "a", "text": "[string, any]", "correct": false, "selected": false },
+            { "id": "mto0d1e2f3g4h5i6j7k8l9m", "option": "b", "text": "[string, string]", "correct": true, "selected": false },
+            { "id": "mto1e2f3g4h5i6j7k8l9m0n", "option": "c", "text": "string[]", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+      ],
+      "tasks": [
+        {
+          "id": "mtt1a2b3c4d5e6f7g8h9i0j",
+          "title": "Create a Merge Function with Multiple Type Parameters",
+          "description": "Create a function called %mergeObjects% that takes two objects and returns a merged object. The function should use two type parameters %T% and %U%. Use the spread operator to combine the objects. Test it with two different objects.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "function mergeObjects<T, U>(obj1: T, obj2: U): T & U {\n  return { ...obj1, ...obj2 };\n}\nconst result = mergeObjects({ name: 'Alice' }, { age: 30 });\nconsole.log(result); // { name: 'Alice', age: 30 }",
+          "done": false
+        },
+        {
+          "id": "mtt2b3c4d5e6f7g8h9i0j1k",
+          "title": "Create a Pair Function with Multiple Type Parameters",
+          "description": "Create a function called %makePair% that takes two values and returns them as a tuple. The function should use two type parameters %T% and %U%. Test it with different types: string/number, number/boolean, and string/string.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "function makePair<T, U>(first: T, second: U): [T, U] {\n  return [first, second];\n}\nconst pair1 = makePair('hello', 42);\nconst pair2 = makePair(10, true);\nconst pair3 = makePair('hello', 'world');",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "gv1o2v3e4r5l6o7a8d9s0t",
+      "title": "Generics vs Overloads",
+      "videoID": "59",
+      "section": 7,
+      "done": false,
+      "milestone": false,
+      "inProgress": false,
+      "questions": [
+        {
+          "id": "gvq1a2b3c4d5e6f7g8h9i0j",
+          "title": "Generics vs Overloads - Use Case",
+          "question": "When should you use function overloads instead of generics?",
+          "options": [
+            { "id": "gvo1a2b3c4d5e6f7g8h9i0j", "option": "a", "text": "When you want to restrict inputs to specific types with precise return types", "correct": true, "selected": false },
+            { "id": "gvo2b3c4d5e6f7g8h9i0j1k", "option": "b", "text": "When the function should accept any arbitrary type", "correct": false, "selected": false },
+            { "id": "gvo3c4d5e6f7g8h9i0j1k2l", "option": "c", "text": "When you want to make all types optional", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "gvq2b3c4d5e6f7g8h9i0j1k",
+          "title": "Generics vs Overloads - When to Use Generics",
+          "question": "When should you use generics instead of function overloads?",
+          "options": [
+            { "id": "gvo5e6f7g8h9i0j1k2l3m4n", "option": "a", "text": "When the function should accept any arbitrary type determined by the caller", "correct": true, "selected": false },
+            { "id": "gvo6f7g8h9i0j1k2l3m4n5o", "option": "b", "text": "When you have a fixed set of specific types", "correct": false, "selected": false },
+            { "id": "gvo7g8h9i0j1k2l3m4n5o6p", "option": "c", "text": "When you want different return types for different inputs", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "gvq3c4d5e6f7g8h9i0j1k2l",
+          "title": "Overloads Example",
+          "question": "function process(value: string): string;\nfunction process(value: number): number;\nfunction process(value: string | number) {\n  return value;\n}\nconst result = process('hello');\nWhat is the return type of result?",
+          "options": [
+            { "id": "gvo9i0j1k2l3m4n5o6p7q8r", "option": "a", "text": "string", "correct": true, "selected": false },
+            { "id": "gvo0j1k2l3m4n5o6p7q8r9s", "option": "b", "text": "number", "correct": false, "selected": false },
+            { "id": "gvo1k2l3m4n5o6p7q8r9s0t", "option": "c", "text": "string | number", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "gvq4d5e6f7g8h9i0j1k2l3m",
+          "title": "Generics Example",
+          "question": "function doSomething<T>(value: T): T {\n  return value;\n}\nconst result = doSomething<boolean>(true);\nWhat is the return type of result?",
+          "options": [
+            { "id": "gvo3m4n5o6p7q8r9s0t1u2v", "option": "a", "text": "any", "correct": false, "selected": false },
+            { "id": "gvo4n5o6p7q8r9s0t1u2v3w", "option": "b", "text": "boolean", "correct": true, "selected": false },
+            { "id": "gvo5o6p7q8r9s0t1u2v3w4x", "option": "c", "text": "true", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "gvq5e6f7g8h9i0j1k2l3m4n",
+          "title": "Overloads vs Generics - Return Types",
+          "question": "function identity<T>(value: T): T {\n  return value;\n}\nconst result = identity('hello');\nWhat type does TypeScript infer for result?",
+          "options": [
+            { "id": "gvo7q8r9s0t1u2v3w4x5y6z", "option": "a", "text": "string", "correct": true, "selected": false },
+            { "id": "gvo8r9s0t1u2v3w4x5y6z7a", "option": "b", "text": "any", "correct": false, "selected": false },
+            { "id": "gvo9s0t1u2v3w4x5y6z7a8b", "option": "c", "text": "unknown", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "gvq6f7g8h9i0j1k2l3m4n5o",
+          "title": "Overloads - Multiple Signatures",
+          "question": "function format(value: string): string;\nfunction format(value: number): string;\nfunction format(value: string | number): string {\n  return String(value);\n}\nHow many overload signatures does this function have?",
+          "options": [
+            { "id": "gvo1u2v3w4x5y6z7a8b9c0d", "option": "a", "text": "1", "correct": false, "selected": false },
+            { "id": "gvo2v3w4x5y6z7a8b9c0d1e", "option": "b", "text": "2", "correct": true, "selected": false },
+            { "id": "gvo3w4x5y6z7a8b9c0d1e2f", "option": "c", "text": "3", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "gvq7g8h9i0j1k2l3m4n5o6p",
+          "title": "Generics - Flexible Types",
+          "question": "function wrapInArray<T>(value: T): T[] {\n  return [value];\n}\nconst result1 = wrapInArray('hello');\nconst result2 = wrapInArray(42);\nWhat types do result1 and result2 have?",
+          "options": [
+            { "id": "gvo5y6z7a8b9c0d1e2f3g4h", "option": "a", "text": "result1 is string[], result2 is number[]", "correct": true, "selected": false },
+            { "id": "gvo6z7a8b9c0d1e2f3g4h5i", "option": "b", "text": "result1 is string, result2 is number", "correct": false, "selected": false },
+            { "id": "gvo7a8b9c0d1e2f3g4h5i6j", "option": "c", "text": "result1 is any[], result2 is any[]", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "gvq8h9i0j1k2l3m4n5o6p7q",
+          "title": "Overloads - Fixed Types",
+          "question": "function convert(value: string): number;\nfunction convert(value: number): string;\nfunction convert(value: string | number): string | number {\n  if (typeof value === 'string') {\n    return Number(value);\n  }\n  return String(value);\n}\nconst result = convert(42);\nWhat is the return type of result?",
+          "options": [
+            { "id": "gvo9c0d1e2f3g4h5i6j7k8l", "option": "a", "text": "number", "correct": false, "selected": false },
+            { "id": "gvo0d1e2f3g4h5i6j7k8l9m", "option": "b", "text": "string", "correct": true, "selected": false },
+            { "id": "gvo1e2f3g4h5i6j7k8l9m0n", "option": "c", "text": "string | number", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+      ],
+      "tasks": [
+        {
+          "id": "gvt1a2b3c4d5e6f7g8h9i0j",
+          "title": "Create a Function with Overloads",
+          "description": "Create a function called %stringify% that takes either a number or a boolean and returns a string. Use function overloads to define both signatures. The implementation should convert the input to a string.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "function stringify(value: number): string;\nfunction stringify(value: boolean): string;\nfunction stringify(value: number | boolean): string {\n  return String(value);\n}\nconst result1 = stringify(42);\nconst result2 = stringify(true);",
+          "done": false
+        },
+        {
+          "id": "gvt2b3c4d5e6f7g8h9i0j1k",
+          "title": "Create a Generic Function",
+          "description": "Create a generic function called %getLengthOrValue% that takes a parameter %value%. If the value is an array, return its length. Otherwise, return the value itself. Use generics so the function works with any type.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "function getLengthOrValue<T>(value: T | T[]): T | number {\n  if (Array.isArray(value)) {\n    return value.length;\n  }\n  return value;\n}\nconst result1 = getLengthOrValue([1, 2, 3]);\nconst result2 = getLengthOrValue('hello');",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "gd1e2f3a4u5l6t7v8a9l0u",
+      "title": "Generic Default Values",
+      "videoID": "60",
+      "section": 7,
+      "done": false,
+      "milestone": false,
+      "inProgress": false,
+      "questions": [
+        {
+          "id": "gdq1a2b3c4d5e6f7g8h9i0j",
+          "title": "Generic Default Syntax",
+          "question": "Which of the following correctly defines a generic with a default type?",
+          "options": [
+            { "id": "gdo2b3c4d5e6f7g8h9i0j1k", "option": "a", "text": "function create<T: string>(value: T) { }", "correct": false, "selected": false },
+            { "id": "gdo3c4d5e6f7g8h9i0j1k2l", "option": "b", "text": "function create<T extends string>(value: T) { }", "correct": false, "selected": false },
+            { "id": "gdo1a2b3c4d5e6f7g8h9i0j", "option": "c", "text": "function create<T = string>(value: T) { }", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "gdq2b3c4d5e6f7g8h9i0j1k",
+          "title": "Default Type Usage",
+          "question": "function createContainer<T = string>(value: T) {\n  return { value };\n}\nconst container = createContainer('Hello');\nWhat type does TypeScript infer for container.value?",
+          "options": [
+            { "id": "gdo6f7g8h9i0j1k2l3m4n5o", "option": "a", "text": "unknown", "correct": false, "selected": false },
+            { "id": "gdo5e6f7g8h9i0j1k2l3m4n", "option": "b", "text": "string", "correct": true, "selected": false },
+            { "id": "gdo7g8h9i0j1k2l3m4n5o6p", "option": "c", "text": "any", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "gdq3c4d5e6f7g8h9i0j1k2l",
+          "title": "Explicit Generic Type",
+          "question": "function createContainer<T = string>(value: T) {\n  return { value };\n}\nconst container = createContainer<number>(42);\nWhat type does TypeScript infer for container.value?",
+          "options": [
+            { "id": "gdo9i0j1k2l3m4n5o6p7q8r", "option": "a", "text": "number", "correct": true, "selected": false },
+            { "id": "gdo0j1k2l3m4n5o6p7q8r9s", "option": "b", "text": "string", "correct": false, "selected": false },
+            { "id": "gdo1k2l3m4n5o6p7q8r9s0t", "option": "c", "text": "any", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "gdq4d5e6f7g8h9i0j1k2l3m",
+          "title": "Type Inference with Default",
+          "question": "function createContainer<T = string>(value: T) {\n  return { value };\n}\nconst container = createContainer(true);\nWhat type does TypeScript infer for container.value?",
+          "options": [
+            { "id": "gdo3m4n5o6p7q8r9s0t1u2v", "option": "a", "text": "string", "correct": false, "selected": false },
+            { "id": "gdo4n5o6p7q8r9s0t1u2v3w", "option": "b", "text": "boolean", "correct": true, "selected": false },
+            { "id": "gdo5o6p7q8r9s0t1u2v3w4x", "option": "c", "text": "any", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "gdq5e6f7g8h9i0j1k2l3m4n",
+          "title": "Generic Default with Interface",
+          "question": "interface Container<T = string> {\n  value: T;\n}\nconst obj: Container = { value: 'Hello' };\nWhat type does TypeScript infer for obj.value?",
+          "options": [
+            { "id": "gdo7q8r9s0t1u2v3w4x5y6z", "option": "a", "text": "string", "correct": true, "selected": false },
+            { "id": "gdo8r9s0t1u2v3w4x5y6z7a", "option": "b", "text": "unknown", "correct": false, "selected": false },
+            { "id": "gdo9s0t1u2v3w4x5y6z7a8b", "option": "c", "text": "any", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "gdq6f7g8h9i0j1k2l3m4n5o",
+          "title": "Default Type with Multiple Parameters",
+          "question": "function merge<T = object, U = object>(obj1: T, obj2: U): T & U {\n  return { ...obj1, ...obj2 };\n}\nconst result = merge({ a: 1 }, { b: 2 });\nWhat type does TypeScript infer for result?",
+          "options": [
+            { "id": "gdo2v3w4x5y6z7a8b9c0d1e", "option": "a", "text": "{ a: number; b: number }", "correct": false, "selected": false },
+            { "id": "gdo3w4x5y6z7a8b9c0d1e2f", "option": "b", "text": "any", "correct": false, "selected": false },
+            { "id": "gdo1u2v3w4x5y6z7a8b9c0d", "option": "c", "text": "{ a: number } & { b: number }", "correct": true, "selected": false },
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "gdq9i0j1k2l3m4n5o6p7q8r",
+          "title": "Default Type with Function",
+          "question": "function createArray<T = string>(): T[] {\n  return [];\n}\nconst arr = createArray();\nWhat type does TypeScript infer for arr?",
+          "options": [
+            { "id": "gdo3g4h5i6j7k8l9m0n1o2p", "option": "a", "text": "string[]", "correct": true, "selected": false },
+            { "id": "gdo4h5i6j7k8l9m0n1o2p3q", "option": "b", "text": "number[]", "correct": false, "selected": false },
+            { "id": "gdo5i6j7k8l9m0n1o2p3q4r", "option": "c", "text": "any[]", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+      ],
+      "tasks": [
+        {
+          "id": "gdt1a2b3c4d5e6f7g8h9i0j",
+          "title": "Create a Generic Container with Default Type",
+          "description": "Create a function called %createContainer% that takes a %value% and returns an object with a %value% property. The function should have a generic type parameter %T% with a default type of %string%. Test it by: 1) calling it without specifying the type, 2) calling it with a number explicitly, and 3) calling it with a boolean and letting TypeScript infer the type.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "function createContainer<T = string>(value: T) {\n  return { value };\n}\nconst container1 = createContainer('Hello'); // T defaults to string\nconst container2 = createContainer<number>(42); // T is number\nconst container3 = createContainer(true); // T is inferred as boolean",
+          "done": false
+        },
+      ]
+    },
+    {
+      "id": "ge1x2t3e4n5d6s7e8x9t0s",
+      "title": "Generics Extends",
+      "videoID": "61",
+      "section": 7,
+      "done": false,
+      "milestone": false,
+      "inProgress": false,
+      "questions": [
+        {
+          "id": "geq2b3c4d5e6f7g8h9i0j1k",
+          "title": "Extends with Primitive Type",
+          "question": "function getName<T extends string>(val: T): T {\n  return val;\n}\nconst result = getName('Pablo');\nIs this valid?",
+          "options": [
+            { "id": "geo6f7g8h9i0j1k2l3m4n5o", "option": "a", "text": "No, because T must be a number", "correct": false, "selected": false },
+            { "id": "geo5e6f7g8h9i0j1k2l3m4n", "option": "b", "text": "Yes, because 'Pablo' is a string", "correct": true, "selected": false },
+            { "id": "geo7g8h9i0j1k2l3m4n5o6p", "option": "c", "text": "No, because extends only works with objects", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "geq3c4d5e6f7g8h9i0j1k2l",
+          "title": "Extends with Object Property",
+          "question": "function getName<T extends { name: string }>(obj: T): string {\n  return obj.name;\n}\nconst result = getName({ name: 'Alice', age: 30 });\nIs this valid?",
+          "options": [
+            { "id": "geo9i0j1k2l3m4n5o6p7q8r", "option": "a", "text": "Yes, because the object has a name property", "correct": true, "selected": false },
+            { "id": "geo0j1k2l3m4n5o6p7q8r9s", "option": "b", "text": "No, because age is not allowed", "correct": false, "selected": false },
+            { "id": "geo1k2l3m4n5o6p7q8r9s0t", "option": "c", "text": "No, because the return type should be T", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "geq4d5e6f7g8h9i0j1k2l3m",
+          "title": "Extends with Missing Property",
+          "question": "function getName<T extends { name: string }>(obj: T): string {\n  return obj.name;\n}\nconst result = getName({ age: 30 });\nWhat happens?",
+          "options": [
+            { "id": "geo3m4n5o6p7q8r9s0t1u2v", "option": "a", "text": "It works and returns undefined", "correct": false, "selected": false },
+            { "id": "geo4n5o6p7q8r9s0t1u2v3w", "option": "b", "text": "TypeScript shows an error because 'name' is missing", "correct": true, "selected": false },
+            { "id": "geo5o6p7q8r9s0t1u2v3w4x", "option": "c", "text": "It creates a name property automatically", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "geq5e6f7g8h9i0j1k2l3m4n",
+          "title": "Extends with Multiple Properties",
+          "question": "function getFullName<T extends { firstName: string; lastName: string }>(obj: T): string {\n  return `${obj.firstName} ${obj.lastName}`;\n}\nconst result = getFullName({ firstName: 'John', lastName: 'Doe', age: 25 });\nIs this valid?",
+          "options": [
+            { "id": "geo7q8r9s0t1u2v3w4x5y6z", "option": "a", "text": "Yes, because firstName and lastName are present", "correct": true, "selected": false },
+            { "id": "geo8r9s0t1u2v3w4x5y6z7a", "option": "b", "text": "No, because age is not allowed", "correct": false, "selected": false },
+            { "id": "geo9s0t1u2v3w4x5y6z7a8b", "option": "c", "text": "No, because the return type should be T", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "geq6f7g8h9i0j1k2l3m4n5o",
+          "title": "Extends with Union Type",
+          "question": "function processValue<T extends string | number>(value: T): T {\n  return value;\n}\nconst result = processValue(true);\nWhat happens?",
+          "options": [
+            { "id": "geo1u2v3w4x5y6z7a8b9c0d", "option": "a", "text": "It works and returns true", "correct": false, "selected": false },
+            { "id": "geo2v3w4x5y6z7a8b9c0d1e", "option": "b", "text": "TypeScript shows an error because boolean is not allowed", "correct": true, "selected": false },
+            { "id": "geo3w4x5y6z7a8b9c0d1e2f", "option": "c", "text": "It converts true to a string", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+       
+      ],
+      "tasks": [
+        {
+          "id": "get1a2b3c4d5e6f7g8h9i0j",
+          "title": "Create a Generic Function with Extends",
+          "description": "Create a function called %getUserName% that takes an object and returns its %name% property. Use generics with 'extends' to ensure the object has a %name% property of type string. Test it with a valid object and an invalid object.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "function getUserName<T extends { name: string }>(obj: T): string {\n  return obj.name;\n}\nconst valid = getUserName({ name: 'Alice', age: 30 });\n// const invalid = getUserName({ age: 30 }); // Error: Property 'name' is missing",
+          "done": false
+        },
+        {
+          "id": "get2b3c4d5e6f7g8h9i0j1k",
+          "title": "Create a Generic Function with Multiple Constraints",
+          "description": "Create a function called %getFullName% that takes an object with %firstName% and %lastName% properties. Use generics with 'extends' to ensure both properties exist. Return the full name as a string.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "function getFullName<T extends { firstName: string; lastName: string }>(obj: T): string {\n  return `${obj.firstName} ${obj.lastName}`;\n}\nconst result = getFullName({ firstName: 'John', lastName: 'Doe', age: 25 });\nconsole.log(result); // 'John Doe'",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "gi1n2t3e4r5f6a7c8e9s0t",
+      "title": "Generics with Interfaces",
+      "videoID": "62",
+      "section": 7,
+      "done": false,
+      "milestone": false,
+      "inProgress": false,
+      "questions": [
+        {
+          "id": "giq1a2b3c4d5e6f7g8h9i0j",
+          "title": "Generic Interface Syntax",
+          "question": "Which of the following correctly defines a generic interface?",
+          "options": [
+            { "id": "gio2b3c4d5e6f7g8h9i0j1k", "option": "a", "text": "interface Box { value: T; }", "correct": false, "selected": false },
+            { "id": "gio1a2b3c4d5e6f7g8h9i0j", "option": "b", "text": "interface Box<T> { value: T; }", "correct": true, "selected": false },
+            { "id": "gio3c4d5e6f7g8h9i0j1k2l", "option": "c", "text": "interface Box<T extends string> { value: T; }", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "giq2b3c4d5e6f7g8h9i0j1k",
+          "title": "Generic Interface Usage",
+          "question": "interface Box<T> {\n  value: T;\n}\nconst box: Box<string> = { value: 'Hello' };\nWhat type does TypeScript infer for box.value?",
+          "options": [
+            { "id": "gio5e6f7g8h9i0j1k2l3m4n", "option": "a", "text": "string", "correct": true, "selected": false },
+            { "id": "gio6f7g8h9i0j1k2l3m4n5o", "option": "b", "text": "any", "correct": false, "selected": false },
+            { "id": "gio7g8h9i0j1k2l3m4n5o6p", "option": "c", "text": "unknown", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "giq3c4d5e6f7g8h9i0j1k2l",
+          "title": "Generic Interface with Different Types",
+          "question": "interface Pair<T, U> {\n  first: T;\n  second: U;\n}\nconst pair: Pair<string, number> = { first: 'Hello', second: 42 };\nWhat type does TypeScript infer for pair.second?",
+          "options": [
+            { "id": "gio9i0j1k2l3m4n5o6p7q8r", "option": "a", "text": "string", "correct": false, "selected": false },
+            { "id": "gio0j1k2l3m4n5o6p7q8r9s", "option": "b", "text": "number", "correct": true, "selected": false },
+            { "id": "gio1k2l3m4n5o6p7q8r9s0t", "option": "c", "text": "string | number", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "giq4d5e6f7g8h9i0j1k2l3m",
+          "title": "Interface with Default Generic",
+          "question": "interface Container<T = string> {\n  value: T;\n}\nconst container: Container = { value: 'Hello' };\nWhat type does TypeScript infer for container.value?",
+          "options": [
+            { "id": "gio3m4n5o6p7q8r9s0t1u2v", "option": "a", "text": "string", "correct": true, "selected": false },
+            { "id": "gio4n5o6p7q8r9s0t1u2v3w", "option": "b", "text": "any", "correct": false, "selected": false },
+            { "id": "gio5o6p7q8r9s0t1u2v3w4x", "option": "c", "text": "unknown", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "giq5e6f7g8h9i0j1k2l3m4n",
+          "title": "Generic Interface with Methods",
+          "question": "interface Wrapper<T> {\n  value: T;\n  getValue(): T;\n}\nconst wrapper: Wrapper<number> = {\n  value: 42,\n  getValue() { return this.value; }\n};\nWhat type does wrapper.getValue() return?",
+          "options": [
+            { "id": "gio7q8r9s0t1u2v3w4x5y6z", "option": "a", "text": "string", "correct": false, "selected": false },
+            { "id": "gio8r9s0t1u2v3w4x5y6z7a", "option": "b", "text": "number", "correct": true, "selected": false },
+            { "id": "gio9s0t1u2v3w4x5y6z7a8b", "option": "c", "text": "any", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "giq6f7g8h9i0j1k2l3m4n5o",
+          "title": "Generic Interface with Extends",
+          "question": "interface HasName {\n  name: string;\n}\ninterface Person<T extends HasName> {\n  data: T;\n  getName(): string;\n}\nconst person: Person<{ name: string; age: number }> = {\n  data: { name: 'Alice', age: 30 },\n  getName() { return this.data.name; }\n};\nWhat does person.getName() return?",
+          "options": [
+            { "id": "gio1u2v3w4x5y6z7a8b9c0d", "option": "a", "text": "'Alice'", "correct": true, "selected": false },
+            { "id": "gio2v3w4x5y6z7a8b9c0d1e", "option": "b", "text": "30", "correct": false, "selected": false },
+            { "id": "gio3w4x5y6z7a8b9c0d1e2f", "option": "c", "text": "undefined", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "giq7g8h9i0j1k2l3m4n5o6p",
+          "title": "Generic Interface with Array",
+          "question": "interface Collection<T> {\n  items: T[];\n  add(item: T): void;\n  get(index: number): T;\n}\nconst collection: Collection<string> = {\n  items: ['Hello', 'World'],\n  add(item) { this.items.push(item); },\n  get(index) { return this.items[index]; }\n};\ncollection.add('Test');\nWhat is the type of collection.items?",
+          "options": [
+            { "id": "gio6z7a8b9c0d1e2f3g4h5i", "option": "a", "text": "any[]", "correct": false, "selected": false },
+            { "id": "gio7a8b9c0d1e2f3g4h5i6j", "option": "b", "text": "number[]", "correct": false, "selected": false },
+            { "id": "gio5y6z7a8b9c0d1e2f3g4h", "option": "c", "text": "string[]", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "giq8h9i0j1k2l3m4n5o6p7q",
+          "title": "Generic Interface with Nested Generics",
+          "question": "interface Result<T> {\n  data: T;\n  status: number;\n}\ninterface ApiResponse<T> {\n  response: Result<T>;\n  timestamp: Date;\n}\nconst api: ApiResponse<string> = {\n  response: { data: 'Hello', status: 200 },\n  timestamp: new Date()\n};\nWhat type does TypeScript infer for api.response.data?",
+          "options": [
+            { "id": "gio9c0d1e2f3g4h5i6j7k8l", "option": "a", "text": "string", "correct": true, "selected": false },
+            { "id": "gio0d1e2f3g4h5i6j7k8l9m", "option": "b", "text": "number", "correct": false, "selected": false },
+            { "id": "gio1e2f3g4h5i6j7k8l9m0n", "option": "c", "text": "any", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "giq9i0j1k2l3m4n5o6p7q8r",
+          "title": "Generic Interface with Function Type",
+          "question": "interface Mapper<T, U> {\n  map(input: T): U;\n}\nconst stringToNumber: Mapper<string, number> = {\n  map(input) { return input.length; }\n};\nconst result = stringToNumber.map('Hello');\nWhat type does TypeScript infer for result?",
+          "options": [
+            { "id": "gio3g4h5i6j7k8l9m0n1o2p", "option": "a", "text": "string", "correct": false, "selected": false },
+            { "id": "gio4h5i6j7k8l9m0n1o2p3q", "option": "b", "text": "number", "correct": true, "selected": false },
+            { "id": "gio5i6j7k8l9m0n1o2p3q4r", "option": "c", "text": "any", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+      ],
+      "tasks": [
+        {
+          "id": "git1a2b3c4d5e6f7g8h9i0j",
+          "title": "Create a Generic Interface for a Container",
+          "description": "Create a generic interface called %Container% that takes a type parameter %T%. It should have a %value% property of type %T% and a %getValue% method that returns %T%. Then create an object using this interface with a string type and another with a number type.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "interface Container<T> {\n  value: T;\n  getValue(): T;\n}\nconst stringContainer: Container<string> = {\n  value: 'Hello',\n  getValue() { return this.value; }\n};\nconst numberContainer: Container<number> = {\n  value: 42,\n  getValue() { return this.value; }\n};",
+          "done": false
+        },
+      ]
+    },
+    {
+      "id": "gt1y2p3e4s5i6n7g8e9n0e",
+      "title": "Generic Types (Type Aliases)",
+      "videoID": "63",
+      "section": 7,
+      "done": false,
+      "milestone": false,
+      "inProgress": false,
+      "questions": [
+        {
+          "id": "gtq1a2b3c4d5e6f7g8h9i0j",
+          "title": "Generic Type Alias Syntax",
+          "question": "Which of the following correctly defines a generic type alias?",
+          "options": [
+            { "id": "gto2b3c4d5e6f7g8h9i0j1k", "option": "a", "text": "type Box = { value: T; };", "correct": false, "selected": false },
+            { "id": "gto3c4d5e6f7g8h9i0j1k2l", "option": "b", "text": "type Box<T extends string> = { value: T; };", "correct": false, "selected": false },
+            { "id": "gto1a2b3c4d5e6f7g8h9i0j", "option": "c", "text": "type Box<T> = { value: T; };", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "gtq2b3c4d5e6f7g8h9i0j1k",
+          "title": "Generic Type Alias Usage",
+          "question": "type Box<T> = { value: T; };\nconst box: Box<string> = { value: 'Hello' };\nWhat type does TypeScript infer for box.value?",
+          "options": [
+            { "id": "gto5e6f7g8h9i0j1k2l3m4n", "option": "a", "text": "string", "correct": true, "selected": false },
+            { "id": "gto6f7g8h9i0j1k2l3m4n5o", "option": "b", "text": "any", "correct": false, "selected": false },
+            { "id": "gto7g8h9i0j1k2l3m4n5o6p", "option": "c", "text": "unknown", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "gtq3c4d5e6f7g8h9i0j1k2l",
+          "title": "Generic Type Alias with Multiple Types",
+          "question": "type Pair<T, U> = { first: T; second: U; };\nconst pair: Pair<string, number> = { first: 'Hello', second: 42 };\nWhat type does TypeScript infer for pair.second?",
+          "options": [
+            { "id": "gto9i0j1k2l3m4n5o6p7q8r", "option": "a", "text": "string", "correct": false, "selected": false },
+            { "id": "gto0j1k2l3m4n5o6p7q8r9s", "option": "b", "text": "number", "correct": true, "selected": false },
+            { "id": "gto1k2l3m4n5o6p7q8r9s0t", "option": "c", "text": "string | number", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "gtq4d5e6f7g8h9i0j1k2l3m",
+          "title": "Type Alias with Default Generic",
+          "question": "type Container<T = string> = { value: T; };\nconst container: Container = { value: 'Hello' };\nWhat type does TypeScript infer for container.value?",
+          "options": [
+            { "id": "gto3m4n5o6p7q8r9s0t1u2v", "option": "a", "text": "string", "correct": true, "selected": false },
+            { "id": "gto4n5o6p7q8r9s0t1u2v3w", "option": "b", "text": "any", "correct": false, "selected": false },
+            { "id": "gto5o6p7q8r9s0t1u2v3w4x", "option": "c", "text": "unknown", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "gtq5e6f7g8h9i0j1k2l3m4n",
+          "title": "Type Alias with Extends",
+          "question": "type HasName = { name: string; };\ntype Person<T extends HasName> = { data: T; getName(): string; };\nconst person: Person<{ name: string; age: number }> = {\n  data: { name: 'Alice', age: 30 },\n  getName() { return this.data.name; }\n};\nWhat does person.getName() return?",
+          "options": [
+            { "id": "gto8r9s0t1u2v3w4x5y6z7a", "option": "a", "text": "30", "correct": false, "selected": false },
+            { "id": "gto9s0t1u2v3w4x5y6z7a8b", "option": "b", "text": "undefined", "correct": false, "selected": false },
+            { "id": "gto7q8r9s0t1u2v3w4x5y6z", "option": "c", "text": "'Alice'", "correct": true, "selected": false },
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "gtq6f7g8h9i0j1k2l3m4n5o",
+          "title": "Generic Type Alias with Array",
+          "question": "type Collection<T> = {\n  items: T[];\n  add(item: T): void;\n};\nconst collection: Collection<string> = {\n  items: ['Hello', 'World'],\n  add(item) { this.items.push(item); }\n};\ncollection.add('Test');\nWhat is the type of collection.items?",
+          "options": [
+            { "id": "gto1u2v3w4x5y6z7a8b9c0d", "option": "a", "text": "string[]", "correct": true, "selected": false },
+            { "id": "gto2v3w4x5y6z7a8b9c0d1e", "option": "b", "text": "any[]", "correct": false, "selected": false },
+            { "id": "gto3w4x5y6z7a8b9c0d1e2f", "option": "c", "text": "number[]", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "gtq7g8h9i0j1k2l3m4n5o6p",
+          "title": "Type Alias with Nested Generics",
+          "question": "type Result<T> = { data: T; status: number; };\ntype ApiResponse<T> = { response: Result<T>; timestamp: Date; };\nconst api: ApiResponse<string> = {\n  response: { data: 'Hello', status: 200 },\n  timestamp: new Date()\n};\nWhat type does TypeScript infer for api.response.data?",
+          "options": [
+            { "id": "gto5y6z7a8b9c0d1e2f3g4h", "option": "a", "text": "string", "correct": true, "selected": false },
+            { "id": "gto6z7a8b9c0d1e2f3g4h5i", "option": "b", "text": "number", "correct": false, "selected": false },
+            { "id": "gto7a8b9c0d1e2f3g4h5i6j", "option": "c", "text": "any", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "gtq8h9i0j1k2l3m4n5o6p7q",
+          "title": "Type Alias with Function Type",
+          "question": "type Mapper<T, U> = (input: T) => U;\nconst stringToNumber: Mapper<string, number> = (input) => input.length;\nconst result = stringToNumber('Hello');\nWhat type does TypeScript infer for result?",
+          "options": [
+            { "id": "gto9c0d1e2f3g4h5i6j7k8l", "option": "a", "text": "string", "correct": false, "selected": false },
+            { "id": "gto0d1e2f3g4h5i6j7k8l9m", "option": "b", "text": "number", "correct": true, "selected": false },
+            { "id": "gto1e2f3g4h5i6j7k8l9m0n", "option": "c", "text": "any", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "gtq9i0j1k2l3m4n5o6p7q8r",
+          "title": "Generic Type Alias with Union",
+          "question": "type Response<T> = { success: true; data: T } | { success: false; error: string };\nconst result: Response<number> = { success: true, data: 42 };\nWhat type does TypeScript infer for result.data?",
+          "options": [
+            { "id": "gto3g4h5i6j7k8l9m0n1o2p", "option": "a", "text": "number", "correct": true, "selected": false },
+            { "id": "gto4h5i6j7k8l9m0n1o2p3q", "option": "b", "text": "string", "correct": false, "selected": false },
+            { "id": "gto5i6j7k8l9m0n1o2p3q4r", "option": "c", "text": "any", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+      ],
+      "tasks": [
+        {
+          "id": "gtt1a2b3c4d5e6f7g8h9i0j",
+          "title": "Create a Generic Type Alias for a Container",
+          "description": "Create a generic type alias called %Container% that takes a type parameter %T%. It should have a %value% property of type %T% and a %getValue% method that returns %T%. Then create a variable using this type with a string type and another with a number type.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "type Container<T> = {\n  value: T;\n  getValue(): T;\n};\nconst stringContainer: Container<string> = {\n  value: 'Hello',\n  getValue() { return this.value; }\n};\nconst numberContainer: Container<number> = {\n  value: 42,\n  getValue() { return this.value; }\n};",
+          "done": false
+        },
+      ]
+    },
+    {
+      "id": "af1g2e3n4e5r6i7c8s9a0s",
+      "title": "Async Functions with Generics",
+      "videoID": "64",
+      "section": 7,
+      "done": false,
+      "milestone": false,
+      "inProgress": false,
+      "questions": [
+        {
+          "id": "afq1a2b3c4d5e6f7g8h9i0j",
+          "title": "Async Generic Function Syntax",
+          "question": "Which of the following correctly defines an async generic function?",
+          "options": [
+            { "id": "afo1a2b3c4d5e6f7g8h9i0j", "option": "a", "text": "async function fetchData<T>(url: string): Promise<T> { }", "correct": true, "selected": false },
+            { "id": "afo2b3c4d5e6f7g8h9i0j1k", "option": "b", "text": "function fetchData<T>(url: string): Promise<T> { }", "correct": false, "selected": false },
+            { "id": "afo3c4d5e6f7g8h9i0j1k2l", "option": "c", "text": "async function fetchData(url: string): Promise<any> { }", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "afq2b3c4d5e6f7g8h9i0j1k",
+          "title": "Async Generic Return Type",
+          "question": "async function fetchData<T>(url: string): Promise<T> {\n  const response = await fetch(url);\n  return response.json();\n}\nWhat is the return type of this function?",
+          "options": [
+            { "id": "afo5e6f7g8h9i0j1k2l3m4n", "option": "a", "text": "Promise<T>", "correct": true, "selected": false },
+            { "id": "afo6f7g8h9i0j1k2l3m4n5o", "option": "b", "text": "T", "correct": false, "selected": false },
+            { "id": "afo7g8h9i0j1k2l3m4n5o6p", "option": "c", "text": "Response", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "afq3c4d5e6f7g8h9i0j1k2l",
+          "title": "Using Async Generic Function",
+          "question": "interface User {\n  id: number;\n  name: string;\n}\nasync function fetchData<T>(url: string): Promise<T> {\n  const response = await fetch(url);\n  return response.json();\n}\nasync function getUsers() {\n  const users = await fetchData<User>('/api/users');\n  return users;\n}\nWhat is the type of users in getUsers()?",
+          "options": [
+            { "id": "afo9i0j1k2l3m4n5o6p7q8r", "option": "a", "text": "User", "correct": false, "selected": false },
+            { "id": "afo0j1k2l3m4n5o6p7q8r9s", "option": "b", "text": "User[]", "correct": false, "selected": false },
+            { "id": "afo1k2l3m4n5o6p7q8r9s0t", "option": "c", "text": "Promise<User>", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "afq4d5e6f7g8h9i0j1k2l3m",
+          "title": "Async Generic with Different Types",
+          "question": "interface Product {\n  id: number;\n  title: string;\n  price: number;\n}\nasync function fetchData<T>(url: string): Promise<T> {\n  const response = await fetch(url);\n  return response.json();\n}\nasync function getProduct() {\n  const product = await fetchData<Product>('/api/product/1');\n  return product;\n}\nWhat type does product have?",
+          "options": [
+            { "id": "afo3m4n5o6p7q8r9s0t1u2v", "option": "a", "text": "Product", "correct": true, "selected": false },
+            { "id": "afo4n5o6p7q8r9s0t1u2v3w", "option": "b", "text": "Product[]", "correct": false, "selected": false },
+            { "id": "afo5o6p7q8r9s0t1u2v3w4x", "option": "c", "text": "Promise<Product>", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "afq5e6f7g8h9i0j1k2l3m4n",
+          "title": "Async Generic with Type Inference",
+          "question": "async function fetchData<T>(url: string): Promise<T> {\n  const response = await fetch(url);\n  return response.json();\n}\nasync function getData() {\n  const data = await fetchData('/api/data');\n  return data;\n}\nWhat type does TypeScript infer for data?",
+          "options": [
+            { "id": "afo7q8r9s0t1u2v3w4x5y6z", "option": "a", "text": "any", "correct": true, "selected": false },
+            { "id": "afo8r9s0t1u2v3w4x5y6z7a", "option": "b", "text": "unknown", "correct": false, "selected": false },
+            { "id": "afo9s0t1u2v3w4x5y6z7a8b", "option": "c", "text": "never", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "afq6f7g8h9i0j1k2l3m4n5o",
+          "title": "Async Generic with Error Handling",
+          "question": "async function fetchData<T>(url: string): Promise<T> {\n  try {\n    const response = await fetch(url);\n    return await response.json();\n  } catch (error) {\n    throw new Error('Failed to fetch');\n  }\n}\nWhat is the return type of this function?",
+          "options": [
+            { "id": "afo1u2v3w4x5y6z7a8b9c0d", "option": "a", "text": "Promise<T>", "correct": true, "selected": false },
+            { "id": "afo2v3w4x5y6z7a8b9c0d1e", "option": "b", "text": "T | null", "correct": false, "selected": false },
+            { "id": "afo3w4x5y6z7a8b9c0d1e2f", "option": "c", "text": "Promise<T | Error>", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "afq7g8h9i0j1k2l3m4n5o6p",
+          "title": "Async Generic with Array Response",
+          "question": "interface Post {\n  id: number;\n  title: string;\n  body: string;\n}\nasync function fetchPosts() {\n  const posts = await fetchData<Post[]>('/api/posts');\n  return posts;\n}\nWhat type does posts have?",
+          "options": [
+            { "id": "afo5y6z7a8b9c0d1e2f3g4h", "option": "a", "text": "Post", "correct": false, "selected": false },
+            { "id": "afo6z7a8b9c0d1e2f3g4h5i", "option": "b", "text": "Post[]", "correct": true, "selected": false },
+            { "id": "afo7a8b9c0d1e2f3g4h5i6j", "option": "c", "text": "Promise<Post[]>", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "afq8h9i0j1k2l3m4n5o6p7q",
+          "title": "Async Generic with Custom Type",
+          "question": "type ApiResponse<T> = { data: T; status: number; message: string; };\nasync function fetchApi<T>(url: string): Promise<ApiResponse<T>> {\n  const response = await fetch(url);\n  return response.json();\n}\nasync function getUser() {\n  const result = await fetchApi<User>('/api/user');\n  return result;\n}\nWhat is the type of result?",
+          "options": [
+            { "id": "afo9c0d1e2f3g4h5i6j7k8l", "option": "a", "text": "User", "correct": false, "selected": false },
+            { "id": "afo0d1e2f3g4h5i6j7k8l9m", "option": "b", "text": "ApiResponse<User>", "correct": true, "selected": false },
+            { "id": "afo1e2f3g4h5i6j7k8l9m0n", "option": "c", "text": "Promise<ApiResponse<User>>", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "afq0j1k2l3m4n5o6p7q8r9s",
+          "title": "Async Generic with Default Type",
+          "question": "async function fetchData<T = any>(url: string): Promise<T> {\n  const response = await fetch(url);\n  return response.json();\n}\nconst data = await fetchData('/api/data');\nWhat type does TypeScript infer for data?",
+          "options": [
+            { "id": "afo7k8l9m0n1o2p3q4r5s6t", "option": "a", "text": "unknown", "correct": false, "selected": false },
+            { "id": "afo8l9m0n1o2p3q4r5s6t7u", "option": "b", "text": "any", "correct": true, "selected": false },
+            { "id": "afo9m0n1o2p3q4r5s6t7u8v", "option": "c", "text": "never", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "aft1a2b3c4d5e6f7g8h9i0j",
+          "title": "Create an Async Generic Fetch Function",
+          "description": "Create an async generic function called %fetchData% that takes a %url% (string) and returns a %Promise<T>%. Inside the function, use %fetch% to get the response and parse it as JSON. Then create an interface %User% with %id% (number) and %name% (string). Finally, call %fetchData% with the %User% type to get a user.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "interface User {\n  id: number;\n  name: string;\n}\nasync function fetchData<T>(url: string): Promise<T> {\n  const response = await fetch(url);\n  return response.json();\n}\nconst user = await fetchData<User>('https://api.example.com/users/1');\nconsole.log(user);",
+          "done": false
+        },
+      ]
     }
   ]
 }
