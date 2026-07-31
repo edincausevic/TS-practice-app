@@ -58,7 +58,7 @@ function App() {
     setCourseData(getStats(updatedData).allData)
     
     // save on the server
-    saveDB(updatedData)
+    saveDB(getStats(updatedData).allData)
 
     setStats(getStats(updatedData).appStats)
 
@@ -229,7 +229,6 @@ function App() {
     
   
         if(exercise.section === sectionNum) {
-          console.log(exercise)
   
           if(exercise.type === 'title') {
             return {...exercise, 

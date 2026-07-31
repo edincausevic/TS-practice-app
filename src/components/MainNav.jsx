@@ -1,6 +1,5 @@
 import { useState } from "react";
 import UdemyLogo from "../assets/udemy_logo.png"
-import { getDB, saveDB } from "../db/init";
 
 const MainNav = ({displayExercise, data, resetSection}) => {
   const [activeLinkId, setActiveLinkId] = useState()
@@ -63,7 +62,7 @@ const MainNav = ({displayExercise, data, resetSection}) => {
                       </svg>
                       <strong> {listItem.totalCorrect || 0} / </strong>
                       <strong style={{color: '#b91c1c'}}>{listItem.totalFalse || 0} </strong>
-                      <strong>/ 112</strong>
+                      <strong>/ {listItem.questionsTotal || 0}</strong> 
                     </div>
 
                 
@@ -91,7 +90,7 @@ const MainNav = ({displayExercise, data, resetSection}) => {
                         <line x1="15" y1="16" x2="15.01" y2="16"></line>
                       </svg>
                       <strong> {listItem.totalTasksDone || 0} </strong>
-                      <strong>/ 23</strong>
+                      <strong>/ {listItem.tasksTotal}</strong>
                     </div>
 
                     <button onClick={() => resetSection(listItem.section)} style={{marginLeft: '35px', color: '#b91c1c', cursor: 'pointer', fontSize: '16px'}}><span>↻</span> Reset</button>

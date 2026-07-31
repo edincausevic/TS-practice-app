@@ -7238,11 +7238,11 @@ export const seedData = {
           "title": "Async Generic with Error Handling",
           "question": "async function fetchData<T>(url: string): Promise<T> {\n  try {\n    const response = await fetch(url);\n    return await response.json();\n  } catch (error) {\n    throw new Error('Failed to fetch');\n  }\n}\nWhat is the return type of this function?",
           "options": [
-            { "id": "afo1u2v3w4x5y6z7a8b9c0d", "option": "a", "text": "Promise<T>", "correct": true, "selected": false },
-            { "id": "afo2v3w4x5y6z7a8b9c0d1e", "option": "b", "text": "T | null", "correct": false, "selected": false },
+            { "id": "afo2v3w4x5y6z7a8b9c0d1e", "option": "a", "text": "T | null", "correct": false, "selected": false },
+            { "id": "afo1u2v3w4x5y6z7a8b9c0d", "option": "b", "text": "Promise<T>", "correct": true, "selected": false },
             { "id": "afo3w4x5y6z7a8b9c0d1e2f", "option": "c", "text": "Promise<T | Error>", "correct": false, "selected": false }
           ],
-          "correctAnswer": "a"
+          "correctAnswer": "b"
         },
         {
           "id": "afq7g8h9i0j1k2l3m4n5o6p",

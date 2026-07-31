@@ -103,6 +103,7 @@ function getStats(allData) {
     exercise.tasks.forEach(task => {
       if(task.done) totalTasksDone++
     })
+
   });
 
   // add stats to the data so menu can show it
@@ -116,7 +117,6 @@ function getStats(allData) {
       exercise.totalFalse = sections[exercise.section].totalFalse
       exercise.totalTasksDone =  sections[exercise.section].totalTasksDone
     }
-
   })
 
   return {
