@@ -1,6 +1,6 @@
 export const seedData = {
   id: '144_TS',
-  version: '0.2',
+  version: '0.5',
   allExercises: [
     {
       "id": "fx8brk4iqkqx8hbp5l8b",
@@ -1733,7 +1733,7 @@ export const seedData = {
     },
     {
       "id": "k9p3m7q2v8x5t1w4r6y9",
-      "title": "Type Aliasesp",
+      "title": "Type Aliases",
       "videoID": "20",
       "section": 3,
       "done": false,
@@ -3538,6 +3538,50 @@ export const seedData = {
           "result": "",
           "note": "implement in your editor / console",
           "solution": "function calculate(a: number, b: number): number {\n  return a + b;\n}\ntype CalculateFn = typeof calculate;\nconst multiply: CalculateFn = (a, b) => a * b;",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "ky1p2e3o4f5t6y7p8e9o0f",
+      "title": "keyof",
+      "videoID": "35",
+      "section": 4,
+      "done": false,
+      "milestone": false,
+      "inProgress": false,
+      "questions": [
+        {
+          "id": "kyq1a2b3c4d5e6f7g8h9i0j",
+          "title": "keyof with Interface",
+          "question": "interface User {\n  name: string;\n  age: number;\n  email: string;\n}\ntype UserKeys = keyof User;\nWhat type does UserKeys represent?",
+          "options": [
+            { "id": "kyo2b3c4d5e6f7g8h9i0j1k", "option": "a", "text": "string", "correct": false, "selected": false },
+            { "id": "kyo3c4d5e6f7g8h9i0j1k2l", "option": "b", "text": "'name' | 'age' | 'email'", "correct": true, "selected": false },
+            { "id": "kyo1a2b3c4d5e6f7g8h9i0j", "option": "c", "text": "any", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "kyq2b3c4d5e6f7g8h9i0j1k",
+          "title": "keyof with Type Alias",
+          "question": "type Product = {\n  id: number;\n  name: string;\n  price: number;\n};\ntype ProductKeys = keyof Product;\nWhat is the result?",
+          "options": [
+            { "id": "kyo5e6f7g8h9i0j1k2l3m4n", "option": "a", "text": "'id' | 'name' | 'price'", "correct": true, "selected": false },
+            { "id": "kyo6f7g8h9i0j1k2l3m4n5o", "option": "b", "text": "keyof Product", "correct": false, "selected": false },
+            { "id": "kyo7g8h9i0j1k2l3m4n5o6p", "option": "c", "text": "string", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+      ],
+      "tasks": [
+        {
+          "id": "kyt1a2b3c4d5e6f7g8h9i0j",
+          "title": "Simple keyof Access",
+          "description": "Create an interface %Person% with %name% (string) and %age% (number). Create a variable %person% with name 'Alice' and age 30. Write code to get the %name% property using keyof.",
+          "result": "",
+          "note": "implement in your editor / console",
+          "solution": "interface Person {\n  name: string;\n  age: number;\n}\nconst person: Person = { name: 'Alice', age: 30 };\ntype PersonKey = keyof Person;\nconst key: PersonKey = 'name';\nconsole.log(person[key]); // 'Alice'",
           "done": false
         }
       ]
