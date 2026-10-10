@@ -5,7 +5,7 @@ export const seedData = {
     {
       "id": "fx8brk4iqkqx8hbp5l8b",
       "type": "title",
-      "title": "Section 2: Starting with Typescript",
+      "title": "TypeScript Fundamentals: Core Types & Type Inference",
       "videoID": "1121",
       "questionsTotal": 0,
       "tasksTotal": 0,
@@ -1717,7 +1717,7 @@ export const seedData = {
     {
       "id": "1rrhi7solwwyst5v8cay",
       "type": "title",
-      "title": "Section 3: Typescript",
+      "title": "Intermediate TypeScript: Type Aliases, Functions & Narrowing",
       "videoID": "1121",
       "questionsTotal": 0,
       "tasksTotal": 0,
@@ -3120,7 +3120,7 @@ export const seedData = {
     {
       "id": "42234i7solwwyst5v8cay",
       "type": "title",
-      "title": "Section 4: ",
+      "title": "Interfaces, Type Assertions & Object Manipulation",
       "videoID": "414234",
       "questionsTotal": 0,
       "tasksTotal": 0,
@@ -4297,7 +4297,7 @@ export const seedData = {
     {
       "id": "z52344i7solwwyst5v8cay",
       "type": "title",
-      "title": "Section 5: ",
+      "title": "Advanced TypeScript Patterns & Complex Types",
       "videoID": "414234",
       "questionsTotal": 0,
       "tasksTotal": 0,
@@ -5354,7 +5354,7 @@ export const seedData = {
     {
       "id": "z2f124i7solwwyst5v8cay",
       "type": "title",
-      "title": "Section 6: Utility Types",
+      "title": "Mastering TypeScript Utility Types",
       "videoID": "414234",
       "questionsTotal": 0,
       "tasksTotal": 0,
@@ -6447,7 +6447,7 @@ export const seedData = {
     {
       "id": "z2f124i7solwwyst123cay",
       "type": "title",
-      "title": "Section 7: Generics",
+      "title": "Generics: Writing Reusable, Type-Safe Code",
       "videoID": "414234",
       "questionsTotal": 0,
       "tasksTotal": 0,
