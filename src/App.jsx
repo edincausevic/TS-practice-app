@@ -229,7 +229,7 @@ function App() {
     
   
         if(exercise.section === sectionNum) {
-  
+          
           if(exercise.type === 'title') {
             return {...exercise, 
               questionsTotal: 0,
@@ -238,7 +238,7 @@ function App() {
               totalFalse: 0,
               totalTasksDone: 0}
           }
-  
+          
           return ({
             ...exercise,
             done: false,
@@ -252,15 +252,19 @@ function App() {
             })),
             tasks: exercise.tasks.map(task => ({...task, done: false}))
           })
+
+          
+        }else {
+          return exercise
         }
       })
   
       console.log('@', newData)
 
       // save on the server
-      // saveDB(newData)
+      saveDB(newData)
 
-      // window.location.reload()
+      window.location.reload()
     }
   
 
