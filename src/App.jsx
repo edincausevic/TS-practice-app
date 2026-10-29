@@ -225,7 +225,9 @@ function App() {
   
       const data = getDB()
      
-      const newData = data.allExercises.map(exercise => {
+      const newData = {
+        ...data,
+        allExercises: data.allExercises.map(exercise => {
     
   
         if(exercise.section === sectionNum) {
@@ -258,9 +260,8 @@ function App() {
           return exercise
         }
       })
+      }
   
-      console.log('@', newData)
-
       // save on the server
       saveDB(newData)
 
