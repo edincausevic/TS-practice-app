@@ -93,7 +93,45 @@ const MainNav = ({displayExercise, data, resetSection}) => {
                       <strong>/ {listItem.tasksTotal}</strong>
                     </div>
 
-                    <button onClick={() => resetSection(listItem.section)} style={{marginLeft: '35px', color: '#b91c1c', cursor: 'pointer', fontSize: '16px'}}><span>↻</span> Reset</button>
+                    <button
+  onClick={() => resetSection(listItem.section)}
+  style={{
+    marginLeft: "23px",
+    background: "rgba(239, 68, 68, 0.05)",
+    border: "1px solid rgba(239, 68, 68, 0.2)",
+    color: "rgb(185, 28, 28)",
+    cursor: "pointer",
+    fontSize: "12px",
+    fontWeight: 500,
+    padding: "1px 7px",
+    borderRadius: "8px",
+    display: "inline-flex",
+    alignItems: "center",
+    gap: "8px",
+    backdropFilter: "blur(4px)",
+    transition: "all 0.25s ease",
+    boxShadow: "rgba(0, 0, 0, 0.02) 0px 2px 4px",
+    transform: "translateY(0px)",
+  }}
+  onMouseEnter={(e) => {
+    const target = e.currentTarget;
+    target.style.background = "rgb(239, 68, 68)";
+    target.style.color = "#ffffff";
+    target.style.borderColor = "rgb(239, 68, 68)";
+    target.style.boxShadow = "0 4px 12px rgba(239, 68, 68, 0.25)";
+    target.style.transform = "translateY(-1px)";
+  }}
+  onMouseLeave={(e) => {
+    const target = e.currentTarget;
+    target.style.background = "rgba(239, 68, 68, 0.05)";
+    target.style.color = "rgb(185, 28, 28)";
+    target.style.borderColor = "rgba(239, 68, 68, 0.2)";
+    target.style.boxShadow = "0 2px 4px rgba(0, 0, 0, 0.02)";
+    target.style.transform = "translateY(0px)";
+  }}
+>
+  <span style={{ fontSize: "15px" }}>↻</span> Reset
+</button>
                   </div>
                 </div>
               )

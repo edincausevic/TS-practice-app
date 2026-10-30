@@ -3120,7 +3120,7 @@ export const seedData = {
     {
       "id": "42234i7solwwyst5v8cay",
       "type": "title",
-      "title": "Interfaces, Type Assertions & Object Manipulation",
+      "title": "Mastering Interfaces, Type Guards, and Advanced Operators",
       "videoID": "414234",
       "questionsTotal": 0,
       "tasksTotal": 0,
